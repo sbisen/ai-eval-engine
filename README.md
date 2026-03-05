@@ -77,6 +77,5 @@ MIT
 ## Author
 
 **Shivika Bisen**
-- SciPy 2026 speaker (submitted)
 - Speaker: Oracle Agentic AI Conference, AWS, Data Science Salon, Austin GenAI
 - GitHub: [@sbisen](https://github.com/sbisen)
