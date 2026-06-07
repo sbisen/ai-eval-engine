@@ -7,9 +7,10 @@ from ai_eval_engine import (
     DomainCategory,
     DomainContext,
     IntentCategory,
+    build_artifacts_message,
     build_user_message,
 )
-from ai_eval_engine.domain_context import SYSTEM_PROMPT
+from ai_eval_engine.domain_context import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT
 
 
 def test_intentcategory_is_alias_for_domaincategory():
@@ -61,3 +62,18 @@ def test_build_user_message_embeds_project_and_rows():
 def test_system_prompt_is_non_empty():
     assert "Domain Context Extractor" in SYSTEM_PROMPT
     assert len(SYSTEM_PROMPT) > 200
+
+
+def test_text_system_prompt_targets_specs_not_rows():
+    assert "specification" in SYSTEM_PROMPT_TEXT
+    assert "No dataset exists yet" in SYSTEM_PROMPT_TEXT
+    assert len(SYSTEM_PROMPT_TEXT) > 200
+
+
+def test_build_artifacts_message_embeds_project_and_artifacts():
+    artifacts = [{"name": "system_prompt.md", "content": "be safe", "truncated": False}]
+    msg = build_artifacts_message("acme", "agent spec", artifacts)
+    assert "Project: acme" in msg
+    assert "agent spec" in msg
+    assert "system_prompt.md" in msg
+    assert "be safe" in msg

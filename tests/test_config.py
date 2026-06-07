@@ -5,7 +5,7 @@ from __future__ import annotations
 import pytest
 from pydantic import ValidationError
 
-from ai_eval_engine.config import ProjectConfig, load_config
+from ai_eval_engine.config import CsvSource, ProjectConfig, TextSource, load_config
 
 
 def test_load_config_roundtrip(config_path):
@@ -35,3 +35,27 @@ def test_requires_a_domain_source():
 def test_requires_non_empty_project():
     with pytest.raises(ValidationError):
         ProjectConfig(project="", domain_sources=[{"type": "csv", "path": "x.csv"}])
+
+
+def test_text_source_discriminator_routes_by_type():
+    config = ProjectConfig(
+        project="spec",
+        domain_sources=[{"type": "text", "paths": ["system_prompt.md"]}],
+    )
+    source = config.domain_sources[0]
+    assert isinstance(source, TextSource)
+    assert source.paths == ["system_prompt.md"]
+
+
+def test_csv_source_still_routes_by_type():
+    config = ProjectConfig(
+        project="data", domain_sources=[{"type": "csv", "path": "x.csv"}]
+    )
+    assert isinstance(config.domain_sources[0], CsvSource)
+
+
+def test_text_source_requires_at_least_one_path():
+    with pytest.raises(ValidationError):
+        ProjectConfig(
+            project="spec", domain_sources=[{"type": "text", "paths": []}]
+        )

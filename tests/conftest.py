@@ -41,6 +41,28 @@ def config_path(tmp_path: Path, csv_path: Path) -> Path:
 
 
 @pytest.fixture
+def text_config_path(tmp_path: Path) -> Path:
+    """A cold-start text-source project dir; returns the config path."""
+    (tmp_path / "system_prompt.md").write_text(
+        "You are a support agent. Issue refunds with issue_refund(order_id, amount).\n"
+    )
+    (tmp_path / "user_stories.md").write_text(
+        "- As a customer, I want a refund for a damaged item.\n"
+    )
+    cfg = tmp_path / "spec.yaml"
+    cfg.write_text(
+        "project: spec-test\n"
+        "domain_sources:\n"
+        "  - type: text\n"
+        "    paths:\n"
+        "      - system_prompt.md\n"
+        "      - user_stories.md\n"
+        "    description: agent spec fixture\n"
+    )
+    return cfg
+
+
+@pytest.fixture
 def stratified_config() -> ProjectConfig:
     return ProjectConfig(
         project="mini-test",

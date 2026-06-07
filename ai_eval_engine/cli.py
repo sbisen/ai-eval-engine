@@ -19,8 +19,8 @@ import sys
 from pathlib import Path
 
 from ai_eval_engine import __version__
-from ai_eval_engine.config import load_config
-from ai_eval_engine.domain_context import build_user_message
+from ai_eval_engine.config import TextSource, load_config
+from ai_eval_engine.domain_context import build_artifacts_message, build_user_message
 from ai_eval_engine.sampling import format_sample, load_csv_sample
 
 
@@ -28,7 +28,14 @@ def _cmd_sample(args: argparse.Namespace) -> int:
     config_path = Path(args.config).resolve()
     config = load_config(config_path)
     source = config.domain_sources[0]
-    sample = load_csv_sample(source, config_path.parent, config)
+
+    if isinstance(source, TextSource):
+        return _sample_text(args, config, source, config_path.parent)
+    return _sample_csv(args, config, source, config_path.parent)
+
+
+def _sample_csv(args, config, source, base_dir: Path) -> int:
+    sample = load_csv_sample(source, base_dir, config)
 
     if args.show_prompt:
         sys.stdout.write(build_user_message(config.project, source.description, sample))
@@ -48,6 +55,29 @@ def _cmd_sample(args: argparse.Namespace) -> int:
     print(f"seed:           {config.sample_seed}")
     print()
     print(format_sample(sample))
+    return 0
+
+
+def _sample_text(args, config, source, base_dir: Path) -> int:
+    from ai_eval_engine.artifacts import format_artifacts, load_text_artifacts
+
+    artifacts = load_text_artifacts(source, base_dir)
+
+    if args.show_prompt:
+        sys.stdout.write(
+            build_artifacts_message(config.project, source.description, artifacts)
+        )
+        sys.stdout.write("\n")
+        return 0
+    if args.json:
+        json.dump(artifacts, sys.stdout, indent=2)
+        sys.stdout.write("\n")
+        return 0
+
+    print(f"project:        {config.project}")
+    print(f"source:         text ({len(artifacts)} artifact(s))")
+    print()
+    print(format_artifacts(artifacts))
     return 0
 
 

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Literal
+from typing import Annotated, Literal, Union
 
 import yaml
 from pydantic import BaseModel, Field
@@ -11,7 +11,23 @@ class CsvSource(BaseModel):
     description: str = ""
 
 
-DomainSource = CsvSource
+class TextSource(BaseModel):
+    """A set of free-text artifacts describing an agent's *intent*, not its data.
+
+    The cold-start path: a repo that has no dataset yet — only the agent's spec
+    (system prompt, README, tool/function definitions, user stories). Step 1
+    infers a ``DomainContext`` from these instead of from sampled rows. Only
+    Step 1 is supported for a text source; Steps 2-5 still need labeled data.
+    """
+
+    type: Literal["text"] = "text"
+    paths: list[str] = Field(
+        min_length=1, description="Text/markdown/code files describing the agent"
+    )
+    description: str = ""
+
+
+DomainSource = Annotated[Union[CsvSource, TextSource], Field(discriminator="type")]
 
 
 class TaskSpec(BaseModel):

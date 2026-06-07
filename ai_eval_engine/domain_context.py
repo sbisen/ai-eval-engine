@@ -10,15 +10,16 @@ tested without an API key; only :func:`extract_domain_context` calls the model.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
-import anthropic
 from pydantic import BaseModel, Field
 
-from ai_eval_engine.config import load_config
+from ai_eval_engine.config import TextSource, load_config
+from ai_eval_engine.llm import DEFAULT_MODEL, AnthropicBackend, LLMBackend
 from ai_eval_engine.sampling import format_sample, load_csv_sample
 
-DEFAULT_MODEL = "claude-opus-4-8"
+if TYPE_CHECKING:
+    import anthropic
 
 
 class DomainCategory(BaseModel):
@@ -119,6 +120,38 @@ Output must conform to the DomainContext JSON schema.
 """
 
 
+SYSTEM_PROMPT_TEXT = """\
+You are the Domain Context Extractor for the AI Eval Engine framework.
+
+You are given the *specification* of an AI agent — not its data. The sources may
+include the agent's system prompt, README, tool/function definitions, and user
+stories. No dataset exists yet; your job is to infer, from stated intent, the
+domain structure a downstream evaluation pipeline will need.
+
+Produce four things, grounded in the provided artifacts and in how this kind of
+agent typically fails in production:
+
+1. Categories / intents the agent is expected to handle. Derive them from the
+   stated capabilities, tools, and user stories. Give two or three plausible
+   example queries for each (plausible, since no real data exists yet).
+
+2. Safety constraints this agent must respect, tied to its stated purpose and
+   tools — e.g. a tool that writes to a database implies "confirm before
+   destructive writes"; a tool that sends email implies "do not exfiltrate user
+   data". Give a severity (critical / high / medium) and a one-sentence rationale
+   tied to *this* agent, not generic AI-safety boilerplate.
+
+3. Quality signals / risks evident from the spec itself: under-specified
+   behaviors, tools without guardrails, ambiguous scope, missing refusal rules.
+
+4. A short summary tying these together.
+
+Be specific and cite the artifacts. Where the spec is silent on something an
+evaluation would need, name it explicitly as a gap rather than inventing detail.
+Output must conform to the DomainContext JSON schema.
+"""
+
+
 def build_user_message(
     project: str, source_description: str, sample: list[dict[str, str]]
 ) -> str:
@@ -131,42 +164,54 @@ def build_user_message(
     )
 
 
+def build_artifacts_message(
+    project: str, source_description: str, artifacts: list[dict]
+) -> str:
+    """Construct the user message for a text (spec) source (pure; offline-safe)."""
+    from ai_eval_engine.artifacts import format_artifacts
+
+    return (
+        f"Project: {project}\n"
+        f"Source description: {source_description or '(none provided)'}\n\n"
+        f"Agent specification artifacts:\n{format_artifacts(artifacts)}\n\n"
+        "Extract the DomainContext for this agent from the specification above. Be "
+        "concrete and tied to the artifacts; name any gaps where the spec is silent."
+    )
+
+
 def extract_domain_context(
     config_path: str | Path,
     client: anthropic.Anthropic | None = None,
     model: str = DEFAULT_MODEL,
+    backend: LLMBackend | None = None,
 ) -> DomainContext:
-    """Load a project config, sample its first domain source, and extract a DomainContext.
+    """Load a project config, read its first domain source, and extract a DomainContext.
 
-    Requires a configured Anthropic client (``ANTHROPIC_API_KEY``). To inspect the
-    prompt without spending tokens, use :func:`build_user_message` with a sample
-    from :func:`ai_eval_engine.sampling.load_csv_sample`.
+    The model call goes through an :class:`~ai_eval_engine.llm.LLMBackend`. By
+    default that is :class:`~ai_eval_engine.llm.AnthropicBackend` (Claude, requires
+    ``ANTHROPIC_API_KEY``); pass ``backend`` to use any other provider. ``client``
+    and ``model`` are kept as conveniences that configure the default backend.
+
+    To inspect the prompt without spending tokens, use :func:`build_user_message`
+    (or :func:`build_artifacts_message`) directly.
     """
     config_path = Path(config_path).resolve()
     config = load_config(config_path)
     base_dir = config_path.parent
 
     source = config.domain_sources[0]
-    sample = load_csv_sample(source, base_dir, config)
+    if isinstance(source, TextSource):
+        from ai_eval_engine.artifacts import load_text_artifacts
 
-    client = client or anthropic.Anthropic()
-    user_message = build_user_message(config.project, source.description, sample)
+        artifacts = load_text_artifacts(source, base_dir)
+        system_prompt = SYSTEM_PROMPT_TEXT
+        user_message = build_artifacts_message(
+            config.project, source.description, artifacts
+        )
+    else:
+        sample = load_csv_sample(source, base_dir, config)
+        system_prompt = SYSTEM_PROMPT
+        user_message = build_user_message(config.project, source.description, sample)
 
-    response = client.messages.parse(
-        model=model,
-        max_tokens=16000,
-        thinking={"type": "adaptive"},
-        system=[
-            {
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }
-        ],
-        messages=[{"role": "user", "content": user_message}],
-        output_format=DomainContext,
-    )
-    assert response.parsed_output is not None, (
-        f"Failed to parse DomainContext (stop_reason={response.stop_reason})"
-    )
-    return response.parsed_output
+    backend = backend or AnthropicBackend(client=client, model=model)
+    return backend.parse(system=system_prompt, user=user_message, schema=DomainContext)

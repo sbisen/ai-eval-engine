@@ -1,0 +1,23 @@
+project: acme-support-agent
+
+# Cold-start demo: this project has NO dataset yet — only the agent's spec.
+# A `text` source points Step 1 at free-text artifacts (system prompt, tool
+# definitions, user stories) instead of a CSV. Claude infers a DomainContext
+# (categories + safety constraints + quality signals) from intent.
+#
+#   ai-eval-engine sample  --config configs/support_agent_spec.yaml          # offline
+#   ai-eval-engine extract --config configs/support_agent_spec.yaml          # calls Claude
+#
+# Only Step 1 runs from a text source. Steps 2-5 (golden set, scoring, runbook,
+# dashboard) still need labeled rows — see the CSV configs for those.
+domain_sources:
+  - type: text
+    paths:
+      - ../examples/support_agent/system_prompt.md
+      - ../examples/support_agent/tools.md
+      - ../examples/support_agent/user_stories.md
+    description: >-
+      Specification for a customer-support agent over an online store: system
+      prompt, tool definitions, and user stories. No production data exists yet;
+      safety constraints must be inferred from the agent's stated purpose and the
+      side effects of its tools (refunds, email, account lookups).

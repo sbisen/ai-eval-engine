@@ -106,6 +106,27 @@ again) appends a run, grows the runbook, and refreshes the dashboard trend. It r
 because both demo datasets ship gold labels; pass `--predictions preds.json` to score a real
 agent. `--gold-baseline` uses near-perfect predictions as a harness sanity check.
 
+To stop at Step 2 and just inspect the generated golden set, use `golden` (offline):
+
+```sh
+ai-eval-engine golden --config configs/financebench.yaml --context financebench_context.json --out golden_set.json
+```
+
+### Cold start: no dataset yet, only the agent's spec
+
+When a project has no labeled data, point a `type: text` source at the agent's spec files
+(system prompt, tool definitions, user stories) and run Step 1 on those instead of a CSV —
+Claude infers a `DomainContext` from intent and tool side-effects:
+
+```sh
+ai-eval-engine sample  --config configs/support_agent_spec.yaml   # offline, inspect the prompt
+ai-eval-engine extract --config configs/support_agent_spec.yaml   # extract the DomainContext
+```
+
+Only Step 1 runs from a text source; Steps 2–5 still need labeled rows from a CSV source.
+The single model call goes through a pluggable `LLMBackend` (default `AnthropicBackend`), so
+any provider — including local/open models — can be swapped in.
+
 ### Use it from Python
 
 ```python
@@ -182,9 +203,11 @@ without network access or an API key.
 
 ```
 ai_eval_engine/      # the library
-  config.py          #   YAML project config + TaskSpec (Pydantic)
-  sampling.py        #   deterministic / stratified sampling (offline)
-  domain_context.py  #   Step 1: DomainContext schema + Claude extraction
+  config.py          #   YAML project config + TaskSpec + Csv/Text sources (Pydantic)
+  sampling.py        #   deterministic / stratified CSV sampling (offline)
+  artifacts.py       #   text-source (cold-start) artifact loading (offline)
+  domain_context.py  #   Step 1: DomainContext schema + extraction
+  llm.py             #   pluggable LLMBackend seam (default AnthropicBackend)
   golden_set.py      #   Step 2: versioned golden-set generation
   evaluation.py      #   Step 3: scorers (grounded_qa / code_execution) + run_eval
   eval_script.py     #   Step 3: generate a standalone eval runner
@@ -192,10 +215,10 @@ ai_eval_engine/      # the library
   dashboard.py       #   Step 5: self-contained HTML dashboard
   pipeline.py        #   build(): Steps 2-5 end-to-end
   cli.py             #   `ai-eval-engine` command-line interface
-configs/             # project configs (ScienceAgentBench, FinanceBench)
+configs/             # project configs (ScienceAgentBench, FinanceBench, support-agent)
 data/                # datasets (downloaded, not committed — see data/README.md)
-examples/            # runnable quickstart script
-tests/               # offline pytest suite (46 tests)
+examples/            # runnable quickstart script + support_agent cold-start spec
+tests/               # offline pytest suite (63 tests)
 ```
 
 ## Citation
