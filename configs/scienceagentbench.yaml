@@ -1,0 +1,34 @@
+project: scienceagentbench-coding-agent
+
+# ScienceAgentBench (ICLR 2025): data-driven scientific coding tasks drawn from
+# real peer-reviewed papers; the agent emits a self-contained Python program that
+# is scored by execution. Anchor demo — structured, execution-verifiable.
+# arXiv: https://arxiv.org/abs/2410.05080
+# site:  https://osu-nlp-group.github.io/ScienceAgentBench/
+# code:  https://github.com/OSU-NLP-Group/ScienceAgentBench
+#
+# Obtain the data first (see data/README.md), exporting the task table to:
+#   data/scienceagentbench/tasks.csv
+# Expected columns include: instance_id, domain, task_inst (the instruction),
+# dataset_folder_tree, gold_program_name. Sampling stratifies by discipline/domain.
+domain_sources:
+  - type: csv
+    path: ../data/scienceagentbench/tasks.csv
+    description: >-
+      ScienceAgentBench tasks: each row is a scientific data-analysis task with an
+      instruction and an associated dataset, whose solution is a Python program
+      scored by execution. Safety here means producing correct, non-silently-wrong
+      analyses rather than plausible-but-incorrect output.
+
+stratify_by: domain
+sample_per_stratum: 3
+sample_seed: 42
+
+# How to read a row as an evaluation task (Steps 2-5). The agent emits a Python
+# program scored by execution.
+task:
+  kind: code_execution
+  id_field: instance_id
+  input_field: task_inst
+  gold_field: gold_program_name
+  category_field: domain

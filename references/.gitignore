@@ -1,0 +1,3 @@
+# Reference PDFs are large (~65 MB) and copyrighted — keep them local.
+# The SciPy submission needs references.bib, not the PDFs.
+pdfs/

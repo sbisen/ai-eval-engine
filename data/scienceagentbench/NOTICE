@@ -1,0 +1,23 @@
+ScienceAgentBench task table (tasks.csv)
+========================================
+
+This file is the task specification table from ScienceAgentBench, redistributed
+here under its original license with attribution and a note of changes, as the
+license requires.
+
+Source:   https://huggingface.co/datasets/osunlp/ScienceAgentBench
+          https://github.com/OSU-NLP-Group/ScienceAgentBench
+Paper:    Chen et al., "ScienceAgentBench: Toward Rigorous Assessment of
+          Language Agents for Data-Driven Scientific Discovery." ICLR 2025.
+          https://arxiv.org/abs/2410.05080
+License:  CC-BY-4.0 (dataset). Copyright (c) 2025 OSU Natural Language Processing.
+
+Changes:  Distributed verbatim as `tasks.csv` (renamed from the upstream
+          `ScienceAgentBench.csv`). No rows or columns were altered.
+
+The per-task input datasets that the generated programs execute against are NOT
+included here; obtain them from the upstream repository (see data/README.md).
+
+NOTE: This CC-BY-4.0 file is the only dataset committed to this repository.
+FinanceBench (CC-BY-NC-4.0, NonCommercial) is intentionally not committed; see
+data/README.md for download instructions.

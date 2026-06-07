@@ -1,0 +1,50 @@
+CLAUDE.md
+abstract.md
+poster.md
+publish.md
+
+# secrets — never commit
+.env
+.env.*
+!.env.example
+.env.example
+*.key
+secrets.json
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# generated eval bundles (golden set, runbook, dashboard, run history)
+out/
+
+# datasets — licensed / reproduced via data/README.md (see download instructions).
+# FinanceBench is CC-BY-NC-4.0 (NonCommercial) and is deliberately NOT committed to
+# this MIT-licensed repo. ScienceAgentBench tasks are CC-BY-4.0 and ARE committed,
+# with attribution in data/scienceagentbench/NOTICE.
+data/*
+!data/README.md
+!data/scienceagentbench/
+data/scienceagentbench/*
+!data/scienceagentbench/tasks.csv
+!data/scienceagentbench/NOTICE
+
+# local-only assets & notes — kept out of the public repo
+abstract_flowchart.png
+abstract_video.mp4
+# third-party copyrighted paper — do not redistribute
+agentic-context-engineering.pdf
+# internal planning notes (deadlines, strategy)
+markdowns/
+
+# editor / OS
+.DS_Store
+.vscode/
+.idea/

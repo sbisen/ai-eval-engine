@@ -1,0 +1,144 @@
+% References for "Solving the AI Eval Gap: Domain-Aware Evals for Production AI Agents"
+% SciPy 2026 Proceedings.
+% PDFs are in references/pdfs/<key>.pdf (one per entry below).
+% NOTE: verify author lists, venues, and citation counts before final submission.
+% Entries marked [VERIFY] have author/venue fields I was less certain about.
+
+% ---- Core eval canon (lineage) ----
+
+@inproceedings{zheng2023llmjudge,
+  title     = {Judging {LLM}-as-a-Judge with {MT}-Bench and Chatbot Arena},
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  year      = {2023},
+  note      = {arXiv:2306.05685},
+}
+
+@article{liang2023helm,
+  title   = {Holistic Evaluation of Language Models},
+  author  = {Liang, Percy and Bommasani, Rishi and Lee, Tony and others},
+  journal = {Transactions on Machine Learning Research (TMLR)},
+  year    = {2023},
+  note    = {arXiv:2211.09110},
+}
+
+@inproceedings{es2024ragas,
+  title     = {{RAGAS}: Automated Evaluation of Retrieval Augmented Generation},
+  author    = {Es, Shahul and James, Jithin and Espinosa-Anke, Luis and Schockaert, Steven},
+  booktitle = {Proceedings of EACL 2024 (System Demonstrations)},
+  year      = {2024},
+  note      = {arXiv:2309.15217},
+}
+
+@inproceedings{liu2023geval,
+  title     = {{G-Eval}: {NLG} Evaluation using {GPT-4} with Better Human Alignment},
+  author    = {Liu, Yang and Iter, Dan and Xu, Yichong and Wang, Shuohang and Xu, Ruochen and Zhu, Chenguang},
+  booktitle = {Proceedings of EMNLP 2023},
+  year      = {2023},
+  note      = {arXiv:2303.16634},
+}
+
+@inproceedings{saadfalcon2024ares,
+  title     = {{ARES}: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems},
+  author    = {Saad-Falcon, Jon and Khattab, Omar and Potts, Christopher and Zaharia, Matei},
+  booktitle = {Proceedings of NAACL 2024},
+  year      = {2024},
+  note      = {arXiv:2311.09476},
+}
+
+% ---- Closest method neighbors (corpus -> test set / criteria synthesis) ----
+
+@inproceedings{guinet2024examgen,
+  title     = {Automated Evaluation of Retrieval-Augmented Language Models with Task-Specific Exam Generation},
+  author    = {Guinet, Gauthier and Omidvar-Tehrani, Behrooz and Deoras, Anoop and Callot, Laurent},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  year      = {2024},
+  note      = {arXiv:2405.13622},
+}
+
+@inproceedings{shankar2024evalgen,
+  title     = {Who Validates the Validators? Aligning {LLM}-Assisted Evaluation of {LLM} Outputs with Human Preferences},
+  author    = {Shankar, Shreya and Zamfirescu-Pereira, J.D. and Hartmann, Bj{\"o}rn and Parameswaran, Aditya G. and Arawjo, Ian},
+  booktitle = {Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology (UIST)},
+  year      = {2024},
+  note      = {arXiv:2404.12272},
+}
+
+@article{shankar2024spade,
+  title   = {{SPADE}: Synthesizing Data Quality Assertions for Large Language Model Pipelines},
+  author  = {Shankar, Shreya and Parameswaran, Aditya G. and others},
+  journal = {Proceedings of the VLDB Endowment (PVLDB)},
+  volume  = {17},
+  year    = {2024},
+  note    = {arXiv:2401.03038. [VERIFY author list]},
+}
+
+% ---- Latest closest competitors (cite + differentiate) ----
+
+@misc{ata2025,
+  title        = {Agent-Testing Agent: A Meta-Agent for Automated Testing and Evaluation of Conversational AI Agents},
+  author       = {{Authors TBD}},
+  year         = {2025},
+  howpublished = {arXiv:2508.17393},
+  note         = {[VERIFY authors/venue]},
+}
+
+@misc{testagent2024,
+  title        = {{TestAgent}: Automatic Benchmarking and Exploratory Interaction for Evaluating {LLMs} in Vertical Domains},
+  author       = {{Authors TBD}},
+  year         = {2024},
+  howpublished = {arXiv:2410.11507},
+  note         = {[VERIFY authors/venue]},
+}
+
+@misc{yao2024taubench,
+  title        = {{$\tau$-bench}: A Benchmark for Tool-Agent-User Interaction in Real-World Domains},
+  author       = {Yao, Shunyu and others},
+  year         = {2024},
+  howpublished = {arXiv:2406.12045},
+  note         = {Sierra. [VERIFY author list]},
+}
+
+% ---- Surveys + domain-specific safety (landscape / safety lineage) ----
+
+@misc{yehudai2025survey,
+  title        = {A Survey on Evaluation of {LLM}-based Agents},
+  author       = {Yehudai, Asaf and others},
+  year         = {2025},
+  howpublished = {arXiv:2503.16416},
+  note         = {[VERIFY author list]},
+}
+
+@inproceedings{mohammadi2025survey,
+  title     = {Evaluation and Benchmarking of {LLM} Agents: A Survey},
+  author    = {Mohammadi, Mahmoud and others},
+  booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
+  year      = {2025},
+  note      = {arXiv:2507.21504. [VERIFY author list]},
+}
+
+@misc{hui2025trident,
+  title        = {{TRIDENT}: Benchmarking {LLM} Safety in Finance, Medicine, and Law},
+  author       = {Hui, Zheng and others},
+  year         = {2025},
+  howpublished = {arXiv:2507.21134},
+  note         = {[VERIFY author list]},
+}
+
+@inproceedings{wang2023decodingtrust,
+  title     = {{DecodingTrust}: A Comprehensive Assessment of Trustworthiness in {GPT} Models},
+  author    = {Wang, Boxin and others},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  year      = {2023},
+  note      = {arXiv:2306.11698. [VERIFY author list]},
+}
+
+% ---- Context-engineering (related work, cited lightly) ----
+
+@inproceedings{zhang2026ace,
+  title     = {Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models},
+  author    = {Zhang, Qizheng and Hu, Changran and Upasani, Shubhangi and Ma, Boyuan and Hong, Fenglu and Kamanuru, Vamsidhar and Rainton, Jay and Wu, Chen and Ji, Mengmeng and Li, Hanchen and Thakker, Urmish and Zou, James and Olukotun, Kunle},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  note      = {Project page: https://ace-agent.github.io},
+}

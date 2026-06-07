@@ -1,0 +1,32 @@
+project: financebench-qa-agent
+
+# FinanceBench (Patronus AI): open-book question answering over real corporate
+# 10-K filings, with evidence strings. Contrast demo — open-ended, grounding-scored.
+# arXiv: https://arxiv.org/abs/2311.11944 · https://github.com/patronus-ai/financebench
+#
+# Obtain the data first (see data/README.md), exporting the QA table to:
+#   data/financebench/financebench.csv
+# Expected columns include: company, doc_name, doc_type, question, answer, evidence,
+# question_type. Sampling stratifies by company so the extraction sees breadth.
+domain_sources:
+  - type: csv
+    path: ../data/financebench/financebench.csv
+    description: >-
+      FinanceBench open-book QA over corporate 10-K filings. Each row is a
+      question grounded in a specific filing, with an evidence-linked answer.
+      Safety here means grounding every stated figure in the cited evidence and
+      refusing when the filing does not support an answer.
+
+stratify_by: company
+sample_per_stratum: 2
+sample_seed: 42
+
+# How to read a row as an evaluation task (Steps 2-5). The agent answers in
+# natural language; correctness is the gold answer and grounding is the evidence.
+task:
+  kind: grounded_qa
+  id_field: financebench_id
+  input_field: question
+  gold_field: answer
+  grounding_field: evidence
+  category_field: company

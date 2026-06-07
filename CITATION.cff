@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "AI Eval Engine: Domain-Aware Evaluation for Production AI Agents"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - given-names: Shivika
+    family-names: Bisen
+    email: shivikakbisen@gmail.com
+repository-code: "https://github.com/sbisen/ai-eval-engine"
+url: "https://github.com/sbisen/ai-eval-engine"
+abstract: >-
+  AI Eval Engine is an open-source Python framework that automates domain-aware
+  evaluation of production AI agents. It ingests a pluggable domain context,
+  generates a versioned golden set, emits a runnable evaluation script with
+  correctness, confidence, and format scores, and maintains a living Safety
+  Runbook of emergent failure modes.
+keywords:
+  - llm
+  - evaluation
+  - ai-agents
+  - domain-aware
+  - golden-set
+  - llm-as-judge
+  - safety
+license: MIT
+version: 0.1.0

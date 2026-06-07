@@ -1,0 +1,60 @@
+"""AI Eval Engine — domain-aware evaluation for production AI agents."""
+
+from dotenv import load_dotenv
+
+load_dotenv(override=False)
+
+__version__ = "0.1.0"
+
+from ai_eval_engine.config import CsvSource, ProjectConfig, TaskSpec, load_config
+from ai_eval_engine.dashboard import render_dashboard
+from ai_eval_engine.domain_context import (
+    DomainCategory,
+    DomainContext,
+    IntentCategory,
+    QualitySignal,
+    SafetyConstraint,
+    build_user_message,
+    extract_domain_context,
+)
+from ai_eval_engine.eval_script import generate_eval_script
+from ai_eval_engine.evaluation import (
+    CaseResult,
+    EvalReport,
+    make_baseline_predictions,
+    run_eval,
+)
+from ai_eval_engine.golden_set import GoldenCase, GoldenSet, build_golden_set
+from ai_eval_engine.pipeline import build
+from ai_eval_engine.runbook import Runbook, RunbookItem, update_runbook
+from ai_eval_engine.sampling import format_sample, load_csv_sample
+
+__all__ = [
+    "CaseResult",
+    "CsvSource",
+    "DomainCategory",
+    "DomainContext",
+    "EvalReport",
+    "GoldenCase",
+    "GoldenSet",
+    "IntentCategory",
+    "ProjectConfig",
+    "QualitySignal",
+    "Runbook",
+    "RunbookItem",
+    "SafetyConstraint",
+    "TaskSpec",
+    "__version__",
+    "build",
+    "build_golden_set",
+    "build_user_message",
+    "extract_domain_context",
+    "format_sample",
+    "generate_eval_script",
+    "load_config",
+    "load_csv_sample",
+    "make_baseline_predictions",
+    "render_dashboard",
+    "run_eval",
+    "update_runbook",
+]
