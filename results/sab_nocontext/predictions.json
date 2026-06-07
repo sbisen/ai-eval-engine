@@ -1,0 +1,14 @@
+{
+  "case-1": "raise ValueError('simulated agent error')",
+  "case-23": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-28": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-29": "raise ValueError('simulated agent error')",
+  "case-46": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-63": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-66": "raise ValueError('simulated agent error')",
+  "case-8": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-82": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-86": "raise ValueError('simulated agent error')",
+  "case-9": "print('ok')  # synthetic baseline: runs cleanly",
+  "case-96": "print('ok')  # synthetic baseline: runs cleanly"
+}

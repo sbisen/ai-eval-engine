@@ -1,0 +1,96 @@
+{
+  "domain_name": "Scientific data-analysis code generation (execution-scored)",
+  "summary": "The agent writes self-contained Python programs that perform a specific scientific data-analysis task over a supplied dataset, saving a named artifact (a figure or CSV under pred_results/) that is scored by execution. The sample spans four disciplines — Computational Chemistry, Psychology and Cognitive science, Bioinformatics, and Geographical Information Science — and is dominated by visualization and computational-analysis subtasks over heterogeneous file formats (CSV, AnnData .h5ad, VASP CHGCAR, NetCDF .nc, GeoJSON, GeoTIFF). 'Unsafe' here is not a refusal failure but a silently-wrong analysis: a program that runs and emits a plausible artifact while loading the wrong file, computing a proxy instead of the requested metric, or writing to the wrong path. Correctness is decided by running the program, which keeps the evaluation self-bias-proof.",
+  "categories": [
+    {
+      "name": "Computational Chemistry",
+      "description": "Cheminformatics and materials tasks: train molecular-property models, featurize structures, compute statistics over chemical descriptors, and analyze electronic-structure outputs. Requires domain libraries (deepchem, pymatgen) and specific featurizations.",
+      "example_queries": [
+        "Train a multitask model on the Clintox dataset to predict a drug's toxicity and FDA approval status, using ECFP featurization and MultitaskClassifier, and save test-set predictions to pred_results/clintox_test_pred.csv.",
+        "Calculate the charge density difference between constituent systems (A, B) and the combined system (AB) from VASP CHGCAR files and plot the planar-averaged charge density along z.",
+        "Compute pairwise Pearson correlations across FACTORS tasks and save the result as a histogram."
+      ]
+    },
+    {
+      "name": "Psychology and Cognitive science",
+      "description": "Behavioural and physiological signal analysis: process ECG/RSP/EDA biosignals, compute event-related and variability metrics, and produce cognitive-model comparison visualizations. Leans on NeuroKit2 and bespoke factor-analysis methods (JNMF).",
+      "example_queries": [
+        "Process ECG and RSP signals from a 5-minute resting recording, compute HRV and RRV metrics, and save bio_ecg_plot.png and bio_rsp_plot.png with tight bounding boxes.",
+        "Localize events in ecg_1000hz.csv and save event-related features (ECG_Rate_Mean, RSP_Rate_Mean, EDA_Peak_Amplitude) to a CSV with named columns.",
+        "Generate radar (polar) plots comparing seven cognitive models' similarity to consciousness and openness."
+      ]
+    },
+    {
+      "name": "Bioinformatics",
+      "description": "Single-cell and molecular-biology analysis over AnnData objects: clustering, dimensionality-reduction visualization, dendrograms, and feature selection. Centred on scanpy / AnnData and scikit-learn / mlxtend.",
+      "example_queries": [
+        "Compute Leiden clusters on a preprocessed PBMC AnnData object with precomputed UMAP and visualize the clustering, saving scatter_pred.png.",
+        "Visualize the dendrogram of the 'bulk_labels' variable for pbmc.h5ad and save dendrogram.png.",
+        "Perform backward feature selection with logistic regression on the DKPES dataset and plot accuracy vs number of selected features."
+      ]
+    },
+    {
+      "name": "Geographical Information Science",
+      "description": "Geospatial and earth-science analysis: raster/terrain computation, vector overlays and buffering, and map visualization with geographic backgrounds. Uses rasterio, geopandas, iris, and matplotlib contour plotting.",
+      "example_queries": [
+        "Buffer a planned road network by 5.5 km in Rondonia and visualize predicted deforestation risk against existing roads, deforested area, and protected forest.",
+        "Compute the Terrain Ruggedness Index from an elevation GeoTIFF and save ruggedness.png.",
+        "Load Total Electron Content from a NetCDF file and render it as a filled contour map with a coastline background."
+      ]
+    }
+  ],
+  "safety_constraints": [
+    {
+      "name": "compute_the_requested_metric_not_a_proxy",
+      "description": "The program must compute exactly the quantity the instruction names (e.g. Terrain Ruggedness Index, HRV/RRV, charge-density difference, Pearson correlation), not a related or simpler statistic that happens to produce similar-looking output.",
+      "severity": "critical",
+      "rationale": "The core failure mode in this domain is a silently-wrong scientific result: a substituted metric runs cleanly and yields a plausible figure, so it passes a generic eval while being scientifically incorrect."
+    },
+    {
+      "name": "use_the_specified_input_files_and_columns",
+      "description": "Load the exact dataset files and columns referenced by the task (e.g. bio_resting_5min_100hz.csv vs bio_eventrelated_100hz.csv; the 'bulk_labels' obs field; the correct CHGCAR among F/LiMoS2 variants) rather than a similarly named neighbour.",
+      "severity": "high",
+      "rationale": "Several tasks ship multiple near-identically named inputs; loading the wrong one produces a runnable but invalid analysis that no output-format check would catch."
+    },
+    {
+      "name": "write_artifact_to_exact_output_path",
+      "description": "Save the result to the precise path and filename the task specifies (e.g. pred_results/clintox_test_pred.csv, pred_results/TEC_vis.png), including the requested columns or figure layout.",
+      "severity": "high",
+      "rationale": "Execution scoring locates the artifact by its declared path; a correct computation written to the wrong path or with wrong column names scores as a failure and, in production, breaks downstream consumers."
+    },
+    {
+      "name": "fail_loudly_on_missing_dependency_or_data",
+      "description": "If a required library, file, or column is unavailable, the program must raise rather than emit a placeholder, empty figure, or fabricated values.",
+      "severity": "high",
+      "rationale": "A swallowed exception that still writes an artifact converts a detectable crash into an undetectable silently-wrong result — the worst outcome for an execution-scored scientific agent."
+    },
+    {
+      "name": "preserve_domain_method_semantics",
+      "description": "Honour method-specific requirements stated in the domain knowledge (e.g. Leiden via sc.tl.leiden on the connectivities graph, ECFP featurization, equal NX/NY/NZ grids when differencing CHGCAR files).",
+      "severity": "medium",
+      "rationale": "Domain methods have correctness preconditions; ignoring them yields results that are numerically defined but scientifically meaningless for the stated experiment."
+    }
+  ],
+  "quality_signals": [
+    {
+      "name": "discipline-stratified, visualization-heavy distribution",
+      "description": "The sample is balanced across four disciplines (3 tasks each) but skewed toward Data Visualization and Computational Analysis subtasks, so the golden set should over-represent figure-producing tasks while still covering CSV/model-output tasks."
+    },
+    {
+      "name": "heterogeneous, format-specific input loading",
+      "description": "Inputs span CSV, AnnData .h5ad, VASP CHGCAR, NetCDF .nc, GeoJSON, and GeoTIFF; file ingestion (not algorithmics) is the largest single failure surface and deserves dedicated probes."
+    },
+    {
+      "name": "uneven domain_knowledge coverage",
+      "description": "Some tasks carry rich domain_knowledge hints while others (e.g. the FACTORS correlation task) leave it empty; the with-context vs without-context ablation should expect the largest lift on the knowledge-rich tasks."
+    },
+    {
+      "name": "exact output contract (path + schema)",
+      "description": "Every task pins an output filename and often a column or subplot layout; format/path validation is a first-class scoring dimension here, not an afterthought."
+    },
+    {
+      "name": "artifact-only outputs limit semantic grading",
+      "description": "Many tasks produce only a .png, so execution/structure checks carry correctness; an LLM judge can only assess open-ended explanation quality, not the figure's scientific validity."
+    }
+  ]
+}
