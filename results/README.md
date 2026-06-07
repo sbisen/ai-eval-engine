@@ -46,3 +46,17 @@ Retained: `pass_rate`, `domain_accuracy`, `grounding_rate`, `safety_score`, per-
 
 > The headline ablation is the **delta between the with- and without-context builds** scored on
 > the *same* predictions, not any single agent score.
+
+## Figures
+
+`make_ablation_figure.py` renders the paper's result figures from the JSONs above (PNG + PDF).
+Every figure shows **only our own measured numbers**, always domain-aware (Step 1 on) versus
+our no-context baseline (Step 1 off); published baselines stay in the paper prose, never in a
+chart. Run from the repo root: `python3 results/make_ablation_figure.py`.
+
+| File | Shows |
+|---|---|
+| `fb_ablation.{png,pdf}` | (a) FinanceBench scored metrics baseline vs domain-aware; (b) capability matrix of what domain context unlocks in the generated eval (both datasets) |
+| `grounding_scatter.{png,pdf}` | per-case correctness vs grounding; the 18 well-grounded-but-incorrect definitional-mismatch cases |
+| `okr_radar.{png,pdf}` | the 4 safety/quality OKRs; baseline collapses on the safety axis |
+| `per_company.{png,pdf}` | FinanceBench pass rate by company — one flat number becomes a per-company map |
