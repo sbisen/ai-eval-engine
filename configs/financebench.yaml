@@ -1,4 +1,4 @@
-project: financebench-qa-agent
+project: AI Eval Engine
 
 # FinanceBench (Patronus AI): open-book question answering over real corporate
 # 10-K filings, with evidence strings. Contrast demo — open-ended, grounding-scored.

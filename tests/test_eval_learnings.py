@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from ai_eval_engine.evaluation import run_eval
 from ai_eval_engine.golden_set import REFUSE, GoldenCase, GoldenSet
-from ai_eval_engine.runbook import Runbook, update_runbook
+from ai_eval_engine.eval_learnings import Runbook, update_runbook
 
 
 def _set():

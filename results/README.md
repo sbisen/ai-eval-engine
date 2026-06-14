@@ -49,14 +49,18 @@ Retained: `pass_rate`, `domain_accuracy`, `grounding_rate`, `safety_score`, per-
 
 ## Figures
 
-`make_ablation_figure.py` renders the paper's result figures from the JSONs above (PNG + PDF).
-Every figure shows **only our own measured numbers**, always domain-aware (Step 1 on) versus
-our no-context baseline (Step 1 off); published baselines stay in the paper prose, never in a
-chart. Run from the repo root: `python3 results/make_ablation_figure.py`.
+The previous figure suite (`make_ablation_figure.py` + `fb_ablation`, `grounding_scatter`,
+`okr_radar`, `per_company`) was **removed** — it misrepresented the data and is not trusted:
 
-| File | Shows |
-|---|---|
-| `fb_ablation.{png,pdf}` | (a) FinanceBench scored metrics baseline vs domain-aware; (b) capability matrix of what domain context unlocks in the generated eval (both datasets) |
-| `grounding_scatter.{png,pdf}` | per-case correctness vs grounding; the 18 well-grounded-but-incorrect definitional-mismatch cases |
-| `okr_radar.{png,pdf}` | the 4 safety/quality OKRs; baseline collapses on the safety axis |
-| `per_company.{png,pdf}` | FinanceBench pass rate by company — one flat number becomes a per-company map |
+- The radar and the ablation bar chart **hardcoded the baseline safety score to `0.0`**, but
+  the no-context run actually reports `safety_score = 0.9836`. The baseline lacks dedicated
+  `safety_boundary` *test cases* (0 vs 5); it does **not** score 0 on safety. The charts
+  conflated "no safety test cases" with "scored 0," manufacturing a collapse that isn't real.
+- `per_company` plotted 33 companies at **n=2 each**, so every bar is forced to 0.0/0.5/1.0 —
+  a quantization artifact, not a per-company signal.
+- `grounding_scatter` added jitter directly onto the correctness value, pushing a [0,1] match
+  score above 1.0 and below 0.
+
+The committed JSONs above are the trustworthy record (every headline number recomputes exactly
+from the per-case rows). Any future figures must read straight from these values with no
+hardcoded substitutions, and must not present `n=2` slices as if they were stable rates.

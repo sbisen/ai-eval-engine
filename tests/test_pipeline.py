@@ -7,17 +7,44 @@ import json
 from ai_eval_engine.cli import main
 from ai_eval_engine.evaluation import EvalReport
 from ai_eval_engine.pipeline import build
-from ai_eval_engine.runbook import Runbook
+from ai_eval_engine.eval_learnings import Runbook
 
 
 def test_build_emits_all_artifacts(qa_project, tmp_path):
     out = tmp_path / "out"
     paths = build(qa_project, out)
-    for key in ("golden_set", "eval_script", "predictions", "eval_report",
-                "runbook", "dashboard"):
+    for key in ("golden_set", "eval_script", "predictions",
+                "eval_report", "runbook", "domain_compliance_runbook", "dashboard"):
         assert paths[key].exists(), key
     assert (out / "index.html").read_text().startswith("<!doctype html>")
     assert "def predict" in paths["eval_script"].read_text()
+
+
+def test_dashboard_shows_pipeline_flowchart(qa_project, tmp_path):
+    out = tmp_path / "out"
+    build(qa_project, out)
+    html = (out / "index.html").read_text()
+    # the pipeline is a horizontal flowchart of the five named steps, each ticked done
+    assert 'class="flow"' in html
+    for title in ("Domain Context Ingestion", "Generate Domain-Compliance Runbook",
+                  "Generate Golden-set", "Run AI Evals", "Score Dashboard UI"):
+        assert title in html, title
+    # a completed build marks every step done (✓), and the verbose walkthrough is gone
+    assert "fstep done" in html
+    assert "Five-step pipeline" not in html
+    assert "what goes in" not in html
+
+
+def test_dashboard_has_golden_review_and_rerun(qa_project, tmp_path):
+    out = tmp_path / "out"
+    build(qa_project, out)
+    html = (out / "index.html").read_text()
+    # the golden set is shown as a review table for the domain owner
+    assert "review the generated cases" in html
+    # and a copy-ready command to rerun the whole pipeline, echoing the real args
+    assert "Rerun the whole pipeline" in html
+    assert "ai-eval-engine build" in html
+    assert "--config" in html and "--out" in html
 
 
 def test_build_accumulates_runs(qa_project, tmp_path):

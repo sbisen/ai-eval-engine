@@ -25,17 +25,22 @@ from ai_eval_engine.domain_context import (
     build_user_message,
     extract_domain_context,
 )
-from ai_eval_engine.eval_script import generate_eval_script
 from ai_eval_engine.evaluation import (
     CaseResult,
     EvalReport,
+    generate_eval_script,
     make_baseline_predictions,
     run_eval,
 )
-from ai_eval_engine.golden_set import GoldenCase, GoldenSet, build_golden_set
+from ai_eval_engine.golden_set import (
+    GoldenCase,
+    GoldenSet,
+    build_golden_set,
+    generate_golden_set,
+)
 from ai_eval_engine.llm import DEFAULT_MODEL, AnthropicBackend, LLMBackend
 from ai_eval_engine.pipeline import build
-from ai_eval_engine.runbook import Runbook, RunbookItem, update_runbook
+from ai_eval_engine.eval_learnings import Runbook, RunbookItem, update_runbook
 from ai_eval_engine.sampling import format_sample, load_csv_sample
 
 __all__ = [
@@ -66,6 +71,7 @@ __all__ = [
     "format_artifacts",
     "format_sample",
     "generate_eval_script",
+    "generate_golden_set",
     "load_config",
     "load_csv_sample",
     "load_text_artifacts",

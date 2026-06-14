@@ -133,6 +133,24 @@
   note      = {arXiv:2306.11698. [VERIFY author list]},
 }
 
+% ---- Primary framework baselines (production eval frameworks: cite + differentiate) ----
+
+@misc{aisi2024inspect,
+  title        = {Inspect: An Open-Source Framework for Large Language Model Evaluations},
+  author       = {{UK AI Security Institute}},
+  year         = {2024},
+  howpublished = {Software, \url{https://inspect.aisi.org.uk}},
+  note         = {Repo: github.com/UKGovernmentBEIS/inspect_ai. Dataset/Solver/Scorer/Task; agent scaffolds, tool use, sandboxing. [VERIFY release year / org name]},
+}
+
+@misc{confident2024deepeval,
+  title        = {{DeepEval}: The {LLM} Evaluation Framework},
+  author       = {{Confident AI}},
+  year         = {2024},
+  howpublished = {Software, \url{https://github.com/confident-ai/deepeval}},
+  note         = {pytest-style; component/trajectory/end-to-end agent metrics. [VERIFY release year]},
+}
+
 % ---- Context-engineering (related work, cited lightly) ----
 
 @inproceedings{zhang2026ace,
@@ -141,4 +159,12 @@
   booktitle = {International Conference on Learning Representations (ICLR)},
   year      = {2026},
   note      = {Project page: https://ace-agent.github.io},
+}
+
+@misc{kayba2024aceframework,
+  title        = {{ACE} (Agentic Context Engine): Build Self-Improving AI Agents That Learn from Experience},
+  author       = {{Kayba.ai}},
+  year         = {2024},
+  howpublished = {Software v0.7.0, \url{https://pypi.org/project/ace-framework/}},
+  note         = {Repo: github.com/Kayba-ai/agentic-context-engine. Agent/Reflector/SkillManager roles; in-context skillbook, no fine-tuning. MIT. [VERIFY release year]},
 }

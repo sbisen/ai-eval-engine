@@ -35,7 +35,10 @@ don't). Regenerate the figure with [`images/figure1_pipeline.py`](images/figure1
 
 ## Install
 
-Python 3.11+:
+> **Requires Python 3.11+.** The code uses 3.10+ syntax (`X | None` type unions), so
+> 3.9 — the default `python3` on macOS — will fail with a `TypeError` on import. Check
+> first with `python3 --version`; if it is below 3.11, use an explicit `python3.11`
+> (e.g. `brew install python@3.11`).
 
 ```sh
 git clone https://github.com/sbisen/ai-eval-engine.git

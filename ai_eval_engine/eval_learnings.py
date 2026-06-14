@@ -1,10 +1,20 @@
-"""Step 4 — Agentic Safety Runbook.
+"""Step 4 — Living Runbook.
 
-An itemised JSON record of what the agent gets *wrong*, accumulated across eval
-runs. Each run's failures are clustered by (category, failure_type) into stable,
-content-addressed items. Re-running merges into the existing runbook: occurrence
-counts grow, ``last_seen`` advances, and example case ids accrue — so the runbook
-is a living artifact that reflects learnings over time rather than a one-shot dump.
+The living record of what the agent-under-test gets *wrong*. After each
+eval it reads the scorer's failures and writes down the learning: failures are
+clustered by (category, failure_type) into stable, content-addressed items, each
+carrying a ``recommended_check`` — the concrete golden-set addition that would
+catch this failure next time. Re-running merges into the existing runbook:
+occurrence counts grow, ``last_seen`` advances, and example case ids accrue, so the
+runbook accumulates learnings across runs rather than being a one-shot dump.
+
+This artifact closes the loop: it is fed back as an input to the next golden-set
+generation (see :func:`ai_eval_engine.golden_set.generate_golden_set`'s
+``runbook`` argument), so recurring failure modes become targeted new cases.
+
+Note on terminology: the clustering and ``recommended_check`` mapping are
+deterministic rules, not a learned model — "learning" here means the accumulated,
+human-reviewable record of failure modes, not gradient-based training.
 """
 
 from __future__ import annotations
@@ -65,6 +75,34 @@ class Runbook(BaseModel):
 
 def _item_id(category: str, failure_type: str) -> str:
     return "rb-" + hashlib.sha256(f"{category}::{failure_type}".encode()).hexdigest()[:8]
+
+
+_SEV_RANK = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+
+
+def aggregate_failure_modes(runbook: "Runbook") -> list[dict]:
+    """Collapse the flat per-(category, failure_type) items into failure *modes*,
+    dropping the per-company split, severity-then-frequency ordered.
+
+    Each mode dict: ``failure_type, severity, occurrences, categories, case_ids,
+    recommended_check``. Consumed by :func:`ai_eval_engine.domain_compliance_runbook.\
+build_compliance_runbook` to render the Failure Modes section. Deterministic — not learned.
+    """
+    modes: dict[str, dict] = {}
+    for it in runbook.items:
+        m = modes.setdefault(it.failure_type, {
+            "failure_type": it.failure_type, "severity": it.severity,
+            "occurrences": 0, "categories": [], "case_ids": [],
+            "recommended_check": it.recommended_check,
+        })
+        m["occurrences"] += it.occurrences
+        if it.category not in m["categories"]:
+            m["categories"].append(it.category)
+        m["case_ids"] += it.example_case_ids
+        if _SEV_RANK.get(it.severity, 9) < _SEV_RANK.get(m["severity"], 9):
+            m["severity"] = it.severity
+    return sorted(modes.values(),
+                  key=lambda m: (_SEV_RANK.get(m["severity"], 9), -m["occurrences"]))
 
 
 def update_runbook(runbook: Runbook, report: EvalReport) -> Runbook:

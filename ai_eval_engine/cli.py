@@ -2,8 +2,9 @@
 
     ai-eval-engine sample  --config configs/financebench.yaml      # Step 1, offline
     ai-eval-engine extract --config configs/financebench.yaml      # Step 1, calls Claude
-    ai-eval-engine golden  --config configs/financebench.yaml      # Step 2, offline
-    ai-eval-engine build   --config configs/financebench.yaml      # Steps 2-5, offline
+    ai-eval-engine golden    --config configs/financebench.yaml    # Step 2, offline
+    ai-eval-engine recommend --context context.json                # Step 3a, offline
+    ai-eval-engine build     --config configs/financebench.yaml    # Steps 2-5, offline
     ai-eval-engine version
 
 The ``sample``, ``golden`` and ``build`` commands run fully offline (no API key,
@@ -108,6 +109,46 @@ def _cmd_golden(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_generate(args: argparse.Namespace) -> int:
+    from ai_eval_engine.config import load_config
+    from ai_eval_engine.golden_set import (
+        _evidence_excerpts,
+        _require_task,
+        build_generation_message,
+        runbook_learnings,
+    )
+    from ai_eval_engine.sampling import load_csv_sample
+
+    config_path = Path(args.config).resolve()
+
+    if args.show_prompt:
+        config = load_config(config_path)
+        task = _require_task(config)
+        sample = load_csv_sample(config.domain_sources[0], config_path.parent, config)
+        excerpts = _evidence_excerpts(sample, task, config.category_field)
+        ctx = json.loads(Path(args.context).read_text())
+        learnings = runbook_learnings(
+            json.loads(Path(args.runbook).read_text()) if args.runbook else None
+        )
+        sys.stdout.write(
+            build_generation_message(config.project, ctx, excerpts, args.target, learnings)
+            + "\n"
+        )
+        return 0
+
+    from ai_eval_engine.golden_set import generate_golden_set
+
+    golden = generate_golden_set(args.config, args.context, target_cases=args.target,
+                                 runbook_path=args.runbook)
+    if args.out:
+        golden.save(args.out)
+        print(f"generated golden set ({golden.case_count} cases, {golden.version}) "
+              f"-> {args.out}", file=sys.stderr)
+    else:
+        sys.stdout.write(golden.model_dump_json(indent=2) + "\n")
+    return 0
+
+
 def _cmd_build(args: argparse.Namespace) -> int:
     from ai_eval_engine.pipeline import build
 
@@ -154,6 +195,29 @@ def build_parser() -> argparse.ArgumentParser:
     p_golden.add_argument("--context", help="Optional DomainContext JSON (adds safety cases).")
     p_golden.add_argument("--out", help="Write the golden set JSON to this path.")
     p_golden.set_defaults(func=_cmd_golden)
+
+    p_generate = sub.add_parser(
+        "generate",
+        help="Generate a varied, edge-case golden set via Claude (Step 2, requires ANTHROPIC_API_KEY).",
+    )
+    p_generate.add_argument("--config", required=True, help="Path to a project YAML config.")
+    p_generate.add_argument(
+        "--context", required=True, help="Step-1 DomainContext JSON (grounds the generation)."
+    )
+    p_generate.add_argument(
+        "--target", type=int, default=24, help="Approx. number of cases to author (default 24)."
+    )
+    p_generate.add_argument(
+        "--runbook",
+        help="Optional Step-4 living runbook JSON; its failure modes are re-targeted.",
+    )
+    p_generate.add_argument("--out", help="Write the golden set JSON to this path.")
+    p_generate.add_argument(
+        "--show-prompt",
+        action="store_true",
+        help="Print the exact generation prompt instead of calling the model (offline).",
+    )
+    p_generate.set_defaults(func=_cmd_generate)
 
     p_build = sub.add_parser(
         "build",
