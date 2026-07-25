@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Domain accuracy of generated questions &mdash; with vs without context</title>
+<style>
+ body{margin:0;background:#f3f4f6;color:#111827;font-family:-apple-system,Segoe UI,Roboto,sans-serif;padding:32px}
+ .card{max-width:1040px;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+   box-shadow:0 1px 3px rgba(0,0,0,.06);padding:24px 28px}
+ h1{font-size:20px;margin:0 0 4px} p.sub{margin:0 0 16px;color:#6b7280;font-size:14px}
+ svg{width:100%;height:auto;display:block}
+ .foot{margin-top:18px;font-size:13px;line-height:1.55;color:#4b5563;border-top:1px solid #eee;padding-top:14px}
+</style></head><body>
+ <div class="card">
+  <h1>Domain accuracy of generated questions &mdash; with vs without domain context</h1>
+  <p class="sub">FinanceBench golden sets &middot; we test the questions, not the answers</p>
+  <svg viewBox="0 0 1280 680" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <rect width="1280" height="680" fill="#ffffff"/>
+  <rect x="150" y="40" width="26" height="26" rx="5" fill="#9aa3ad"/><text x="186" y="61" font-size="28" fill="#374151">Without context</text><rect x="460" y="40" width="26" height="26" rx="5" fill="#3f6fb0"/><text x="496" y="61" font-size="28" fill="#374151">With context</text>
+  <line x1="150" y1="560.0" x2="1180" y2="560.0" stroke="#e5e7eb"/><text x="132" y="566.0" text-anchor="end" font-size="27" fill="#6b7280">0%</text><line x1="150" y1="472.0" x2="1180" y2="472.0" stroke="#e5e7eb"/><text x="132" y="478.0" text-anchor="end" font-size="27" fill="#6b7280">20%</text><line x1="150" y1="384.0" x2="1180" y2="384.0" stroke="#e5e7eb"/><text x="132" y="390.0" text-anchor="end" font-size="27" fill="#6b7280">40%</text><line x1="150" y1="296.0" x2="1180" y2="296.0" stroke="#e5e7eb"/><text x="132" y="302.0" text-anchor="end" font-size="27" fill="#6b7280">60%</text><line x1="150" y1="208.0" x2="1180" y2="208.0" stroke="#e5e7eb"/><text x="132" y="214.0" text-anchor="end" font-size="27" fill="#6b7280">80%</text><line x1="150" y1="120.0" x2="1180" y2="120.0" stroke="#e5e7eb"/><text x="132" y="126.0" text-anchor="end" font-size="27" fill="#6b7280">100%</text>
+  <line x1="150" y1="120" x2="150" y2="560" stroke="#d1d5db"/>
+  <line x1="150" y1="560" x2="1180" y2="560" stroke="#d1d5db"/>
+  <rect x="320" y="335.6" width="300" height="224.4" rx="4" fill="#9aa3ad"/><text x="470" y="317.6" text-anchor="middle" font-size="40" font-weight="700" fill="#1f2937">51%</text>
+  <rect x="680" y="150.8" width="300" height="409.2" rx="4" fill="#3f6fb0"/><text x="830" y="132.8" text-anchor="middle" font-size="40" font-weight="700" fill="#1f2937">93%</text>
+  <text x="650" y="613" text-anchor="middle" font-size="35" font-weight="700" fill="#111827">Domain Accuracy</text>
+  <text x="650" y="652" text-anchor="middle" font-size="29" font-weight="700" fill="#16a34a">+41 pts</text>
+</svg>
+  <div class="foot">Metric: <b>graded question domain accuracy</b> = mean of two axes an LLM-as-judge (holding the raw FinanceBench domain JSON) scores per <i>generated question</i> &mdash; <i>domain relevance</i> (is it a real 10-K finance question) and <i>groundedness</i> (does it pin a specific company/period/figure verifiable against the raw data). We test the questions, not answers; compliance/refusal probes excluded. <b>With context</b> (generator had the raw domain info + runbook): mean 93% &mdash; relevant and grounded. <b>Without context</b> (generator had neither): mean 51% &mdash; the questions are valid finance questions (relevance credit) but company-less, so they verify against no specific filing (low groundedness). The moral: domain context lets the generator write questions that are not just on-topic but actually gradeable against the domain.</div>
+ </div>
+</body></html>

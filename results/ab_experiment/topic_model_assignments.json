@@ -1,0 +1,169 @@
+{
+  "method": "NMF topic modeling (TF-IDF, 1-2 grams, finance-boilerplate stopwords) over raw question text; fine-topic assignment hand-verified by reading each question",
+  "with_domain_context": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "Segment & revenue mix",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [
+      "Off-domain / out-of-scope refusal",
+      "MNPI / confidential-data refusal",
+      "No advice / no personal opinion",
+      "Escalate / withhold unauthorized action"
+    ],
+    "assignments": {
+      "Income-statement metrics": [
+        "wdc-004",
+        "wdc-006",
+        "wdc-007",
+        "wdc-008",
+        "wdc-013",
+        "wdc-020",
+        "wdc-023",
+        "wdc-027",
+        "wdc-029",
+        "wdc-032",
+        "wdc-034"
+      ],
+      "Balance-sheet items": [
+        "wdc-002",
+        "wdc-009",
+        "wdc-011",
+        "wdc-017",
+        "wdc-021",
+        "wdc-024",
+        "wdc-028",
+        "wdc-030"
+      ],
+      "Ratios & multi-step computation": [
+        "wdc-003",
+        "wdc-018",
+        "wdc-019",
+        "wdc-025",
+        "wdc-026",
+        "wdc-033"
+      ],
+      "Cash-flow metrics": [
+        "wdc-001",
+        "wdc-005",
+        "wdc-015",
+        "wdc-031"
+      ],
+      "Segment & revenue mix": [
+        "wdc-012",
+        "wdc-022",
+        "wdc-035"
+      ],
+      "Metric applicability / when-to-decline": [
+        "wdc-010",
+        "wdc-014",
+        "wdc-016",
+        "wdc-036"
+      ],
+      "Off-domain / out-of-scope refusal": [
+        "wdc-037",
+        "wdc-038",
+        "wdc-039",
+        "wdc-040"
+      ],
+      "MNPI / confidential-data refusal": [
+        "wdc-041",
+        "wdc-042",
+        "wdc-043",
+        "wdc-044"
+      ],
+      "No advice / no personal opinion": [
+        "wdc-045",
+        "wdc-046",
+        "wdc-047"
+      ],
+      "Escalate / withhold unauthorized action": [
+        "wdc-048",
+        "wdc-049",
+        "wdc-050"
+      ]
+    }
+  },
+  "without_domain_context": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Business & segment narrative",
+      "Risk, governance & audit",
+      "Balance-sheet items",
+      "Capital returns & share info",
+      "Cash-flow metrics",
+      "Ratios & derived metrics"
+    ],
+    "compliance_subtree_topics": [],
+    "assignments": {
+      "Income-statement metrics": [
+        "ndc-001",
+        "ndc-002",
+        "ndc-003",
+        "ndc-004",
+        "ndc-005",
+        "ndc-006",
+        "ndc-007",
+        "ndc-029",
+        "ndc-030",
+        "ndc-044"
+      ],
+      "Business & segment narrative": [
+        "ndc-015",
+        "ndc-016",
+        "ndc-017",
+        "ndc-018",
+        "ndc-019",
+        "ndc-022",
+        "ndc-024",
+        "ndc-038",
+        "ndc-041",
+        "ndc-046",
+        "ndc-047",
+        "ndc-048"
+      ],
+      "Risk, governance & audit": [
+        "ndc-020",
+        "ndc-021",
+        "ndc-023",
+        "ndc-025",
+        "ndc-026",
+        "ndc-027",
+        "ndc-028",
+        "ndc-036",
+        "ndc-037",
+        "ndc-040",
+        "ndc-042",
+        "ndc-049",
+        "ndc-050"
+      ],
+      "Balance-sheet items": [
+        "ndc-008",
+        "ndc-009",
+        "ndc-010",
+        "ndc-014",
+        "ndc-039"
+      ],
+      "Capital returns & share info": [
+        "ndc-032",
+        "ndc-033",
+        "ndc-034",
+        "ndc-035"
+      ],
+      "Cash-flow metrics": [
+        "ndc-011",
+        "ndc-012",
+        "ndc-013"
+      ],
+      "Ratios & derived metrics": [
+        "ndc-031",
+        "ndc-043",
+        "ndc-045"
+      ]
+    }
+  }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Baseline vs AI Eval Engine — what each golden set can cover</title>
+<style>
+  :root{
+    --green:#3aa655; --grey:#9aa3ad; --amber:#d08a3a; --blue:#3f6fb0;
+    --ink:#1f2d3d; --muted:#7b8794; --line:#edf0f2; --fwbg:#f1f6fb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f6f8;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:34px}
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-size:18px;letter-spacing:.04em;color:#586574;text-transform:uppercase;margin:0 0 10px}
+  .lede{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 22px;max-width:1080px}
+  .lede b{color:var(--ink)}
+  .card{background:#fff;border:1px solid #e6e9ec;border-radius:16px;
+    box-shadow:0 1px 3px rgba(20,30,50,.05);padding:10px 18px 18px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:center;padding:18px 14px;vertical-align:middle}
+  th:first-child,td:first-child{text-align:left;width:31%}
+  thead th{font-size:15px;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line)}
+  thead th .sub{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:3px}
+  thead th.fw{color:var(--blue)}
+  thead th.fw .sub{color:var(--blue);opacity:.85}
+  tbody td{border-bottom:1px solid var(--line);font-size:15px}
+  tbody tr:last-child td{border-bottom:none}
+  .cap{font-weight:700;color:#23313f;line-height:1.35}
+  .fw{background:var(--fwbg)}
+  .sym{font-size:21px;font-weight:700;line-height:1}
+  .ok{color:var(--green)} .no{color:var(--grey)} .ad{color:var(--amber)} .dash{color:#c2c8ce}
+  .note{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.35}
+  .big{font-size:18px;font-weight:800;color:var(--green)}
+  .none{font-size:16px;font-weight:700;color:var(--muted)}
+  .high{font-size:16px;font-weight:800;color:var(--amber)}
+  .callout{margin-top:20px;background:#eef3fb;border-left:4px solid var(--blue);
+    border-radius:0 10px 10px 0;padding:16px 20px;color:#2c3a49;font-size:15px;line-height:1.6}
+</style></head>
+<body>
+<div class="wrap">
+  <h1>Baseline (no framework) vs AI Eval Engine — what each golden set can cover</h1>
+  <p class="lede">The two baseline columns are the no-framework reality, not a measured run: with no golden
+    set there is nothing to evaluate against; a hand-authored set covers only what someone remembered to
+    write and drifts as data and prompts change. The framework column is <b>measured</b> — the generated
+    with-context golden set. All <b>50</b> questions are accounted for below:
+    <b>36 domain-capability questions</b> (of which 5 are edge-case/decline) <b>+ 14 compliance/safety
+    probes</b> = 50.</p>
+
+  <div class="card">
+   <table>
+    <thead>
+      <tr>
+        <th>Capability</th>
+        <th>No golden set<span class="sub">(default)</span></th>
+        <th>Hand-authored<span class="sub">(status quo)</span></th>
+        <th class="fw">AI Eval Engine<span class="sub">domain info + runbook</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cap">A golden set exists to test against</td>
+        <td><span class="sym dash">—</span></td>
+        <td><span class="sym ok">✓</span></td>
+        <td class="fw"><span class="sym ok">✓</span><span class="note">50 questions total</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Domain capability / metric questions (income stmt, balance sheet, cash flow, ratios, segments)</td>
+        <td><span class="sym no">✗</span></td>
+        <td><span class="sym ad">~</span><span class="note">common ones only</span></td>
+        <td class="fw"><span class="big">36 tests</span><span class="note">across 6 topic areas</span></td>
+      </tr>
+      <tr>
+        <td class="cap" style="padding-left:34px;font-weight:600">↳ of which edge-case / decline (metric not meaningful, missing line item)</td>
+        <td><span class="sym no">✗</span></td>
+        <td><span class="sym ad">~</span></td>
+        <td class="fw"><span class="big">5 tests</span><span class="note">subset of the 36</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Compliance / safety probes (off-domain, MNPI, advice, escalation)</td>
+        <td><span class="sym no">✗</span></td>
+        <td><span class="sym ad">~</span><span class="note">only if remembered</span></td>
+        <td class="fw"><span class="big">14 tests</span><span class="note">off-domain 4 · MNPI 4 · advice 3 · escalation 3</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Systematic coverage of all 5 compliance criteria</td>
+        <td><span class="sym no">✗</span></td>
+        <td><span class="sym ad">~</span><span class="note">ad hoc — no guarantee</span></td>
+        <td class="fw"><span class="sym ok">✓</span><span class="note">all 5 probed by construction</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Versioned &amp; reproducible</td>
+        <td><span class="sym dash">—</span></td>
+        <td><span class="sym no">✗</span><span class="note">usually not</span></td>
+        <td class="fw"><span class="sym ok">✓</span><span class="note">content-addressed</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Auto-regenerates when data / prompts change</td>
+        <td><span class="sym dash">—</span></td>
+        <td><span class="sym no">✗</span><span class="note">goes stale</span></td>
+        <td class="fw"><span class="sym ok">✓</span></td>
+      </tr>
+      <tr>
+        <td class="cap">Per-team authoring effort</td>
+        <td><span class="none">none</span><span class="note">but nothing to ship-gate on</span></td>
+        <td><span class="high">high</span><span class="note">from scratch, every team</span></td>
+        <td class="fw"><span class="big">~15-line YAML</span></td>
+      </tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="callout">Without a domain-driven golden set you either hand-author one (ad hoc, stale,
+    per-team) or have none — so whole compliance criteria go untested, and the agent can breach them
+    while the eval never knows.</div>
+</div>
+</body></html>

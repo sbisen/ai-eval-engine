@@ -1,0 +1,138 @@
+[
+  {
+    "topic": "Income-statement metrics",
+    "kind": "cap",
+    "n": 11,
+    "x": 0.2375,
+    "y": 0.9818,
+    "num": 1
+  },
+  {
+    "topic": "Balance-sheet items",
+    "kind": "cap",
+    "n": 8,
+    "x": 0.2475,
+    "y": 1.0,
+    "num": 2
+  },
+  {
+    "topic": "Ratios & multi-step computation",
+    "kind": "cap",
+    "n": 6,
+    "x": 0.2945,
+    "y": 0.9,
+    "num": 3
+  },
+  {
+    "topic": "Cash-flow metrics",
+    "kind": "cap",
+    "n": 4,
+    "x": 0.2334,
+    "y": 1.0,
+    "num": 4
+  },
+  {
+    "topic": "Segment & revenue mix",
+    "kind": "cap",
+    "n": 3,
+    "x": 0.3443,
+    "y": 0.8667,
+    "num": 5
+  },
+  {
+    "topic": "Metric applicability / when-to-decline",
+    "kind": "cap",
+    "n": 4,
+    "x": 0.2587,
+    "y": 0.8,
+    "num": 6
+  },
+  {
+    "topic": "Off-domain / out-of-scope refusal",
+    "kind": "cmp",
+    "n": 4,
+    "x": 0.1216,
+    "y": 0.25,
+    "num": 7
+  },
+  {
+    "topic": "MNPI / confidential-data refusal",
+    "kind": "cmp",
+    "n": 4,
+    "x": 0.1253,
+    "y": 0.3,
+    "num": 8
+  },
+  {
+    "topic": "No advice / no personal opinion",
+    "kind": "cmp",
+    "n": 3,
+    "x": 0.1542,
+    "y": 0.3333,
+    "num": 9
+  },
+  {
+    "topic": "Escalate / withhold unauthorized action",
+    "kind": "cmp",
+    "n": 3,
+    "x": 0.215,
+    "y": 0.4,
+    "num": 10
+  },
+  {
+    "topic": "Income-statement metrics",
+    "kind": "gen",
+    "n": 10,
+    "x": 0.2091,
+    "y": 0.2,
+    "num": 11
+  },
+  {
+    "topic": "Business & segment narrative",
+    "kind": "gen",
+    "n": 12,
+    "x": 0.1948,
+    "y": 0.1333,
+    "num": 12
+  },
+  {
+    "topic": "Risk, governance & audit",
+    "kind": "gen",
+    "n": 13,
+    "x": 0.179,
+    "y": 0.0462,
+    "num": 13
+  },
+  {
+    "topic": "Balance-sheet items",
+    "kind": "gen",
+    "n": 5,
+    "x": 0.1645,
+    "y": 0.28,
+    "num": 14
+  },
+  {
+    "topic": "Capital returns & share info",
+    "kind": "gen",
+    "n": 4,
+    "x": 0.218,
+    "y": 0.1,
+    "num": 15
+  },
+  {
+    "topic": "Cash-flow metrics",
+    "kind": "gen",
+    "n": 3,
+    "x": 0.2101,
+    "y": 0.2,
+    "num": 16
+  },
+  {
+    "topic": "Ratios & derived metrics",
+    "kind": "gen",
+    "n": 3,
+    "x": 0.1756,
+    "y": 0.3333,
+    "num": 17
+  }
+]

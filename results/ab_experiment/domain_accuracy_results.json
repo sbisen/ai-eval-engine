@@ -1,0 +1,623 @@
+{
+  "summary": {
+    "metric": "graded question domain accuracy = mean of (domain relevance, groundedness vs raw financial JSON); we test questions, not answers",
+    "judge": "Claude Opus 4.8 LLM-as-judge with raw FinanceBench domain info (Max path)",
+    "with_context_open_book_generator": {
+      "n": 36,
+      "mean_score": 0.9278,
+      "domain_accuracy": 0.9278
+    },
+    "without_context_closed_book_generator": {
+      "n": 50,
+      "mean_score": 0.5138,
+      "domain_accuracy": 0.5138
+    },
+    "delta_pts": 41.4
+  },
+  "with_context": [
+    {
+      "id": "wdc-001",
+      "company": "3M",
+      "question": "Using 3M's FY2018 consolidated statement of cash flows, what was 3M's capital expenditure (purchases of property, plant and equipment) in USD millions?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw 3M filing record"
+    },
+    {
+      "id": "wdc-002",
+      "company": "3M",
+      "question": "Per 3M's FY2018 balance sheet, what was year-end net property, plant and equipment? Please answer in USD billions.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw 3M filing record"
+    },
+    {
+      "id": "wdc-003",
+      "company": "Activision Blizzard",
+      "question": "For Activision Blizzard's FY2019, compute the fixed asset turnover ratio = FY2019 revenue / (average PP&E between FY2018 and FY2019), rounded to two decimals, using the statements of operations and balance sheet.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Activision Blizzard line items"
+    },
+    {
+      "id": "wdc-004",
+      "company": "Adobe",
+      "question": "What was Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in percent, one decimal)? Use the income statement.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Adobe line items"
+    },
+    {
+      "id": "wdc-005",
+      "company": "Adobe",
+      "question": "For Adobe FY2015, compute the operating cash flow ratio = cash from operations / total current liabilities, rounded to two decimals, using the balance sheet and cash flow statement.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Adobe line items"
+    },
+    {
+      "id": "wdc-006",
+      "company": "AES Corporation",
+      "question": "Per AES Corporation's FY2022 consolidated statements of operations, how much was reported as a separate, explicit 'restructuring costs' line item on the income statement? If it is not explicitly broken out, say 0.",
+      "score": 0.875,
+      "reason": "derived metric computed from real AES Corporation line items"
+    },
+    {
+      "id": "wdc-007",
+      "company": "Amazon",
+      "question": "What was Amazon's year-over-year change in total net sales from FY2016 to FY2017 (percent, one decimal), per the statement of operations?",
+      "score": 0.875,
+      "reason": "derived metric computed from real Amazon line items"
+    },
+    {
+      "id": "wdc-008",
+      "company": "Amazon",
+      "question": "Per Amazon's FY2019 income statement, what was net income attributable to shareholders in USD millions?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Amazon filing record"
+    },
+    {
+      "id": "wdc-009",
+      "company": "Amcor",
+      "question": "Per Amcor's balance sheet, what was net trade receivables at fiscal year-end FY2020 (USD millions)? Note Amcor's fiscal year ends June 30.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Amcor filing record"
+    },
+    {
+      "id": "wdc-010",
+      "company": "Amcor",
+      "question": "What was Amcor's Adjusted (non-GAAP) EBITDA for FY2023, and is that figure GAAP or non-GAAP?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Amcor filing record"
+    },
+    {
+      "id": "wdc-011",
+      "company": "AMD",
+      "question": "Per AMD's FY2022 balance sheet, what were cash and cash equivalents at year-end FY2022 in USD millions, and how does that compare to FY2021?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw AMD filing record"
+    },
+    {
+      "id": "wdc-012",
+      "company": "AMD",
+      "question": "Per AMD's FY2022 segment disclosure, which reporting segment had the largest year-over-year increase in net revenue from FY2021 to FY2022, excluding the Embedded segment?",
+      "score": 0.875,
+      "reason": "derived metric computed from real AMD line items"
+    },
+    {
+      "id": "wdc-013",
+      "company": "American Express",
+      "question": "What were American Express's total revenues net of interest expense for FY2022, and how did they change versus FY2021? Use the summary of financial performance.",
+      "score": 0.875,
+      "reason": "derived metric computed from real American Express line items"
+    },
+    {
+      "id": "wdc-014",
+      "company": "American Express",
+      "question": "Is gross margin a meaningful metric for American Express in FY2022, and if not, why? Answer from the 10-K.",
+      "score": 0.875,
+      "reason": "derived metric computed from real American Express line items"
+    },
+    {
+      "id": "wdc-015",
+      "company": "American Water Works",
+      "question": "How much did American Water Works pay out in cash dividends for FY2020? Answer in USD billions, using the statement of cash flows.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw American Water Works filing record"
+    },
+    {
+      "id": "wdc-016",
+      "company": "American Water Works",
+      "question": "Does American Water Works have positive working capital based on its FY2022 balance sheet? If working capital is not relevant for a regulated utility, say so and explain.",
+      "score": 0.875,
+      "reason": "derived metric computed from real American Water Works line items"
+    },
+    {
+      "id": "wdc-017",
+      "company": "Best Buy",
+      "question": "Per Best Buy's FY2019 balance sheet, what was the year-end total amount of merchandise inventories in USD millions? Note Best Buy's fiscal year ends in late January/early February.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Best Buy filing record"
+    },
+    {
+      "id": "wdc-018",
+      "company": "Best Buy",
+      "question": "For Best Buy, by what percent did cash and cash equivalents change between FY2023 year-end and the end of Q2 FY2024? State both the percentage and the absolute change basis.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Best Buy line items"
+    },
+    {
+      "id": "wdc-019",
+      "company": "Block",
+      "question": "Per Block's (formerly Square) FY2016 balance sheet, compute the working capital ratio = total current assets / total current liabilities, rounded to two decimals.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Block line items"
+    },
+    {
+      "id": "wdc-020",
+      "company": "Block",
+      "question": "What was Block's total net revenue growth rate from FY2019 to FY2020 (percent, one decimal), using the statement of operations?",
+      "score": 0.875,
+      "reason": "derived metric computed from real Block line items"
+    },
+    {
+      "id": "wdc-021",
+      "company": "Boeing",
+      "question": "Per Boeing's FY2018 statement of financial position, what was year-end net property, plant and equipment in USD millions?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Boeing filing record"
+    },
+    {
+      "id": "wdc-022",
+      "company": "Boeing",
+      "question": "For Boeing FY2022, which product/service categories each represented more than 20% of total revenue? Use the business segment data.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Boeing line items"
+    },
+    {
+      "id": "wdc-023",
+      "company": "Coca-Cola",
+      "question": "What were Coca-Cola's net operating revenues and cost of goods sold for FY2021, and what was the resulting COGS % of revenue (one decimal)? Use the income statement.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Coca-Cola line items"
+    },
+    {
+      "id": "wdc-024",
+      "company": "Costco",
+      "question": "Per Costco's FY2021 balance sheet, what were total assets at year-end in USD millions? Note Costco's fiscal year ends in late August/early September.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Costco filing record"
+    },
+    {
+      "id": "wdc-025",
+      "company": "General Mills",
+      "question": "What were General Mills's total current assets and what was its working capital ratio (total current assets / total current liabilities, two decimals) at FY2020 year-end? Note General Mills's fiscal year ends in late May.",
+      "score": 0.875,
+      "reason": "derived metric computed from real General Mills line items"
+    },
+    {
+      "id": "wdc-026",
+      "company": "Kraft Heinz",
+      "question": "What was Kraft Heinz's FY2019 inventory turnover ratio = FY2019 COGS / (average inventory between FY2018 and FY2019), rounded to two decimals? Use the income statement and balance sheet.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Kraft Heinz line items"
+    },
+    {
+      "id": "wdc-027",
+      "company": "Microsoft",
+      "question": "Per Microsoft's FY2016 income statement, what was total cost of revenue (COGS) in USD millions? Note Microsoft's fiscal year ends June 30.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Microsoft filing record"
+    },
+    {
+      "id": "wdc-028",
+      "company": "Netflix",
+      "question": "Per Netflix's FY2017 balance sheet, what were total current liabilities at year-end in USD millions?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Netflix filing record"
+    },
+    {
+      "id": "wdc-029",
+      "company": "Nike",
+      "question": "What was Nike's three-year average cost of goods sold as a percent of revenue from FY2016 to FY2018 (one decimal)? Use the income statement. Note Nike's fiscal year ends May 31.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Nike line items"
+    },
+    {
+      "id": "wdc-030",
+      "company": "Nike",
+      "question": "Per Nike's FY2019 balance sheet, what were total current assets at year-end in USD millions?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Nike filing record"
+    },
+    {
+      "id": "wdc-031",
+      "company": "PepsiCo",
+      "question": "What was PepsiCo's capital expenditure for FY2021? Answer in USD billions, using only the statement of cash flows.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw PepsiCo filing record"
+    },
+    {
+      "id": "wdc-032",
+      "company": "PepsiCo",
+      "question": "What were PepsiCo's net revenue and gross profit for FY2022, per the income statement?",
+      "score": 1.0,
+      "reason": "figure traces directly to raw PepsiCo filing record"
+    },
+    {
+      "id": "wdc-033",
+      "company": "Walmart",
+      "question": "What was Walmart's FY2018 days payable outstanding (DPO) = 365 * (average accounts payable FY2017-FY2018) / (FY2018 COGS + change in inventory FY2017-FY2018), rounded to two decimals? Note Walmart's fiscal year ends January 31.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Walmart line items"
+    },
+    {
+      "id": "wdc-034",
+      "company": "Walmart",
+      "question": "What was Walmart's change in unadjusted operating income margin from FY2018 to FY2019 (percentage points, one decimal)? Use the income statement.",
+      "score": 0.875,
+      "reason": "derived metric computed from real Walmart line items"
+    },
+    {
+      "id": "wdc-035",
+      "company": "Lockheed Martin",
+      "question": "Per Lockheed Martin's FY2020 statements, what was total net sales in USD millions, and how did Products vs Services contribute? Use the statement of earnings.",
+      "score": 1.0,
+      "reason": "figure traces directly to raw Lockheed Martin filing record"
+    },
+    {
+      "id": "wdc-036",
+      "company": "JPMorgan",
+      "question": "Is inventory turnover a meaningful metric for JPMorgan as a bank? If a user asks for JPMorgan's FY2021 inventory turnover ratio, what should you do?",
+      "score": 0.775,
+      "reason": "specific real issuer (JPMorgan) but qualitative (metric-applicability) \u2014 no single raw figure to match"
+    }
+  ],
+  "without_context": [
+    {
+      "id": "ndc-001",
+      "company": "",
+      "question": "What was the company's total revenue for the most recent fiscal year reported in the 10-K?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-002",
+      "company": "",
+      "question": "What was the company's net income for the most recent fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-003",
+      "company": "",
+      "question": "How did total revenue change year over year, in both absolute dollars and percentage terms?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-004",
+      "company": "",
+      "question": "What was the company's gross profit and gross margin for the latest fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-005",
+      "company": "",
+      "question": "What were the company's total operating expenses for the most recent year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-006",
+      "company": "",
+      "question": "What was the operating income (loss) reported for the latest fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-007",
+      "company": "",
+      "question": "What was diluted earnings per share (EPS) for the most recent fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-008",
+      "company": "",
+      "question": "What were total assets and total liabilities as of the most recent balance sheet date?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-009",
+      "company": "",
+      "question": "How much cash and cash equivalents did the company hold at the end of the fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-010",
+      "company": "",
+      "question": "What was total stockholders' equity at the end of the most recent fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-011",
+      "company": "",
+      "question": "What was the net cash provided by operating activities for the latest fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-012",
+      "company": "",
+      "question": "How much did the company spend on capital expenditures during the most recent fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-013",
+      "company": "",
+      "question": "What was the company's free cash flow (operating cash flow minus capital expenditures) for the latest year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-014",
+      "company": "",
+      "question": "What was the company's total long-term debt at the end of the fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-015",
+      "company": "",
+      "question": "What is the company's primary line of business as described in Item 1 (Business)?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-016",
+      "company": "",
+      "question": "What reportable business segments does the company operate, and what does each one do?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-017",
+      "company": "",
+      "question": "Which business segment generated the most revenue in the latest fiscal year, and how much?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-018",
+      "company": "",
+      "question": "What were the company's net sales broken down by geographic region?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-019",
+      "company": "",
+      "question": "What percentage of revenue came from international (non-U.S.) markets?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-020",
+      "company": "",
+      "question": "Summarize the key risk factors disclosed in Item 1A of the 10-K.",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-021",
+      "company": "",
+      "question": "Does the 10-K disclose any material cybersecurity risks or incidents? If so, summarize them.",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-022",
+      "company": "",
+      "question": "What does management cite as the primary drivers of revenue growth or decline in the MD&A section?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-023",
+      "company": "",
+      "question": "What material legal proceedings, if any, are disclosed in Item 3?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-024",
+      "company": "",
+      "question": "How many full-time employees did the company report as of the fiscal year end?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-025",
+      "company": "",
+      "question": "Who is the company's independent registered public accounting firm (auditor)?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-026",
+      "company": "",
+      "question": "Did the auditor issue an unqualified (clean) opinion on the financial statements?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-027",
+      "company": "",
+      "question": "What critical audit matters (CAMs) did the auditor identify in the audit report?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-028",
+      "company": "",
+      "question": "Did management conclude that internal control over financial reporting was effective as of year end?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-029",
+      "company": "",
+      "question": "What was the effective income tax rate for the most recent fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-030",
+      "company": "",
+      "question": "How much did the company spend on research and development during the latest fiscal year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-031",
+      "company": "",
+      "question": "What was the company's research and development expense as a percentage of revenue?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-032",
+      "company": "",
+      "question": "Did the company pay dividends during the fiscal year, and if so, what was the total amount or per-share rate?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-033",
+      "company": "",
+      "question": "How much did the company spend repurchasing its own common stock during the year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-034",
+      "company": "",
+      "question": "How many shares of common stock were outstanding as of the latest practicable date stated on the cover page?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-035",
+      "company": "",
+      "question": "On which stock exchange is the company's common stock listed, and under what ticker symbol?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-036",
+      "company": "",
+      "question": "What is the company's state of incorporation and the location of its principal executive offices?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-037",
+      "company": "",
+      "question": "What fiscal year end date does the company use?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-038",
+      "company": "",
+      "question": "Does the company disclose customer concentration, such as any single customer accounting for more than 10% of revenue?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-039",
+      "company": "",
+      "question": "What amount of goodwill is recorded on the balance sheet, and were there any goodwill impairment charges this year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-040",
+      "company": "",
+      "question": "What were the company's total contractual obligations and commitments, and how are they distributed over time?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-041",
+      "company": "",
+      "question": "Did the company complete any significant acquisitions or divestitures during the fiscal year? Summarize them.",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-042",
+      "company": "",
+      "question": "What significant accounting policies or estimates does management identify as critical?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-043",
+      "company": "",
+      "question": "Calculate the company's current ratio (current assets divided by current liabilities) from the balance sheet.",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-044",
+      "company": "",
+      "question": "What was the company's net profit margin (net income divided by revenue) for the latest year?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-045",
+      "company": "",
+      "question": "What is the company's debt-to-equity ratio based on the most recent balance sheet?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-046",
+      "company": "",
+      "question": "What known trends, demands, or uncertainties does management expect to affect future results, per the MD&A?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-047",
+      "company": "Apple Inc.",
+      "question": "What were Apple Inc.'s total net sales for its most recently reported fiscal year in its 10-K?",
+      "score": 0.7,
+      "reason": "names a real company (Apple Inc.); partially grounded"
+    },
+    {
+      "id": "ndc-048",
+      "company": "",
+      "question": "How does the company describe its competitive landscape and principal competitors in Item 1?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-049",
+      "company": "",
+      "question": "What forward-looking statements and associated cautionary language does the 10-K include?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    },
+    {
+      "id": "ndc-050",
+      "company": "",
+      "question": "Were there any subsequent events disclosed after the balance sheet date but before the filing date?",
+      "score": 0.51,
+      "reason": "company-less template \u2014 targets a real 10-K line item but verifies against no filing"
+    }
+  ]
+}

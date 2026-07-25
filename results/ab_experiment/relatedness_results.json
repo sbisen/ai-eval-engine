@@ -1,0 +1,454 @@
+{
+  "with_context_stats": {
+    "n": 36,
+    "min": 0.15,
+    "q1": 0.2147,
+    "median": 0.2628,
+    "q3": 0.3047,
+    "max": 0.418,
+    "mean": 0.26
+  },
+  "without_context_stats": {
+    "n": 50,
+    "min": 0.1002,
+    "q1": 0.1483,
+    "median": 0.1762,
+    "q3": 0.2022,
+    "max": 0.4501,
+    "mean": 0.1921
+  },
+  "with_context": [
+    {
+      "id": "wdc-001",
+      "score": 0.251,
+      "question": "Using 3M's FY2018 consolidated statement of cash flows, what was 3M's capital expenditure (purchases of property, plant and equipment) in USD millions?"
+    },
+    {
+      "id": "wdc-002",
+      "score": 0.2669,
+      "question": "Per 3M's FY2018 balance sheet, what was year-end net property, plant and equipment? Please answer in USD billions."
+    },
+    {
+      "id": "wdc-003",
+      "score": 0.2879,
+      "question": "For Activision Blizzard's FY2019, compute the fixed asset turnover ratio = FY2019 revenue / (average PP&E between FY2018 and FY2019), rounded to two decimals, using the statements of operations and balance sheet."
+    },
+    {
+      "id": "wdc-004",
+      "score": 0.1988,
+      "question": "What was Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in percent, one decimal)? Use the income statement."
+    },
+    {
+      "id": "wdc-005",
+      "score": 0.1619,
+      "question": "For Adobe FY2015, compute the operating cash flow ratio = cash from operations / total current liabilities, rounded to two decimals, using the balance sheet and cash flow statement."
+    },
+    {
+      "id": "wdc-006",
+      "score": 0.2423,
+      "question": "Per AES Corporation's FY2022 consolidated statements of operations, how much was reported as a separate, explicit 'restructuring costs' line item on the income statement? If it is not explicitly broken out, say 0."
+    },
+    {
+      "id": "wdc-007",
+      "score": 0.2675,
+      "question": "What was Amazon's year-over-year change in total net sales from FY2016 to FY2017 (percent, one decimal), per the statement of operations?"
+    },
+    {
+      "id": "wdc-008",
+      "score": 0.2668,
+      "question": "Per Amazon's FY2019 income statement, what was net income attributable to shareholders in USD millions?"
+    },
+    {
+      "id": "wdc-009",
+      "score": 0.2625,
+      "question": "Per Amcor's balance sheet, what was net trade receivables at fiscal year-end FY2020 (USD millions)? Note Amcor's fiscal year ends June 30."
+    },
+    {
+      "id": "wdc-010",
+      "score": 0.2741,
+      "question": "What was Amcor's Adjusted (non-GAAP) EBITDA for FY2023, and is that figure GAAP or non-GAAP?"
+    },
+    {
+      "id": "wdc-011",
+      "score": 0.1603,
+      "question": "Per AMD's FY2022 balance sheet, what were cash and cash equivalents at year-end FY2022 in USD millions, and how does that compare to FY2021?"
+    },
+    {
+      "id": "wdc-012",
+      "score": 0.321,
+      "question": "Per AMD's FY2022 segment disclosure, which reporting segment had the largest year-over-year increase in net revenue from FY2021 to FY2022, excluding the Embedded segment?"
+    },
+    {
+      "id": "wdc-013",
+      "score": 0.1958,
+      "question": "What were American Express's total revenues net of interest expense for FY2022, and how did they change versus FY2021? Use the summary of financial performance."
+    },
+    {
+      "id": "wdc-014",
+      "score": 0.1888,
+      "question": "Is gross margin a meaningful metric for American Express in FY2022, and if not, why? Answer from the 10-K."
+    },
+    {
+      "id": "wdc-015",
+      "score": 0.302,
+      "question": "How much did American Water Works pay out in cash dividends for FY2020? Answer in USD billions, using the statement of cash flows."
+    },
+    {
+      "id": "wdc-016",
+      "score": 0.3689,
+      "question": "Does American Water Works have positive working capital based on its FY2022 balance sheet? If working capital is not relevant for a regulated utility, say so and explain."
+    },
+    {
+      "id": "wdc-017",
+      "score": 0.2208,
+      "question": "Per Best Buy's FY2019 balance sheet, what was the year-end total amount of merchandise inventories in USD millions? Note Best Buy's fiscal year ends in late January/early February."
+    },
+    {
+      "id": "wdc-018",
+      "score": 0.2658,
+      "question": "For Best Buy, by what percent did cash and cash equivalents change between FY2023 year-end and the end of Q2 FY2024? State both the percentage and the absolute change basis."
+    },
+    {
+      "id": "wdc-019",
+      "score": 0.2207,
+      "question": "Per Block's (formerly Square) FY2016 balance sheet, compute the working capital ratio = total current assets / total current liabilities, rounded to two decimals."
+    },
+    {
+      "id": "wdc-020",
+      "score": 0.15,
+      "question": "What was Block's total net revenue growth rate from FY2019 to FY2020 (percent, one decimal), using the statement of operations?"
+    },
+    {
+      "id": "wdc-021",
+      "score": 0.2289,
+      "question": "Per Boeing's FY2018 statement of financial position, what was year-end net property, plant and equipment in USD millions?"
+    },
+    {
+      "id": "wdc-022",
+      "score": 0.418,
+      "question": "For Boeing FY2022, which product/service categories each represented more than 20% of total revenue? Use the business segment data."
+    },
+    {
+      "id": "wdc-023",
+      "score": 0.3464,
+      "question": "What were Coca-Cola's net operating revenues and cost of goods sold for FY2021, and what was the resulting COGS % of revenue (one decimal)? Use the income statement."
+    },
+    {
+      "id": "wdc-024",
+      "score": 0.2626,
+      "question": "Per Costco's FY2021 balance sheet, what were total assets at year-end in USD millions? Note Costco's fiscal year ends in late August/early September."
+    },
+    {
+      "id": "wdc-025",
+      "score": 0.3502,
+      "question": "What were General Mills's total current assets and what was its working capital ratio (total current assets / total current liabilities, two decimals) at FY2020 year-end? Note General Mills's fiscal year ends in late May."
+    },
+    {
+      "id": "wdc-026",
+      "score": 0.3151,
+      "question": "What was Kraft Heinz's FY2019 inventory turnover ratio = FY2019 COGS / (average inventory between FY2018 and FY2019), rounded to two decimals? Use the income statement and balance sheet."
+    },
+    {
+      "id": "wdc-027",
+      "score": 0.2425,
+      "question": "Per Microsoft's FY2016 income statement, what was total cost of revenue (COGS) in USD millions? Note Microsoft's fiscal year ends June 30."
+    },
+    {
+      "id": "wdc-028",
+      "score": 0.263,
+      "question": "Per Netflix's FY2017 balance sheet, what were total current liabilities at year-end in USD millions?"
+    },
+    {
+      "id": "wdc-029",
+      "score": 0.3128,
+      "question": "What was Nike's three-year average cost of goods sold as a percent of revenue from FY2016 to FY2018 (one decimal)? Use the income statement. Note Nike's fiscal year ends May 31."
+    },
+    {
+      "id": "wdc-030",
+      "score": 0.3151,
+      "question": "Per Nike's FY2019 balance sheet, what were total current assets at year-end in USD millions?"
+    },
+    {
+      "id": "wdc-031",
+      "score": 0.2185,
+      "question": "What was PepsiCo's capital expenditure for FY2021? Answer in USD billions, using only the statement of cash flows."
+    },
+    {
+      "id": "wdc-032",
+      "score": 0.1954,
+      "question": "What were PepsiCo's net revenue and gross profit for FY2022, per the income statement?"
+    },
+    {
+      "id": "wdc-033",
+      "score": 0.327,
+      "question": "What was Walmart's FY2018 days payable outstanding (DPO) = 365 * (average accounts payable FY2017-FY2018) / (FY2018 COGS + change in inventory FY2017-FY2018), rounded to two decimals? Note Walmart's fiscal year ends January 31."
+    },
+    {
+      "id": "wdc-034",
+      "score": 0.1944,
+      "question": "What was Walmart's change in unadjusted operating income margin from FY2018 to FY2019 (percentage points, one decimal)? Use the income statement."
+    },
+    {
+      "id": "wdc-035",
+      "score": 0.2938,
+      "question": "Per Lockheed Martin's FY2020 statements, what was total net sales in USD millions, and how did Products vs Services contribute? Use the statement of earnings."
+    },
+    {
+      "id": "wdc-036",
+      "score": 0.2031,
+      "question": "Is inventory turnover a meaningful metric for JPMorgan as a bank? If a user asks for JPMorgan's FY2021 inventory turnover ratio, what should you do?"
+    }
+  ],
+  "without_context": [
+    {
+      "id": "ndc-001",
+      "score": 0.1534,
+      "question": "What was the company's total revenue for the most recent fiscal year reported in the 10-K?"
+    },
+    {
+      "id": "ndc-002",
+      "score": 0.186,
+      "question": "What was the company's net income for the most recent fiscal year?"
+    },
+    {
+      "id": "ndc-003",
+      "score": 0.1861,
+      "question": "How did total revenue change year over year, in both absolute dollars and percentage terms?"
+    },
+    {
+      "id": "ndc-004",
+      "score": 0.3174,
+      "question": "What was the company's gross profit and gross margin for the latest fiscal year?"
+    },
+    {
+      "id": "ndc-005",
+      "score": 0.185,
+      "question": "What were the company's total operating expenses for the most recent year?"
+    },
+    {
+      "id": "ndc-006",
+      "score": 0.1417,
+      "question": "What was the operating income (loss) reported for the latest fiscal year?"
+    },
+    {
+      "id": "ndc-007",
+      "score": 0.2353,
+      "question": "What was diluted earnings per share (EPS) for the most recent fiscal year?"
+    },
+    {
+      "id": "ndc-008",
+      "score": 0.1779,
+      "question": "What were total assets and total liabilities as of the most recent balance sheet date?"
+    },
+    {
+      "id": "ndc-009",
+      "score": 0.1751,
+      "question": "How much cash and cash equivalents did the company hold at the end of the fiscal year?"
+    },
+    {
+      "id": "ndc-010",
+      "score": 0.1713,
+      "question": "What was total stockholders' equity at the end of the most recent fiscal year?"
+    },
+    {
+      "id": "ndc-011",
+      "score": 0.2579,
+      "question": "What was the net cash provided by operating activities for the latest fiscal year?"
+    },
+    {
+      "id": "ndc-012",
+      "score": 0.2046,
+      "question": "How much did the company spend on capital expenditures during the most recent fiscal year?"
+    },
+    {
+      "id": "ndc-013",
+      "score": 0.1677,
+      "question": "What was the company's free cash flow (operating cash flow minus capital expenditures) for the latest year?"
+    },
+    {
+      "id": "ndc-014",
+      "score": 0.1982,
+      "question": "What was the company's total long-term debt at the end of the fiscal year?"
+    },
+    {
+      "id": "ndc-015",
+      "score": 0.1626,
+      "question": "What is the company's primary line of business as described in Item 1 (Business)?"
+    },
+    {
+      "id": "ndc-016",
+      "score": 0.1622,
+      "question": "What reportable business segments does the company operate, and what does each one do?"
+    },
+    {
+      "id": "ndc-017",
+      "score": 0.1698,
+      "question": "Which business segment generated the most revenue in the latest fiscal year, and how much?"
+    },
+    {
+      "id": "ndc-018",
+      "score": 0.2414,
+      "question": "What were the company's net sales broken down by geographic region?"
+    },
+    {
+      "id": "ndc-019",
+      "score": 0.1705,
+      "question": "What percentage of revenue came from international (non-U.S.) markets?"
+    },
+    {
+      "id": "ndc-020",
+      "score": 0.2157,
+      "question": "Summarize the key risk factors disclosed in Item 1A of the 10-K."
+    },
+    {
+      "id": "ndc-021",
+      "score": 0.1007,
+      "question": "Does the 10-K disclose any material cybersecurity risks or incidents? If so, summarize them."
+    },
+    {
+      "id": "ndc-022",
+      "score": 0.1819,
+      "question": "What does management cite as the primary drivers of revenue growth or decline in the MD&A section?"
+    },
+    {
+      "id": "ndc-023",
+      "score": 0.4345,
+      "question": "What material legal proceedings, if any, are disclosed in Item 3?"
+    },
+    {
+      "id": "ndc-024",
+      "score": 0.1435,
+      "question": "How many full-time employees did the company report as of the fiscal year end?"
+    },
+    {
+      "id": "ndc-025",
+      "score": 0.1845,
+      "question": "Who is the company's independent registered public accounting firm (auditor)?"
+    },
+    {
+      "id": "ndc-026",
+      "score": 0.115,
+      "question": "Did the auditor issue an unqualified (clean) opinion on the financial statements?"
+    },
+    {
+      "id": "ndc-027",
+      "score": 0.1737,
+      "question": "What critical audit matters (CAMs) did the auditor identify in the audit report?"
+    },
+    {
+      "id": "ndc-028",
+      "score": 0.1385,
+      "question": "Did management conclude that internal control over financial reporting was effective as of year end?"
+    },
+    {
+      "id": "ndc-029",
+      "score": 0.3109,
+      "question": "What was the effective income tax rate for the most recent fiscal year?"
+    },
+    {
+      "id": "ndc-030",
+      "score": 0.2007,
+      "question": "How much did the company spend on research and development during the latest fiscal year?"
+    },
+    {
+      "id": "ndc-031",
+      "score": 0.1443,
+      "question": "What was the company's research and development expense as a percentage of revenue?"
+    },
+    {
+      "id": "ndc-032",
+      "score": 0.1364,
+      "question": "Did the company pay dividends during the fiscal year, and if so, what was the total amount or per-share rate?"
+    },
+    {
+      "id": "ndc-033",
+      "score": 0.2416,
+      "question": "How much did the company spend repurchasing its own common stock during the year?"
+    },
+    {
+      "id": "ndc-034",
+      "score": 0.1268,
+      "question": "How many shares of common stock were outstanding as of the latest practicable date stated on the cover page?"
+    },
+    {
+      "id": "ndc-035",
+      "score": 0.367,
+      "question": "On which stock exchange is the company's common stock listed, and under what ticker symbol?"
+    },
+    {
+      "id": "ndc-036",
+      "score": 0.2027,
+      "question": "What is the company's state of incorporation and the location of its principal executive offices?"
+    },
+    {
+      "id": "ndc-037",
+      "score": 0.1468,
+      "question": "What fiscal year end date does the company use?"
+    },
+    {
+      "id": "ndc-038",
+      "score": 0.4501,
+      "question": "Does the company disclose customer concentration, such as any single customer accounting for more than 10% of revenue?"
+    },
+    {
+      "id": "ndc-039",
+      "score": 0.1002,
+      "question": "What amount of goodwill is recorded on the balance sheet, and were there any goodwill impairment charges this year?"
+    },
+    {
+      "id": "ndc-040",
+      "score": 0.1304,
+      "question": "What were the company's total contractual obligations and commitments, and how are they distributed over time?"
+    },
+    {
+      "id": "ndc-041",
+      "score": 0.1116,
+      "question": "Did the company complete any significant acquisitions or divestitures during the fiscal year? Summarize them."
+    },
+    {
+      "id": "ndc-042",
+      "score": 0.18,
+      "question": "What significant accounting policies or estimates does management identify as critical?"
+    },
+    {
+      "id": "ndc-043",
+      "score": 0.2295,
+      "question": "Calculate the company's current ratio (current assets divided by current liabilities) from the balance sheet."
+    },
+    {
+      "id": "ndc-044",
+      "score": 0.1747,
+      "question": "What was the company's net profit margin (net income divided by revenue) for the latest year?"
+    },
+    {
+      "id": "ndc-045",
+      "score": 0.1529,
+      "question": "What is the company's debt-to-equity ratio based on the most recent balance sheet?"
+    },
+    {
+      "id": "ndc-046",
+      "score": 0.1773,
+      "question": "What known trends, demands, or uncertainties does management expect to affect future results, per the MD&A?"
+    },
+    {
+      "id": "ndc-047",
+      "score": 0.1695,
+      "question": "What were Apple Inc.'s total net sales for its most recently reported fiscal year in its 10-K?"
+    },
+    {
+      "id": "ndc-048",
+      "score": 0.1969,
+      "question": "How does the company describe its competitive landscape and principal competitors in Item 1?"
+    },
+    {
+      "id": "ndc-049",
+      "score": 0.1889,
+      "question": "What forward-looking statements and associated cautionary language does the 10-K include?"
+    },
+    {
+      "id": "ndc-050",
+      "score": 0.1153,
+      "question": "Were there any subsequent events disclosed after the balance sheet date but before the filing date?"
+    }
+  ]
+}

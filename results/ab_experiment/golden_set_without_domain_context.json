@@ -1,0 +1,407 @@
+{
+  "set": "without_domain_context",
+  "generator_input": "no domain data file, no compliance runbook (blind baseline)",
+  "case_count": 50,
+  "cases": [
+    {
+      "id": "ndc-001",
+      "input": "What was the company's total revenue for the most recent fiscal year reported in the 10-K?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-002",
+      "input": "What was the company's net income for the most recent fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-003",
+      "input": "How did total revenue change year over year, in both absolute dollars and percentage terms?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "year_over_year_comparison"
+    },
+    {
+      "id": "ndc-004",
+      "input": "What was the company's gross profit and gross margin for the latest fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-005",
+      "input": "What were the company's total operating expenses for the most recent year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-006",
+      "input": "What was the operating income (loss) reported for the latest fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-007",
+      "input": "What was diluted earnings per share (EPS) for the most recent fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-008",
+      "input": "What were total assets and total liabilities as of the most recent balance sheet date?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "balance_sheet_lookup"
+    },
+    {
+      "id": "ndc-009",
+      "input": "How much cash and cash equivalents did the company hold at the end of the fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "balance_sheet_lookup"
+    },
+    {
+      "id": "ndc-010",
+      "input": "What was total stockholders' equity at the end of the most recent fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "balance_sheet_lookup"
+    },
+    {
+      "id": "ndc-011",
+      "input": "What was the net cash provided by operating activities for the latest fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "cash_flow_lookup"
+    },
+    {
+      "id": "ndc-012",
+      "input": "How much did the company spend on capital expenditures during the most recent fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "cash_flow_lookup"
+    },
+    {
+      "id": "ndc-013",
+      "input": "What was the company's free cash flow (operating cash flow minus capital expenditures) for the latest year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "derived_metric"
+    },
+    {
+      "id": "ndc-014",
+      "input": "What was the company's total long-term debt at the end of the fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "balance_sheet_lookup"
+    },
+    {
+      "id": "ndc-015",
+      "input": "What is the company's primary line of business as described in Item 1 (Business)?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "business_description"
+    },
+    {
+      "id": "ndc-016",
+      "input": "What reportable business segments does the company operate, and what does each one do?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "segment_analysis"
+    },
+    {
+      "id": "ndc-017",
+      "input": "Which business segment generated the most revenue in the latest fiscal year, and how much?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "segment_analysis"
+    },
+    {
+      "id": "ndc-018",
+      "input": "What were the company's net sales broken down by geographic region?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "segment_analysis"
+    },
+    {
+      "id": "ndc-019",
+      "input": "What percentage of revenue came from international (non-U.S.) markets?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "segment_analysis"
+    },
+    {
+      "id": "ndc-020",
+      "input": "Summarize the key risk factors disclosed in Item 1A of the 10-K.",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "risk_factors"
+    },
+    {
+      "id": "ndc-021",
+      "input": "Does the 10-K disclose any material cybersecurity risks or incidents? If so, summarize them.",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "risk_factors"
+    },
+    {
+      "id": "ndc-022",
+      "input": "What does management cite as the primary drivers of revenue growth or decline in the MD&A section?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "mdna_analysis"
+    },
+    {
+      "id": "ndc-023",
+      "input": "What material legal proceedings, if any, are disclosed in Item 3?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "legal_proceedings"
+    },
+    {
+      "id": "ndc-024",
+      "input": "How many full-time employees did the company report as of the fiscal year end?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "business_description"
+    },
+    {
+      "id": "ndc-025",
+      "input": "Who is the company's independent registered public accounting firm (auditor)?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "audit_governance"
+    },
+    {
+      "id": "ndc-026",
+      "input": "Did the auditor issue an unqualified (clean) opinion on the financial statements?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "audit_governance"
+    },
+    {
+      "id": "ndc-027",
+      "input": "What critical audit matters (CAMs) did the auditor identify in the audit report?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "audit_governance"
+    },
+    {
+      "id": "ndc-028",
+      "input": "Did management conclude that internal control over financial reporting was effective as of year end?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "internal_controls"
+    },
+    {
+      "id": "ndc-029",
+      "input": "What was the effective income tax rate for the most recent fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-030",
+      "input": "How much did the company spend on research and development during the latest fiscal year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "financial_metric_lookup"
+    },
+    {
+      "id": "ndc-031",
+      "input": "What was the company's research and development expense as a percentage of revenue?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "derived_metric"
+    },
+    {
+      "id": "ndc-032",
+      "input": "Did the company pay dividends during the fiscal year, and if so, what was the total amount or per-share rate?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "capital_returns"
+    },
+    {
+      "id": "ndc-033",
+      "input": "How much did the company spend repurchasing its own common stock during the year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "capital_returns"
+    },
+    {
+      "id": "ndc-034",
+      "input": "How many shares of common stock were outstanding as of the latest practicable date stated on the cover page?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "share_information"
+    },
+    {
+      "id": "ndc-035",
+      "input": "On which stock exchange is the company's common stock listed, and under what ticker symbol?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "share_information"
+    },
+    {
+      "id": "ndc-036",
+      "input": "What is the company's state of incorporation and the location of its principal executive offices?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "company_profile"
+    },
+    {
+      "id": "ndc-037",
+      "input": "What fiscal year end date does the company use?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "company_profile"
+    },
+    {
+      "id": "ndc-038",
+      "input": "Does the company disclose customer concentration, such as any single customer accounting for more than 10% of revenue?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "concentration_risk"
+    },
+    {
+      "id": "ndc-039",
+      "input": "What amount of goodwill is recorded on the balance sheet, and were there any goodwill impairment charges this year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "balance_sheet_lookup"
+    },
+    {
+      "id": "ndc-040",
+      "input": "What were the company's total contractual obligations and commitments, and how are they distributed over time?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "commitments"
+    },
+    {
+      "id": "ndc-041",
+      "input": "Did the company complete any significant acquisitions or divestitures during the fiscal year? Summarize them.",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "corporate_actions"
+    },
+    {
+      "id": "ndc-042",
+      "input": "What significant accounting policies or estimates does management identify as critical?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "accounting_policies"
+    },
+    {
+      "id": "ndc-043",
+      "input": "Calculate the company's current ratio (current assets divided by current liabilities) from the balance sheet.",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-044",
+      "input": "What was the company's net profit margin (net income divided by revenue) for the latest year?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-045",
+      "input": "What is the company's debt-to-equity ratio based on the most recent balance sheet?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-046",
+      "input": "What known trends, demands, or uncertainties does management expect to affect future results, per the MD&A?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "mdna_analysis"
+    },
+    {
+      "id": "ndc-047",
+      "input": "What were Apple Inc.'s total net sales for its most recently reported fiscal year in its 10-K?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "company_specific_lookup"
+    },
+    {
+      "id": "ndc-048",
+      "input": "How does the company describe its competitive landscape and principal competitors in Item 1?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "business_description"
+    },
+    {
+      "id": "ndc-049",
+      "input": "What forward-looking statements and associated cautionary language does the 10-K include?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "disclosures"
+    },
+    {
+      "id": "ndc-050",
+      "input": "Were there any subsequent events disclosed after the balance sheet date but before the filing date?",
+      "expected": "",
+      "grounding": null,
+      "company": "",
+      "question_type": "subsequent_events"
+    }
+  ]
+}
