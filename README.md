@@ -33,6 +33,59 @@ don't). Regenerate the figure with [`images/figure1_pipeline.py`](images/figure1
 
 ---
 
+## Example outputs (real, from the committed FinanceBench run)
+
+The excerpts below are verbatim (abridged) from the committed artifacts under
+[`results/ab_experiment/`](results/ab_experiment/) — the FinanceBench with-vs-without
+comparison reported in the paper. One case, `wdc-001`, is traceable through all three
+files end to end.
+
+**1. Ingested domain context → the Domain Compliance Runbook** (Step 1 + Step 2 output).
+The extracted `DomainContext` — domain facts, categories, and safety constraints — is
+assembled into a single
+[`domain_compliance_runbook.json`](results/ab_experiment/domain_compliance_runbook.json)
+with three sections (Domain Facts · Compliance Key Criteria · Common Failure Modes). One
+entry from each of the first two:
+
+```json
+{ "group": "Definitions", "label": "Free cash flow",
+  "detail": "Operating cash flow minus capital expenditures (purchases of property, plant & equipment). Both terms must come from the cited cash-flow statement." }
+
+{ "group": "Guideline anchor → finance", "label": "Domain scope",
+  "detail": "[Anchor 1/5 · Domain Scope] Answer only in-domain finance requests; refuse off-domain / out-of-policy ones (e.g. asked to write code, give legal advice)." }
+```
+
+**2. A generated golden-set case** — from
+[`golden_set_with_domain_context.json`](results/ab_experiment/golden_set_with_domain_context.json)
+(50 cases; the generator's input was the domain data plus the runbook above):
+
+```json
+{ "id": "wdc-001",
+  "input": "Using 3M's FY2018 consolidated statement of cash flows, what was 3M's capital expenditure (purchases of property, plant and equipment) in USD millions?",
+  "expected": "$1,577 million. Source: 3M_2018_10K, Consolidated Statement of Cash Flows, 'Purchases of property, plant and equipment (PP&E)'. Figures reported in USD millions, GAAP, fiscal year ended December 31, 2018.",
+  "grounding": "... Consolidated Statement of Cash Flows ... Purchases of property, plant and equipment (PP&E) $ (1,577)",
+  "company": "3M",
+  "question_type": "metrics-generated",
+  "probes_criteria": ["Citation & non-misleading disclosure"] }
+```
+
+**3. The scored eval output** — from
+[`domain_accuracy_results.json`](results/ab_experiment/domain_accuracy_results.json),
+where each generated question is judged for domain relevance and groundedness against the
+raw filing data (mean domain accuracy: **0.93 with** the ingested context vs **0.51
+without**):
+
+```json
+{ "id": "wdc-001", "company": "3M", "score": 1.0,
+  "reason": "figure traces directly to raw 3M filing record" }
+```
+
+The runnable eval-script artifact itself (`eval_<project>.py`) is produced per project by
+`ai-eval-engine build` — see [Quick start step 3](#3-build-the-full-eval-bundle-steps-25--offline-no-api-key)
+for the four files it writes.
+
+---
+
 ## Install
 
 > **Requires Python 3.11+.** The code uses 3.10+ syntax (`X | None` type unions), so
