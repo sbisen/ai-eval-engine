@@ -1,0 +1,253 @@
+{
+  "method": "NMF topic modeling (TF-IDF, 1-2 grams, finance-boilerplate stopwords) over raw run-1 question text as a starting point (topic_model_assignments.auto.json); fine-topic assignment hand-verified by reading every run-1 question of each arm, using the topic vocabulary and rules of rerun_2026-08-27_2x2 (single-statement ratios stay with their statement; Ratios & multi-step = cross-statement or multi-date; changes between two dates -> YoY; compliance probes by dominant probes_criteria); flow-conserving: every question in exactly one topic",
+  "C": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [],
+    "assignments": {
+      "Income-statement metrics": [
+        "ndc-001",
+        "ndc-002",
+        "ndc-003",
+        "ndc-007",
+        "ndc-010",
+        "ndc-011",
+        "ndc-013",
+        "ndc-014",
+        "ndc-016",
+        "ndc-017",
+        "ndc-019",
+        "ndc-021",
+        "ndc-023",
+        "ndc-041",
+        "ndc-043",
+        "ndc-044"
+      ],
+      "Balance-sheet items": [
+        "ndc-004",
+        "ndc-006",
+        "ndc-008",
+        "ndc-012",
+        "ndc-018",
+        "ndc-020",
+        "ndc-040"
+      ],
+      "Ratios & multi-step computation": [
+        "ndc-022",
+        "ndc-035",
+        "ndc-036",
+        "ndc-038",
+        "ndc-039"
+      ],
+      "Cash-flow metrics": [
+        "ndc-005",
+        "ndc-009",
+        "ndc-015",
+        "ndc-037"
+      ],
+      "YoY change & multi-year averages": [
+        "ndc-024",
+        "ndc-025",
+        "ndc-026",
+        "ndc-027",
+        "ndc-028",
+        "ndc-042"
+      ],
+      "Segment & revenue mix": [
+        "ndc-029",
+        "ndc-030",
+        "ndc-031",
+        "ndc-032",
+        "ndc-033",
+        "ndc-034"
+      ],
+      "Footnote & 8-K disclosures": [
+        "ndc-050"
+      ],
+      "Metric applicability / when-to-decline": [
+        "ndc-045",
+        "ndc-046",
+        "ndc-047",
+        "ndc-048",
+        "ndc-049"
+      ]
+    }
+  },
+  "B": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures"
+    ],
+    "compliance_subtree_topics": [],
+    "assignments": {
+      "Income-statement metrics": [
+        "doc-006",
+        "doc-007",
+        "doc-009",
+        "doc-017",
+        "doc-018",
+        "doc-020",
+        "doc-023",
+        "doc-025",
+        "doc-027",
+        "doc-035",
+        "doc-037",
+        "doc-041"
+      ],
+      "Balance-sheet items": [
+        "doc-002",
+        "doc-005",
+        "doc-008",
+        "doc-010",
+        "doc-011",
+        "doc-014",
+        "doc-021",
+        "doc-024",
+        "doc-026",
+        "doc-029",
+        "doc-033",
+        "doc-034",
+        "doc-038",
+        "doc-049"
+      ],
+      "Ratios & multi-step computation": [
+        "doc-003",
+        "doc-013"
+      ],
+      "Cash-flow metrics": [
+        "doc-001",
+        "doc-004",
+        "doc-016",
+        "doc-039",
+        "doc-043",
+        "doc-046"
+      ],
+      "YoY change & multi-year averages": [
+        "doc-015",
+        "doc-019",
+        "doc-022",
+        "doc-030",
+        "doc-031",
+        "doc-036",
+        "doc-040",
+        "doc-042",
+        "doc-045",
+        "doc-050"
+      ],
+      "Segment & revenue mix": [
+        "doc-032",
+        "doc-044"
+      ],
+      "Footnote & 8-K disclosures": [
+        "doc-012",
+        "doc-028",
+        "doc-047",
+        "doc-048"
+      ]
+    }
+  },
+  "A": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [
+      "Off-domain / out-of-scope refusal",
+      "MNPI / confidential-data refusal",
+      "No advice / no personal opinion",
+      "Escalate / withhold unauthorized action"
+    ],
+    "assignments": {
+      "Income-statement metrics": [
+        "wdc-002",
+        "wdc-005",
+        "wdc-012",
+        "wdc-016",
+        "wdc-025",
+        "wdc-026",
+        "wdc-028",
+        "wdc-030"
+      ],
+      "Balance-sheet items": [
+        "wdc-006",
+        "wdc-007",
+        "wdc-013",
+        "wdc-017",
+        "wdc-018",
+        "wdc-021",
+        "wdc-024",
+        "wdc-031",
+        "wdc-036"
+      ],
+      "Cash-flow metrics": [
+        "wdc-001",
+        "wdc-004",
+        "wdc-009",
+        "wdc-011",
+        "wdc-027",
+        "wdc-029",
+        "wdc-032",
+        "wdc-034"
+      ],
+      "YoY change & multi-year averages": [
+        "wdc-003",
+        "wdc-022",
+        "wdc-033"
+      ],
+      "Segment & revenue mix": [
+        "wdc-014",
+        "wdc-015",
+        "wdc-019"
+      ],
+      "Footnote & 8-K disclosures": [
+        "wdc-008",
+        "wdc-020",
+        "wdc-035"
+      ],
+      "Metric applicability / when-to-decline": [
+        "wdc-010",
+        "wdc-023"
+      ],
+      "Off-domain / out-of-scope refusal": [
+        "wdc-037",
+        "wdc-038",
+        "wdc-039",
+        "wdc-040"
+      ],
+      "MNPI / confidential-data refusal": [
+        "wdc-041",
+        "wdc-042",
+        "wdc-043"
+      ],
+      "No advice / no personal opinion": [
+        "wdc-044",
+        "wdc-045",
+        "wdc-046",
+        "wdc-047"
+      ],
+      "Escalate / withhold unauthorized action": [
+        "wdc-048",
+        "wdc-049",
+        "wdc-050"
+      ]
+    }
+  }
+}

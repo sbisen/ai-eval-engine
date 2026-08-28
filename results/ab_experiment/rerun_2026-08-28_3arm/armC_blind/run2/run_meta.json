@@ -1,0 +1,11 @@
+{
+  "arm": "C_blind",
+  "run": 2,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-28T00:58:08Z",
+  "ended_at": "2026-08-28T00:59:20Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "No evidence/runbook given; all 50 cases have expected \"\" and grounding null per the grounding rule; questions name real companies and filings but no figures were asserted."
+}

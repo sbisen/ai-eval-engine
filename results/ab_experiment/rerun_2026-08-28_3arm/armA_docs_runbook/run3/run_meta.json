@@ -1,0 +1,11 @@
+{
+  "arm": "A_docs_runbook",
+  "run": 3,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-28T00:57:41Z",
+  "ended_at": "2026-08-28T01:04:17Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Hand-authored from prompt_system.txt + prompt_user.txt (runbook + 61 rows, 32 companies); 36 grounded cases (one per company, 4 companies doubled) + 14 compliance probes; validated: schema, ids, grounding numbers in evidence, derived arithmetic."
+}

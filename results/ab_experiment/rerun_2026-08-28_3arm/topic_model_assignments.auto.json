@@ -1,0 +1,212 @@
+{
+  "C": {
+    "capability": {
+      "apple, net sales, apple fy2023": [
+        "ndc-001",
+        "ndc-003",
+        "ndc-011",
+        "ndc-013",
+        "ndc-014",
+        "ndc-016",
+        "ndc-024",
+        "ndc-029",
+        "ndc-044"
+      ],
+      "segment, segment dollars, dollars": [
+        "ndc-002",
+        "ndc-030",
+        "ndc-031",
+        "ndc-032",
+        "ndc-033",
+        "ndc-034"
+      ],
+      "balance, sheet, balance sheet": [
+        "ndc-004",
+        "ndc-006",
+        "ndc-008",
+        "ndc-010",
+        "ndc-012",
+        "ndc-018",
+        "ndc-020",
+        "ndc-026",
+        "ndc-028",
+        "ndc-040",
+        "ndc-050"
+      ],
+      "cash, net cash, cash operating": [
+        "ndc-005",
+        "ndc-009",
+        "ndc-015",
+        "ndc-022",
+        "ndc-027",
+        "ndc-037",
+        "ndc-039"
+      ],
+      "income, place, percentage": [
+        "ndc-007",
+        "ndc-017",
+        "ndc-019",
+        "ndc-021",
+        "ndc-023",
+        "ndc-025",
+        "ndc-035",
+        "ndc-036",
+        "ndc-038",
+        "ndc-041",
+        "ndc-042"
+      ],
+      "issuer, say, apply issuer": [
+        "ndc-043",
+        "ndc-045",
+        "ndc-046",
+        "ndc-047",
+        "ndc-048",
+        "ndc-049"
+      ]
+    },
+    "compliance": {}
+  },
+  "B": {
+    "capability": {
+      "cash, consolidated cash, flow": [
+        "doc-001",
+        "doc-004",
+        "doc-013",
+        "doc-016",
+        "doc-039",
+        "doc-043",
+        "doc-046"
+      ],
+      "current, liabilities, assets": [
+        "doc-002",
+        "doc-005",
+        "doc-010",
+        "doc-014",
+        "doc-026"
+      ],
+      "december 31, 31, december": [
+        "doc-003",
+        "doc-007",
+        "doc-012",
+        "doc-015",
+        "doc-019",
+        "doc-021",
+        "doc-022",
+        "doc-025",
+        "doc-027",
+        "doc-030",
+        "doc-032",
+        "doc-033",
+        "doc-036",
+        "doc-040",
+        "doc-042",
+        "doc-044",
+        "doc-045",
+        "doc-047",
+        "doc-048",
+        "doc-050"
+      ],
+      "gross, margin, profit": [
+        "doc-006",
+        "doc-009",
+        "doc-018",
+        "doc-020",
+        "doc-035",
+        "doc-037"
+      ],
+      "debt, term, term debt": [
+        "doc-008",
+        "doc-011",
+        "doc-024",
+        "doc-029",
+        "doc-034",
+        "doc-038",
+        "doc-049"
+      ],
+      "income, taxes, income taxes": [
+        "doc-017",
+        "doc-023",
+        "doc-028",
+        "doc-031",
+        "doc-041"
+      ]
+    },
+    "compliance": {}
+  },
+  "A": {
+    "capability": {
+      "cash, cash flow, flow": [
+        "wdc-001",
+        "wdc-003",
+        "wdc-004",
+        "wdc-009",
+        "wdc-011",
+        "wdc-027",
+        "wdc-029",
+        "wdc-032",
+        "wdc-034"
+      ],
+      "consolidated operations, operations december, operations": [
+        "wdc-002",
+        "wdc-005",
+        "wdc-014",
+        "wdc-019",
+        "wdc-025",
+        "wdc-028"
+      ],
+      "current, balance, balance sheet": [
+        "wdc-006",
+        "wdc-007",
+        "wdc-010",
+        "wdc-013",
+        "wdc-018",
+        "wdc-021",
+        "wdc-031"
+      ],
+      "segment, 2021, jpmorgan": [
+        "wdc-008",
+        "wdc-015",
+        "wdc-020",
+        "wdc-022",
+        "wdc-023",
+        "wdc-024",
+        "wdc-033",
+        "wdc-035"
+      ],
+      "gross, divided, margin gross": [
+        "wdc-012",
+        "wdc-016",
+        "wdc-026",
+        "wdc-030"
+      ],
+      "property, equipment, accumulated": [
+        "wdc-017",
+        "wdc-036"
+      ]
+    },
+    "compliance": {
+      "Off-domain / out-of-scope refusal": [
+        "wdc-037",
+        "wdc-038",
+        "wdc-039",
+        "wdc-040"
+      ],
+      "MNPI / confidential-data refusal": [
+        "wdc-041",
+        "wdc-042",
+        "wdc-043"
+      ],
+      "No advice / no personal opinion": [
+        "wdc-044",
+        "wdc-045",
+        "wdc-046",
+        "wdc-047"
+      ],
+      "Escalate / withhold unauthorized action": [
+        "wdc-048",
+        "wdc-049",
+        "wdc-050"
+      ]
+    }
+  }
+}

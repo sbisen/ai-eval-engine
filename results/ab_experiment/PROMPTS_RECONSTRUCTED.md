@@ -4,7 +4,10 @@ Reconstructed from the committed June golden sets so the rerun reproduces their 
 shape (`id / input / expected / grounding / company / question_type [/ probes_criteria]`,
 `[REFUSE]` sentinel, FinanceBench question-category labels). The **system prompt is
 identical for all three arms**; only the data sections of the user message differ.
-Archive the exact text you send, per run, next to its output JSON.
+The evidence given to arms A and B is **filing text only** — FinanceBench's `question` and
+`answer` fields are withheld, so no arm can paraphrase the benchmark (the 2026-08-27 3-arm
+run leaked them and was discarded). Archive the exact text you send, per run, next to its
+output JSON.
 
 Run each arm **k = 3** times. Record per run: model id, start/end wall-clock, input/output
 tokens, and the full prompt as sent.
@@ -53,8 +56,8 @@ metric does not apply to the issuer.
 
 IF EVIDENCE ROWS ARE PROVIDED:
   - Walk the rows in order, at least one case per company, until the budget is used.
-  - Each case must be answerable from that row's `evidence`. You may reformulate the
-    row's question, but the question must name the company, the fiscal period, and the
+  - Each case must be answerable from that row's `evidence`. Derive the question from the
+    evidence text itself; the question must name the company, the fiscal period, and the
     statement, and state the unit/scale requested.
   - `grounding` is the exact evidence text. `company` is the row's company.
 
@@ -92,8 +95,8 @@ ID prefix: wdc
 DOMAIN COMPLIANCE RUNBOOK (Step 1 + Step 2 output):
 {{RUNBOOK_JSON}}
 
-EVIDENCE — real FinanceBench rows, in dataset order (fields: company, doc_name,
-doc_type, question, answer, evidence, question_type):
+EVIDENCE — excerpts from real corporate filings, in dataset order (fields: company,
+doc_name, doc_type, evidence):
 {{EVIDENCE_ROWS_JSON}}
 
 Author the golden set now.
@@ -101,22 +104,22 @@ Author the golden set now.
 
 - `{{RUNBOOK_JSON}}` = `results/ab_experiment/domain_compliance_runbook.json`, verbatim.
 - `{{EVIDENCE_ROWS_JSON}}` = the first 2 rows per company from
-  `data/financebench/financebench.csv` in file order (61 rows, 32 companies). Commit the
-  exact row list as `evidence_rows.json` next to the run output.
+  `data/financebench/financebench.csv` in file order (61 rows, 32 companies) with only the
+  `company, doc_name, doc_type, evidence` fields (`evidence_rows_no_qa.json` in the run folder).
 
 ---
 
-## ARM B — raw data only, no runbook   (`set`: `raw_data_only`, prefix `rdc`)
+## ARM B — documents only, no runbook   (`set`: `documents_only`, prefix `doc`)
 
 ```
 Project: AI Eval Engine
-Set name: raw_data_only
-ID prefix: rdc
+Set name: documents_only
+ID prefix: doc
 
 No Domain Compliance Runbook is provided for this run.
 
-EVIDENCE — real FinanceBench rows, in dataset order (fields: company, doc_name,
-doc_type, question, answer, evidence, question_type):
+EVIDENCE — excerpts from real corporate filings, in dataset order (fields: company,
+doc_name, doc_type, evidence):
 {{EVIDENCE_ROWS_JSON}}
 
 Author the golden set now.
@@ -146,11 +149,11 @@ Author the golden set now.
 |---|---|---|---|
 | System prompt | identical | identical | identical |
 | Runbook | yes | no | no |
-| Evidence rows | 61 rows | same 61 rows | none |
+| Evidence rows (text only) | 61 rows | same 61 rows | none |
 | Expected compliance probes | ~14 | 0 (by construction) | 0 (by construction) |
-| Output file | `golden_set_with_domain_context_run{k}.json` | `golden_set_raw_data_only_run{k}.json` | `golden_set_without_domain_context_run{k}.json` |
+| Output file | `golden_set_with_domain_context_run{k}.json` | `golden_set_documents_only_run{k}.json` | `golden_set_without_domain_context_run{k}.json` |
 
 Per run, save alongside the output: `prompt_system.txt`, `prompt_user.txt` (as sent, with
-placeholders filled), `evidence_rows.json` (Arms A, B), and `run_meta.json`
+placeholders filled), `evidence_rows_no_qa.json` (Arms A, B), and `run_meta.json`
 (`model`, `started_at`, `ended_at`, `input_tokens`, `output_tokens`, `seed` if any).
 Judge all nine outputs with one judge prompt, archived the same way.

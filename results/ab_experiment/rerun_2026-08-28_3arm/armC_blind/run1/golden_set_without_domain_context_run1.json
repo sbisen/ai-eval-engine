@@ -1,0 +1,407 @@
+{
+  "set": "without_domain_context",
+  "generator_input": "Set name, ID prefix, and instruction only; no domain data file, no evidence rows, and no Domain Compliance Runbook were provided.",
+  "case_count": 50,
+  "cases": [
+    {
+      "id": "ndc-001",
+      "input": "According to Apple Inc.'s FY2023 10-K, what was total net sales on the consolidated statement of operations, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-002",
+      "input": "What was Microsoft Corporation's total revenue for fiscal year 2023 (fiscal year ended June 30, 2023) as reported on the income statement in its 10-K, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-003",
+      "input": "Per Amazon.com, Inc.'s FY2022 10-K, what was the company's net income (loss) on the consolidated statement of operations, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-004",
+      "input": "What was the balance of cash and cash equivalents on Alphabet Inc.'s consolidated balance sheet as of December 31, 2023, per its FY2023 10-K, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-005",
+      "input": "According to Walmart Inc.'s 10-K for the fiscal year ended January 31, 2024, what was net cash provided by operating activities on the consolidated statement of cash flows, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Walmart Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-006",
+      "input": "Per The Coca-Cola Company's FY2023 10-K, what was total inventories on the consolidated balance sheet at year-end, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Coca-Cola Company",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-007",
+      "input": "What did Pfizer Inc. report as research and development expenses on its FY2023 consolidated statement of income in its 10-K, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-008",
+      "input": "According to Exxon Mobil Corporation's FY2023 10-K, what was total long-term debt (excluding the current portion) on the consolidated balance sheet, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-009",
+      "input": "What were Tesla, Inc.'s capital expenditures (purchases of property and equipment) on its FY2023 consolidated statement of cash flows, per its 10-K, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-010",
+      "input": "Per Nike, Inc.'s 10-K for the fiscal year ended May 31, 2023, what was diluted earnings per share on the consolidated statement of income, in U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Nike, Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-011",
+      "input": "Apple Inc. reports figures in millions in its FY2023 10-K. Express Apple's FY2023 total net sales in billions of U.S. dollars, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-012",
+      "input": "Alphabet Inc.'s FY2023 10-K reports total assets in millions of U.S. dollars. Convert the December 31, 2023 total assets figure to exact U.S. dollars (no abbreviation).",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-013",
+      "input": "Berkshire Hathaway Inc.'s FY2023 10-K reports its consolidated figures in millions. State Berkshire's FY2023 total revenues in thousands of U.S. dollars.",
+      "expected": "",
+      "grounding": null,
+      "company": "Berkshire Hathaway Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-014",
+      "input": "Costco Wholesale Corporation's 10-K for the fiscal year ended September 3, 2023 reports net sales in millions. Express that figure in billions of U.S. dollars, rounded to two decimal places, and note that the fiscal year contained 53 weeks if the filing says so.",
+      "expected": "",
+      "grounding": null,
+      "company": "Costco Wholesale Corporation",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-015",
+      "input": "Microsoft Corporation's FY2023 10-K reports cash flow figures in millions. What was free cash flow (net cash from operations minus additions to property and equipment) for FY2023, expressed in billions of U.S. dollars to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-016",
+      "input": "Using Apple Inc.'s FY2023 10-K consolidated statement of operations, compute gross margin as a percentage of total net sales (gross margin divided by total net sales), rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-017",
+      "input": "From Amazon.com, Inc.'s FY2023 10-K income statement, what was operating margin (operating income divided by total net sales), expressed as a percentage rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-018",
+      "input": "Using the December 31, 2023 balance sheet in The Home Depot, Inc.'s FY2023 10-K (fiscal year ended January 28, 2024), compute the current ratio (total current assets divided by total current liabilities), rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Home Depot, Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-019",
+      "input": "From Pfizer Inc.'s FY2023 10-K, compute research and development expense as a percentage of total revenues, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-020",
+      "input": "Using Tesla, Inc.'s FY2023 10-K balance sheet, compute the debt-to-equity ratio defined as total liabilities divided by total stockholders' equity, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-021",
+      "input": "From Netflix, Inc.'s FY2023 10-K, compute net profit margin (net income divided by revenues), expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Netflix, Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-022",
+      "input": "Using Walmart Inc.'s 10-K for the fiscal year ended January 31, 2024, compute inventory turnover as cost of sales divided by the average of beginning and ending inventories, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Walmart Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-023",
+      "input": "From The Coca-Cola Company's FY2023 10-K, compute the effective tax rate as income taxes divided by income before income taxes, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Coca-Cola Company",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-024",
+      "input": "Using Apple Inc.'s FY2022 and FY2023 10-K filings, what was the year-over-year percentage change in total net sales from FY2022 to FY2023, rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "year_over_year"
+    },
+    {
+      "id": "ndc-025",
+      "input": "Per Microsoft Corporation's FY2023 10-K, by what percentage did net income change from fiscal 2022 to fiscal 2023, rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "year_over_year"
+    },
+    {
+      "id": "ndc-026",
+      "input": "Using the comparative balance sheets in Amazon.com, Inc.'s FY2023 10-K, by how much did total long-term debt change between December 31, 2022 and December 31, 2023, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "year_over_year"
+    },
+    {
+      "id": "ndc-027",
+      "input": "From Exxon Mobil Corporation's FY2023 10-K, what was the absolute change in net cash provided by operating activities from 2022 to 2023, in millions of U.S. dollars, and was it an increase or decrease?",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "year_over_year"
+    },
+    {
+      "id": "ndc-028",
+      "input": "Using Nike, Inc.'s 10-K for fiscal 2023 (year ended May 31, 2023), what was the percentage change in gross margin dollars compared with fiscal 2022, rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Nike, Inc.",
+      "question_type": "year_over_year"
+    },
+    {
+      "id": "ndc-029",
+      "input": "Per the segment note in Apple Inc.'s FY2023 10-K, what were net sales attributable to the Americas reportable segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-030",
+      "input": "According to the segment information in Amazon.com, Inc.'s FY2023 10-K, what was operating income for the AWS segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-031",
+      "input": "Per Microsoft Corporation's FY2023 10-K segment disclosure, what was revenue for the Intelligent Cloud segment, in millions of U.S. dollars, and what share of total revenue did it represent (rounded to one decimal place)?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-032",
+      "input": "From Alphabet Inc.'s FY2023 10-K, what was the operating loss reported for the Other Bets segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-033",
+      "input": "Per The Walt Disney Company's 10-K for the fiscal year ended September 30, 2023, what were revenues for the Experiences segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Walt Disney Company",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-034",
+      "input": "According to the revenue disaggregation note in Nike, Inc.'s fiscal 2023 10-K, what were revenues for the Greater China geographic operating segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Nike, Inc.",
+      "question_type": "segment_disclosure"
+    },
+    {
+      "id": "ndc-035",
+      "input": "Using Apple Inc.'s FY2023 10-K, compute return on assets as FY2023 net income divided by the average of total assets at the end of FY2022 and FY2023, expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-036",
+      "input": "Using Microsoft Corporation's FY2023 10-K, compute return on equity as FY2023 net income divided by the average of total stockholders' equity at June 30, 2022 and June 30, 2023, expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-037",
+      "input": "From Amazon.com, Inc.'s FY2023 10-K, compute free cash flow as net cash provided by operating activities minus purchases of property and equipment (net of proceeds from sales and incentives, if the filing presents it that way), in millions of U.S. dollars.",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-038",
+      "input": "Using Tesla, Inc.'s FY2023 10-K, compute days sales outstanding as year-end accounts receivable divided by total revenues, multiplied by 365, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-039",
+      "input": "From Exxon Mobil Corporation's FY2023 10-K, compute the cash conversion ratio as net cash provided by operating activities divided by net income attributable to Exxon Mobil, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-040",
+      "input": "Using Costco Wholesale Corporation's fiscal 2023 10-K, compute net debt as total long-term debt (including the current portion) minus cash and cash equivalents and short-term investments, in millions of U.S. dollars, and state whether the company is in a net cash position.",
+      "expected": "",
+      "grounding": null,
+      "company": "Costco Wholesale Corporation",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-041",
+      "input": "From Netflix, Inc.'s FY2023 10-K, compute the interest coverage ratio as operating income divided by interest expense, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Netflix, Inc.",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-042",
+      "input": "Using Pfizer Inc.'s FY2022 and FY2023 10-K filings, compute the two-year change in total revenues from FY2021 to FY2023 as a compound annual growth rate, expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "multi_step_cross_statement"
+    },
+    {
+      "id": "ndc-043",
+      "input": "Per JPMorgan Chase & Co.'s FY2023 10-K, what was net interest income for 2023, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "JPMorgan Chase & Co.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-044",
+      "input": "Per Berkshire Hathaway Inc.'s FY2023 10-K, what were the insurance float and total insurance premiums earned, in millions of U.S. dollars, if both are disclosed?",
+      "expected": "",
+      "grounding": null,
+      "company": "Berkshire Hathaway Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-045",
+      "input": "Using Apple Inc.'s FY2023 10-K, what was the company's net interest margin for FY2023? If the metric does not apply to the issuer, say so and explain why.",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-046",
+      "input": "From JPMorgan Chase & Co.'s FY2023 10-K, what was inventory turnover for 2023? If the metric does not apply to the issuer, say so and explain why.",
+      "expected": "",
+      "grounding": null,
+      "company": "JPMorgan Chase & Co.",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-047",
+      "input": "Per Netflix, Inc.'s FY2023 10-K, what was comparable-store (same-store) sales growth for 2023? If the metric does not apply to the issuer, say so and explain why.",
+      "expected": "",
+      "grounding": null,
+      "company": "Netflix, Inc.",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-048",
+      "input": "Using Microsoft Corporation's FY2023 10-K, what was the combined ratio for fiscal 2023? If the metric does not apply to the issuer, say so and explain why.",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-049",
+      "input": "Per Exxon Mobil Corporation's FY2023 10-K, what was average revenue per user (ARPU) for 2023? If the metric does not apply to the issuer, say so and explain why.",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-050",
+      "input": "Per The Home Depot, Inc.'s FY2023 10-K, what was the fiscal year-end date, and how many weeks did fiscal 2023 contain? State the total number of stores open at year-end if the filing discloses it.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Home Depot, Inc.",
+      "question_type": "direct_lookup"
+    }
+  ]
+}

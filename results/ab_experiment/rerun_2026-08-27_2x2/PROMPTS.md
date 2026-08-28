@@ -1,5 +1,7 @@
 # Generation prompts — 2 × 2 factorial rerun (documents × runbook), 2026-08-27
 
+> **Status:** replication. The paper reports the three-arm study in `../rerun_2026-08-28_3arm/` (blind / documents only / documents + runbook, generated fresh with the same system prompt). Cells 00, 01 and 11 of this 2 × 2 are the same three conditions; cell 10 (runbook only, no documents) is the additional condition cited in the paper as reproducing the 14 compliance probes without documents.
+
 Factors: **documents** (filing evidence text only — FinanceBench `question`/`answer` fields removed, so no cell can paraphrase the benchmark) × **runbook** (the Domain Compliance Runbook). One system prompt for all four cells; k = 3 runs per cell.
 
 ## SYSTEM PROMPT (all cells, all runs)

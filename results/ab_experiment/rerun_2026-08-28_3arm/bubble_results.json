@@ -1,0 +1,236 @@
+[
+  {
+    "cell": "C",
+    "topic": "Income-statement metrics",
+    "kind": "cap",
+    "n": 16,
+    "x": 0.2,
+    "y": 0.6625,
+    "num": 1
+  },
+  {
+    "cell": "C",
+    "topic": "Balance-sheet items",
+    "kind": "cap",
+    "n": 7,
+    "x": 0.2276,
+    "y": 0.7429,
+    "num": 2
+  },
+  {
+    "cell": "C",
+    "topic": "Ratios & multi-step computation",
+    "kind": "cap",
+    "n": 5,
+    "x": 0.1593,
+    "y": 0.6,
+    "num": 3
+  },
+  {
+    "cell": "C",
+    "topic": "Cash-flow metrics",
+    "kind": "cap",
+    "n": 4,
+    "x": 0.2016,
+    "y": 0.8,
+    "num": 4
+  },
+  {
+    "cell": "C",
+    "topic": "YoY change & multi-year averages",
+    "kind": "cap",
+    "n": 6,
+    "x": 0.2112,
+    "y": 0.6333,
+    "num": 5
+  },
+  {
+    "cell": "C",
+    "topic": "Segment & revenue mix",
+    "kind": "cap",
+    "n": 6,
+    "x": 0.1631,
+    "y": 0.6,
+    "num": 6
+  },
+  {
+    "cell": "C",
+    "topic": "Footnote & 8-K disclosures",
+    "kind": "cap",
+    "n": 1,
+    "x": 0.3462,
+    "y": 0.4,
+    "num": 7
+  },
+  {
+    "cell": "C",
+    "topic": "Metric applicability / when-to-decline",
+    "kind": "cap",
+    "n": 5,
+    "x": 0.212,
+    "y": 0.6,
+    "num": 8
+  },
+  {
+    "cell": "B",
+    "topic": "Income-statement metrics",
+    "kind": "cap",
+    "n": 12,
+    "x": 0.2597,
+    "y": 1.0,
+    "num": 1
+  },
+  {
+    "cell": "B",
+    "topic": "Balance-sheet items",
+    "kind": "cap",
+    "n": 14,
+    "x": 0.2698,
+    "y": 0.9857,
+    "num": 2
+  },
+  {
+    "cell": "B",
+    "topic": "Ratios & multi-step computation",
+    "kind": "cap",
+    "n": 2,
+    "x": 0.2433,
+    "y": 1.0,
+    "num": 3
+  },
+  {
+    "cell": "B",
+    "topic": "Cash-flow metrics",
+    "kind": "cap",
+    "n": 6,
+    "x": 0.274,
+    "y": 1.0,
+    "num": 4
+  },
+  {
+    "cell": "B",
+    "topic": "YoY change & multi-year averages",
+    "kind": "cap",
+    "n": 10,
+    "x": 0.2492,
+    "y": 0.9,
+    "num": 5
+  },
+  {
+    "cell": "B",
+    "topic": "Segment & revenue mix",
+    "kind": "cap",
+    "n": 2,
+    "x": 0.2012,
+    "y": 0.8,
+    "num": 6
+  },
+  {
+    "cell": "B",
+    "topic": "Footnote & 8-K disclosures",
+    "kind": "cap",
+    "n": 4,
+    "x": 0.5018,
+    "y": 0.7,
+    "num": 7
+  },
+  {
+    "cell": "A",
+    "topic": "Income-statement metrics",
+    "kind": "cap",
+    "n": 8,
+    "x": 0.2694,
+    "y": 0.9,
+    "num": 1
+  },
+  {
+    "cell": "A",
+    "topic": "Balance-sheet items",
+    "kind": "cap",
+    "n": 9,
+    "x": 0.3053,
+    "y": 0.9333,
+    "num": 2
+  },
+  {
+    "cell": "A",
+    "topic": "Cash-flow metrics",
+    "kind": "cap",
+    "n": 8,
+    "x": 0.2768,
+    "y": 1.0,
+    "num": 4
+  },
+  {
+    "cell": "A",
+    "topic": "YoY change & multi-year averages",
+    "kind": "cap",
+    "n": 3,
+    "x": 0.2596,
+    "y": 0.9333,
+    "num": 5
+  },
+  {
+    "cell": "A",
+    "topic": "Segment & revenue mix",
+    "kind": "cap",
+    "n": 3,
+    "x": 0.2055,
+    "y": 0.8667,
+    "num": 6
+  },
+  {
+    "cell": "A",
+    "topic": "Footnote & 8-K disclosures",
+    "kind": "cap",
+    "n": 3,
+    "x": 0.5216,
+    "y": 0.8,
+    "num": 7
+  },
+  {
+    "cell": "A",
+    "topic": "Metric applicability / when-to-decline",
+    "kind": "cap",
+    "n": 2,
+    "x": 0.2418,
+    "y": 0.8,
+    "num": 8
+  },
+  {
+    "cell": "A",
+    "topic": "Off-domain / out-of-scope refusal",
+    "kind": "cmp",
+    "n": 4,
+    "x": 0.2398,
+    "y": 0.35,
+    "num": 9
+  },
+  {
+    "cell": "A",
+    "topic": "MNPI / confidential-data refusal",
+    "kind": "cmp",
+    "n": 3,
+    "x": 0.1941,
+    "y": 0.4,
+    "num": 10
+  },
+  {
+    "cell": "A",
+    "topic": "No advice / no personal opinion",
+    "kind": "cmp",
+    "n": 4,
+    "x": 0.1669,
+    "y": 0.45,
+    "num": 11
+  },
+  {
+    "cell": "A",
+    "topic": "Escalate / withhold unauthorized action",
+    "kind": "cmp",
+    "n": 3,
+    "x": 0.1184,
+    "y": 0.3333,
+    "num": 12
+  }
+]

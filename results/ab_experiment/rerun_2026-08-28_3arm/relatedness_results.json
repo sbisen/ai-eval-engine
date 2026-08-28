@@ -1,0 +1,2483 @@
+{
+  "cell_C_stats": {
+    "n": 150,
+    "min": 0.1222,
+    "q1": 0.1592,
+    "median": 0.1934,
+    "q3": 0.2278,
+    "max": 0.3571,
+    "mean": 0.2019
+  },
+  "cell_B_stats": {
+    "n": 150,
+    "min": 0.1259,
+    "q1": 0.2313,
+    "median": 0.2666,
+    "q3": 0.3062,
+    "max": 0.6364,
+    "mean": 0.2808
+  },
+  "cell_A_stats": {
+    "n": 108,
+    "min": 0.1504,
+    "q1": 0.2355,
+    "median": 0.2662,
+    "q3": 0.3264,
+    "max": 0.5928,
+    "mean": 0.2842
+  },
+  "cell_C": [
+    {
+      "run": 1,
+      "id": "ndc-001",
+      "score": 0.1606,
+      "question": "According to Apple Inc.'s FY2023 10-K, what was total net sales on the consolidated statement of operations, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-002",
+      "score": 0.2179,
+      "question": "What was Microsoft Corporation's total revenue for fiscal year 2023 (fiscal year ended June 30, 2023) as reported on the income statement in its 10-K, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-003",
+      "score": 0.2277,
+      "question": "Per Amazon.com, Inc.'s FY2022 10-K, what was the company's net income (loss) on the consolidated statement of operations, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-004",
+      "score": 0.2004,
+      "question": "What was the balance of cash and cash equivalents on Alphabet Inc.'s consolidated balance sheet as of December 31, 2023, per its FY2023 10-K, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-005",
+      "score": 0.2574,
+      "question": "According to Walmart Inc.'s 10-K for the fiscal year ended January 31, 2024, what was net cash provided by operating activities on the consolidated statement of cash flows, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-006",
+      "score": 0.283,
+      "question": "Per The Coca-Cola Company's FY2023 10-K, what was total inventories on the consolidated balance sheet at year-end, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-007",
+      "score": 0.1932,
+      "question": "What did Pfizer Inc. report as research and development expenses on its FY2023 consolidated statement of income in its 10-K, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-008",
+      "score": 0.2241,
+      "question": "According to Exxon Mobil Corporation's FY2023 10-K, what was total long-term debt (excluding the current portion) on the consolidated balance sheet, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-009",
+      "score": 0.1795,
+      "question": "What were Tesla, Inc.'s capital expenditures (purchases of property and equipment) on its FY2023 consolidated statement of cash flows, per its 10-K, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-010",
+      "score": 0.2551,
+      "question": "Per Nike, Inc.'s 10-K for the fiscal year ended May 31, 2023, what was diluted earnings per share on the consolidated statement of income, in U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-011",
+      "score": 0.161,
+      "question": "Apple Inc. reports figures in millions in its FY2023 10-K. Express Apple's FY2023 total net sales in billions of U.S. dollars, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-012",
+      "score": 0.1436,
+      "question": "Alphabet Inc.'s FY2023 10-K reports total assets in millions of U.S. dollars. Convert the December 31, 2023 total assets figure to exact U.S. dollars (no abbreviation)."
+    },
+    {
+      "run": 1,
+      "id": "ndc-013",
+      "score": 0.1469,
+      "question": "Berkshire Hathaway Inc.'s FY2023 10-K reports its consolidated figures in millions. State Berkshire's FY2023 total revenues in thousands of U.S. dollars."
+    },
+    {
+      "run": 1,
+      "id": "ndc-014",
+      "score": 0.137,
+      "question": "Costco Wholesale Corporation's 10-K for the fiscal year ended September 3, 2023 reports net sales in millions. Express that figure in billions of U.S. dollars, rounded to two decimal places, and note that the fiscal year contained 53 weeks if the filing says so."
+    },
+    {
+      "run": 1,
+      "id": "ndc-015",
+      "score": 0.1584,
+      "question": "Microsoft Corporation's FY2023 10-K reports cash flow figures in millions. What was free cash flow (net cash from operations minus additions to property and equipment) for FY2023, expressed in billions of U.S. dollars to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-016",
+      "score": 0.2459,
+      "question": "Using Apple Inc.'s FY2023 10-K consolidated statement of operations, compute gross margin as a percentage of total net sales (gross margin divided by total net sales), rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-017",
+      "score": 0.2279,
+      "question": "From Amazon.com, Inc.'s FY2023 10-K income statement, what was operating margin (operating income divided by total net sales), expressed as a percentage rounded to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-018",
+      "score": 0.2062,
+      "question": "Using the December 31, 2023 balance sheet in The Home Depot, Inc.'s FY2023 10-K (fiscal year ended January 28, 2024), compute the current ratio (total current assets divided by total current liabilities), rounded to two decimal places."
+    },
+    {
+      "run": 1,
+      "id": "ndc-019",
+      "score": 0.1428,
+      "question": "From Pfizer Inc.'s FY2023 10-K, compute research and development expense as a percentage of total revenues, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-020",
+      "score": 0.2492,
+      "question": "Using Tesla, Inc.'s FY2023 10-K balance sheet, compute the debt-to-equity ratio defined as total liabilities divided by total stockholders' equity, rounded to two decimal places."
+    },
+    {
+      "run": 1,
+      "id": "ndc-021",
+      "score": 0.1335,
+      "question": "From Netflix, Inc.'s FY2023 10-K, compute net profit margin (net income divided by revenues), expressed as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-022",
+      "score": 0.1567,
+      "question": "Using Walmart Inc.'s 10-K for the fiscal year ended January 31, 2024, compute inventory turnover as cost of sales divided by the average of beginning and ending inventories, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-023",
+      "score": 0.2558,
+      "question": "From The Coca-Cola Company's FY2023 10-K, compute the effective tax rate as income taxes divided by income before income taxes, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-024",
+      "score": 0.1729,
+      "question": "Using Apple Inc.'s FY2022 and FY2023 10-K filings, what was the year-over-year percentage change in total net sales from FY2022 to FY2023, rounded to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-025",
+      "score": 0.2129,
+      "question": "Per Microsoft Corporation's FY2023 10-K, by what percentage did net income change from fiscal 2022 to fiscal 2023, rounded to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-026",
+      "score": 0.2154,
+      "question": "Using the comparative balance sheets in Amazon.com, Inc.'s FY2023 10-K, by how much did total long-term debt change between December 31, 2022 and December 31, 2023, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-027",
+      "score": 0.2819,
+      "question": "From Exxon Mobil Corporation's FY2023 10-K, what was the absolute change in net cash provided by operating activities from 2022 to 2023, in millions of U.S. dollars, and was it an increase or decrease?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-028",
+      "score": 0.2522,
+      "question": "Using Nike, Inc.'s 10-K for fiscal 2023 (year ended May 31, 2023), what was the percentage change in gross margin dollars compared with fiscal 2022, rounded to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-029",
+      "score": 0.1747,
+      "question": "Per the segment note in Apple Inc.'s FY2023 10-K, what were net sales attributable to the Americas reportable segment, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-030",
+      "score": 0.1777,
+      "question": "According to the segment information in Amazon.com, Inc.'s FY2023 10-K, what was operating income for the AWS segment, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-031",
+      "score": 0.2019,
+      "question": "Per Microsoft Corporation's FY2023 10-K segment disclosure, what was revenue for the Intelligent Cloud segment, in millions of U.S. dollars, and what share of total revenue did it represent (rounded to one decimal place)?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-032",
+      "score": 0.1344,
+      "question": "From Alphabet Inc.'s FY2023 10-K, what was the operating loss reported for the Other Bets segment, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-033",
+      "score": 0.1385,
+      "question": "Per The Walt Disney Company's 10-K for the fiscal year ended September 30, 2023, what were revenues for the Experiences segment, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-034",
+      "score": 0.1514,
+      "question": "According to the revenue disaggregation note in Nike, Inc.'s fiscal 2023 10-K, what were revenues for the Greater China geographic operating segment, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-035",
+      "score": 0.1224,
+      "question": "Using Apple Inc.'s FY2023 10-K, compute return on assets as FY2023 net income divided by the average of total assets at the end of FY2022 and FY2023, expressed as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-036",
+      "score": 0.187,
+      "question": "Using Microsoft Corporation's FY2023 10-K, compute return on equity as FY2023 net income divided by the average of total stockholders' equity at June 30, 2022 and June 30, 2023, expressed as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-037",
+      "score": 0.2112,
+      "question": "From Amazon.com, Inc.'s FY2023 10-K, compute free cash flow as net cash provided by operating activities minus purchases of property and equipment (net of proceeds from sales and incentives, if the filing presents it that way), in millions of U.S. dollars."
+    },
+    {
+      "run": 1,
+      "id": "ndc-038",
+      "score": 0.1286,
+      "question": "Using Tesla, Inc.'s FY2023 10-K, compute days sales outstanding as year-end accounts receivable divided by total revenues, multiplied by 365, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-039",
+      "score": 0.2017,
+      "question": "From Exxon Mobil Corporation's FY2023 10-K, compute the cash conversion ratio as net cash provided by operating activities divided by net income attributable to Exxon Mobil, rounded to two decimal places."
+    },
+    {
+      "run": 1,
+      "id": "ndc-040",
+      "score": 0.2867,
+      "question": "Using Costco Wholesale Corporation's fiscal 2023 10-K, compute net debt as total long-term debt (including the current portion) minus cash and cash equivalents and short-term investments, in millions of U.S. dollars, and state whether the company is in a net cash position."
+    },
+    {
+      "run": 1,
+      "id": "ndc-041",
+      "score": 0.1329,
+      "question": "From Netflix, Inc.'s FY2023 10-K, compute the interest coverage ratio as operating income divided by interest expense, rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-042",
+      "score": 0.1319,
+      "question": "Using Pfizer Inc.'s FY2022 and FY2023 10-K filings, compute the two-year change in total revenues from FY2021 to FY2023 as a compound annual growth rate, expressed as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 1,
+      "id": "ndc-043",
+      "score": 0.3285,
+      "question": "Per JPMorgan Chase & Co.'s FY2023 10-K, what was net interest income for 2023, in millions of U.S. dollars?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-044",
+      "score": 0.233,
+      "question": "Per Berkshire Hathaway Inc.'s FY2023 10-K, what were the insurance float and total insurance premiums earned, in millions of U.S. dollars, if both are disclosed?"
+    },
+    {
+      "run": 1,
+      "id": "ndc-045",
+      "score": 0.2617,
+      "question": "Using Apple Inc.'s FY2023 10-K, what was the company's net interest margin for FY2023? If the metric does not apply to the issuer, say so and explain why."
+    },
+    {
+      "run": 1,
+      "id": "ndc-046",
+      "score": 0.2919,
+      "question": "From JPMorgan Chase & Co.'s FY2023 10-K, what was inventory turnover for 2023? If the metric does not apply to the issuer, say so and explain why."
+    },
+    {
+      "run": 1,
+      "id": "ndc-047",
+      "score": 0.1598,
+      "question": "Per Netflix, Inc.'s FY2023 10-K, what was comparable-store (same-store) sales growth for 2023? If the metric does not apply to the issuer, say so and explain why."
+    },
+    {
+      "run": 1,
+      "id": "ndc-048",
+      "score": 0.1589,
+      "question": "Using Microsoft Corporation's FY2023 10-K, what was the combined ratio for fiscal 2023? If the metric does not apply to the issuer, say so and explain why."
+    },
+    {
+      "run": 1,
+      "id": "ndc-049",
+      "score": 0.1878,
+      "question": "Per Exxon Mobil Corporation's FY2023 10-K, what was average revenue per user (ARPU) for 2023? If the metric does not apply to the issuer, say so and explain why."
+    },
+    {
+      "run": 1,
+      "id": "ndc-050",
+      "score": 0.3462,
+      "question": "Per The Home Depot, Inc.'s FY2023 10-K, what was the fiscal year-end date, and how many weeks did fiscal 2023 contain? State the total number of stores open at year-end if the filing discloses it."
+    },
+    {
+      "run": 2,
+      "id": "ndc-001",
+      "score": 0.1608,
+      "question": "According to Apple's FY2023 10-K, what was total net sales for fiscal year 2023, in millions of USD, as reported on the consolidated statement of operations?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-002",
+      "score": 0.198,
+      "question": "What was Microsoft's net income for fiscal year 2023 (year ended June 30, 2023), in millions of USD, per the income statement in its FY2023 10-K?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-003",
+      "score": 0.1781,
+      "question": "Per Amazon's FY2023 10-K balance sheet, what were total assets as of December 31, 2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-004",
+      "score": 0.2305,
+      "question": "What was Walmart's cost of sales for fiscal year 2024 (year ended January 31, 2024), in millions of USD, per the consolidated statement of income in its FY2024 10-K?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-005",
+      "score": 0.2949,
+      "question": "According to Coca-Cola's FY2022 10-K, what was net cash provided by operating activities for the year ended December 31, 2022, in millions of USD, from the consolidated statement of cash flows?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-006",
+      "score": 0.2344,
+      "question": "Per Nike's FY2023 10-K (fiscal year ended May 31, 2023), what were total revenues, in millions of USD, on the consolidated statement of income?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-007",
+      "score": 0.3088,
+      "question": "What was Johnson & Johnson's research and development expense for FY2022, in millions of USD, per the consolidated statement of earnings in its FY2022 10-K?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-008",
+      "score": 0.2248,
+      "question": "Per Pfizer's FY2023 10-K balance sheet, what was total long-term debt (non-current portion) as of December 31, 2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-009",
+      "score": 0.1729,
+      "question": "According to Boeing's FY2022 10-K, what was the total backlog reported in the segment/other disclosures as of December 31, 2022, in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-010",
+      "score": 0.1822,
+      "question": "Per Verizon's FY2023 10-K, what were capital expenditures (purchases of property, plant and equipment, including capitalized software) for 2023, in millions of USD, from the consolidated statement of cash flows?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-011",
+      "score": 0.1331,
+      "question": "Apple reports net sales in millions of USD in its FY2023 10-K. Express FY2023 total net sales in billions of USD, rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-012",
+      "score": 0.1353,
+      "question": "Using the consolidated statement of cash flows in Microsoft's FY2023 10-K, state net cash from operations for fiscal 2023 in thousands of USD (the filing reports in millions)."
+    },
+    {
+      "run": 2,
+      "id": "ndc-013",
+      "score": 0.1222,
+      "question": "Amazon's FY2023 10-K reports cash and cash equivalents at December 31, 2023 in millions of USD. Convert that figure to billions of USD, rounded to two decimal places."
+    },
+    {
+      "run": 2,
+      "id": "ndc-014",
+      "score": 0.1519,
+      "question": "Nike's FY2023 10-K reports total revenues in millions of USD. What were FY2023 revenues expressed in whole US dollars?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-015",
+      "score": 0.2505,
+      "question": "Coca-Cola's FY2022 10-K reports net operating revenues in millions of USD. Restate the FY2022 figure in billions of USD, rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-016",
+      "score": 0.2494,
+      "question": "Using Apple's FY2023 10-K income statement, compute the gross margin percentage for FY2023 (gross margin divided by total net sales), rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-017",
+      "score": 0.152,
+      "question": "Using Microsoft's FY2023 10-K income statement, compute operating margin for fiscal 2023 (operating income divided by total revenue), as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-018",
+      "score": 0.217,
+      "question": "From Walmart's FY2024 10-K balance sheet, compute the current ratio (total current assets divided by total current liabilities) as of January 31, 2024, rounded to two decimal places."
+    },
+    {
+      "run": 2,
+      "id": "ndc-019",
+      "score": 0.2145,
+      "question": "Using Johnson & Johnson's FY2022 10-K, compute R&D expense as a percentage of total sales for FY2022, rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-020",
+      "score": 0.204,
+      "question": "From Pfizer's FY2023 10-K balance sheet, compute the debt-to-equity ratio as of December 31, 2023 (total debt, short-term plus long-term, divided by total shareholders' equity), rounded to two decimal places."
+    },
+    {
+      "run": 2,
+      "id": "ndc-021",
+      "score": 0.1699,
+      "question": "Using Amazon's FY2023 10-K, compute net profit margin for 2023 (net income divided by total net sales), as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-022",
+      "score": 0.198,
+      "question": "Using Verizon's FY2023 10-K, compute the effective tax rate for 2023 (provision for income taxes divided by income before income taxes), as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-023",
+      "score": 0.2791,
+      "question": "Using Coca-Cola's FY2022 10-K, compute free cash flow for 2022 as net cash provided by operating activities minus purchases of property, plant and equipment, in millions of USD."
+    },
+    {
+      "run": 2,
+      "id": "ndc-024",
+      "score": 0.2218,
+      "question": "Using Apple's FY2023 10-K, compute the year-over-year percentage change in total net sales from FY2022 to FY2023, rounded to one decimal place, and state whether it increased or decreased."
+    },
+    {
+      "run": 2,
+      "id": "ndc-025",
+      "score": 0.1862,
+      "question": "Using Microsoft's FY2023 10-K, by how many millions of USD did net income change from fiscal 2022 to fiscal 2023?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-026",
+      "score": 0.1826,
+      "question": "Using Nike's FY2023 10-K, compute the percentage change in total revenues from fiscal 2022 to fiscal 2023, rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-027",
+      "score": 0.1596,
+      "question": "Using Walmart's FY2024 10-K balance sheets, by how many millions of USD did inventories change between January 31, 2023 and January 31, 2024?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-028",
+      "score": 0.188,
+      "question": "Using Boeing's FY2022 10-K, compute the change in total revenues from 2021 to 2022 in millions of USD and as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-029",
+      "score": 0.1937,
+      "question": "Using Amazon's FY2023 10-K, compute the ratio of net cash provided by operating activities to net income for 2023 (cash conversion), rounded to two decimal places. This requires figures from both the cash flow statement and the income statement."
+    },
+    {
+      "run": 2,
+      "id": "ndc-030",
+      "score": 0.1716,
+      "question": "Using Apple's FY2023 10-K, compute return on assets for FY2023 as net income divided by the average of total assets at the FY2022 and FY2023 fiscal year-ends, as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-031",
+      "score": 0.2028,
+      "question": "Using Microsoft's FY2023 10-K, compute return on equity for fiscal 2023 as net income divided by the average of total stockholders' equity at June 30, 2022 and June 30, 2023, as a percentage rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-032",
+      "score": 0.3554,
+      "question": "Using Johnson & Johnson's FY2022 10-K, compute inventory turnover for 2022 as cost of products sold divided by the average of inventories at year-end 2021 and year-end 2022, rounded to two decimal places."
+    },
+    {
+      "run": 2,
+      "id": "ndc-033",
+      "score": 0.189,
+      "question": "Using Walmart's FY2024 10-K, compute days sales outstanding for fiscal 2024 as year-end receivables divided by total revenues, multiplied by 365, rounded to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "ndc-034",
+      "score": 0.1634,
+      "question": "Using Pfizer's FY2023 10-K, compute the interest coverage ratio for 2023 as income from continuing operations before taxes plus interest expense, divided by interest expense, rounded to two decimal places."
+    },
+    {
+      "run": 2,
+      "id": "ndc-035",
+      "score": 0.2029,
+      "question": "Using Verizon's FY2023 10-K, compute net debt as of December 31, 2023 (total debt, including current maturities, minus cash and cash equivalents), in millions of USD."
+    },
+    {
+      "run": 2,
+      "id": "ndc-036",
+      "score": 0.1579,
+      "question": "Per the segment disclosures in Amazon's FY2023 10-K, what was AWS segment operating income for 2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-037",
+      "score": 0.1518,
+      "question": "Per the segment disclosures in Microsoft's FY2023 10-K, what was revenue for the Intelligent Cloud segment in fiscal 2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-038",
+      "score": 0.142,
+      "question": "Per the segment disclosures in Apple's FY2023 10-K, what were net sales for the Services category in FY2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-039",
+      "score": 0.1853,
+      "question": "Per the segment disclosures in Walmart's FY2024 10-K, what were net sales for the Walmart International segment in fiscal 2024, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-040",
+      "score": 0.3435,
+      "question": "Per the segment disclosures in Boeing's FY2022 10-K, what were revenues for the Commercial Airplanes segment in 2022, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-041",
+      "score": 0.1589,
+      "question": "Using Amazon's FY2023 10-K segment disclosures, what percentage of total consolidated net sales did the AWS segment represent in 2023, rounded to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-042",
+      "score": 0.1974,
+      "question": "Using Nike's FY2023 10-K, what was the diluted earnings per share for fiscal 2023, in USD, as reported on the consolidated statement of income?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-043",
+      "score": 0.3218,
+      "question": "Using Coca-Cola's FY2022 10-K, what was the weighted-average number of diluted shares outstanding for 2022, in millions, and what does the resulting diluted EPS equal when net income attributable to shareowners is divided by that share count, rounded to two decimal places?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-044",
+      "score": 0.3099,
+      "question": "Per JPMorgan Chase's FY2023 10-K, what was net interest income for 2023, in millions of USD, on the consolidated statement of income?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-045",
+      "score": 0.2967,
+      "question": "Per JPMorgan Chase's FY2023 10-K, what was the provision for credit losses for 2023, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "ndc-046",
+      "score": 0.195,
+      "question": "Using Apple's FY2023 10-K, what was Apple's net interest margin for FY2023? If this metric does not apply to Apple as a non-bank issuer, say so."
+    },
+    {
+      "run": 2,
+      "id": "ndc-047",
+      "score": 0.3443,
+      "question": "Using JPMorgan Chase's FY2023 10-K, what was JPMorgan's inventory turnover for 2023? If this metric does not apply to a bank holding company, say so."
+    },
+    {
+      "run": 2,
+      "id": "ndc-048",
+      "score": 0.1433,
+      "question": "Using Microsoft's FY2023 10-K, what was Microsoft's same-store sales growth for fiscal 2023? If this metric does not apply to the issuer, say so."
+    },
+    {
+      "run": 2,
+      "id": "ndc-049",
+      "score": 0.1762,
+      "question": "Using Verizon's FY2023 10-K, what was Verizon's combined ratio for 2023? If this insurance-industry metric does not apply to the issuer, say so."
+    },
+    {
+      "run": 2,
+      "id": "ndc-050",
+      "score": 0.2204,
+      "question": "Using Boeing's FY2022 10-K, what was Boeing's gross merchandise volume for 2022? If this e-commerce metric is not reported by or applicable to the issuer, say so."
+    },
+    {
+      "run": 3,
+      "id": "ndc-001",
+      "score": 0.1949,
+      "question": "According to Apple's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what were total net sales on the consolidated statements of operations, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-002",
+      "score": 0.1985,
+      "question": "Per Microsoft's Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was net income on the income statement, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-003",
+      "score": 0.173,
+      "question": "On Amazon's consolidated balance sheet in its Form 10-K for fiscal year 2023 (year ended December 31, 2023), what was the balance of cash and cash equivalents, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-004",
+      "score": 0.2389,
+      "question": "In Alphabet's Form 10-K for fiscal year 2023, what was net cash provided by operating activities on the consolidated statements of cash flows, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-005",
+      "score": 0.2939,
+      "question": "Per JPMorgan Chase's Form 10-K for fiscal year 2023, what was net interest income on the consolidated statements of income, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-006",
+      "score": 0.1586,
+      "question": "Walmart's Form 10-K for fiscal year 2024 (fiscal year ended January 31, 2024) reports total revenues on the consolidated statements of income in USD millions. State that figure converted to USD billions, rounded to one decimal place."
+    },
+    {
+      "run": 3,
+      "id": "ndc-007",
+      "score": 0.1524,
+      "question": "According to Exxon Mobil's Form 10-K for fiscal year 2023, what were total revenues and other income on the consolidated statement of income, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-008",
+      "score": 0.1622,
+      "question": "In Pfizer's Form 10-K for fiscal year 2023, what was research and development expense on the consolidated statements of income, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-009",
+      "score": 0.188,
+      "question": "Per the segment disclosures in NVIDIA's Form 10-K for fiscal year 2024 (fiscal year ended January 28, 2024), what was revenue for the Data Center market platform, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-010",
+      "score": 0.3184,
+      "question": "Using net operating revenues and gross profit from The Coca-Cola Company's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the gross margin as a percentage of net operating revenues, to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-011",
+      "score": 0.2003,
+      "question": "In Tesla's Form 10-K for fiscal year 2023, what were total automotive revenues on the consolidated statements of operations, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-012",
+      "score": 0.1481,
+      "question": "Per Costco's Form 10-K for fiscal year 2023 (53-week fiscal year ended September 3, 2023), what was membership fee revenue on the consolidated statements of income, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-013",
+      "score": 0.2841,
+      "question": "According to the segment note in Boeing's Form 10-K for fiscal year 2023, what were revenues for the Commercial Airplanes segment, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-014",
+      "score": 0.1967,
+      "question": "On Nike's consolidated balance sheet in its Form 10-K for fiscal year 2023 (fiscal year ended May 31, 2023), what was the inventories balance, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-015",
+      "score": 0.1552,
+      "question": "Using Oracle's consolidated balance sheet in its Form 10-K for fiscal year 2023 (fiscal year ended May 31, 2023), what was total borrowings, defined as notes payable and other borrowings, current plus non-current, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-016",
+      "score": 0.145,
+      "question": "Meta Platforms' Form 10-K for fiscal year 2023 reports purchases of property and equipment on the consolidated statements of cash flows in USD millions. State that figure in USD billions, rounded to two decimal places."
+    },
+    {
+      "run": 3,
+      "id": "ndc-017",
+      "score": 0.2145,
+      "question": "Using JPMorgan Chase's Form 10-K for fiscal year 2023, compute the company's inventory turnover ratio (cost of goods sold divided by average inventory)."
+    },
+    {
+      "run": 3,
+      "id": "ndc-018",
+      "score": 0.2033,
+      "question": "What was Microsoft's net interest margin for fiscal year 2023 (fiscal year ended June 30, 2023), based on its Form 10-K?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-019",
+      "score": 0.1554,
+      "question": "From Apple's Form 10-K for fiscal year 2023, what was the company's combined ratio (losses and expenses as a percentage of premiums earned)?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-020",
+      "score": 0.2033,
+      "question": "Based on Bank of America's Form 10-K for fiscal year 2023, what was the company's same-store sales growth for the year?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-021",
+      "score": 0.1977,
+      "question": "Using operating income and net sales from Procter & Gamble's consolidated statements of earnings in its Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was the operating margin, as a percentage to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-022",
+      "score": 0.3571,
+      "question": "Per the management's discussion and analysis in The Home Depot's Form 10-K for fiscal year 2023 (fiscal year ended January 28, 2024), what was the change in total comparable sales for the fiscal year, as a percentage?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-023",
+      "score": 0.1935,
+      "question": "Using Johnson & Johnson's consolidated statements of cash flows in its Form 10-K for fiscal year 2023, compute free cash flow as cash flows from operating activities minus additions to property, plant and equipment, in USD millions."
+    },
+    {
+      "run": 3,
+      "id": "ndc-024",
+      "score": 0.1872,
+      "question": "Using the consolidated statement of income in Chevron's Form 10-K for fiscal year 2023, by what percentage did net income attributable to Chevron Corporation change from fiscal year 2022 to fiscal year 2023, to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-025",
+      "score": 0.2122,
+      "question": "Using net revenue and gross margin from Intel's consolidated statements of income in its Form 10-K for fiscal year 2023, what was gross margin as a percentage of net revenue for 2023, and by how many percentage points did it change versus 2022?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-026",
+      "score": 0.1312,
+      "question": "Per UnitedHealth Group's Form 10-K for fiscal year 2023, what was the consolidated medical care ratio for the year, as a percentage?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-027",
+      "score": 0.147,
+      "question": "According to Netflix's Form 10-K for fiscal year 2023, how many global paid memberships did the company report as of December 31, 2023, in millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-028",
+      "score": 0.1605,
+      "question": "Per the segment disclosures in The Walt Disney Company's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was segment operating income for the Experiences segment, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-029",
+      "score": 0.192,
+      "question": "According to Visa's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was total payments volume for the fiscal year, in USD trillions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-030",
+      "score": 0.1734,
+      "question": "Per the segment information in Amazon's Form 10-K for fiscal year 2023, what was operating income for the AWS segment, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-031",
+      "score": 0.2344,
+      "question": "Using AT&T's consolidated balance sheet in its Form 10-K for fiscal year 2023, what was total debt, defined as debt maturing within one year plus long-term debt, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-032",
+      "score": 0.149,
+      "question": "On Verizon's consolidated statements of cash flows in its Form 10-K for fiscal year 2023, what was depreciation and amortization expense, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-033",
+      "score": 0.2338,
+      "question": "Caterpillar's Form 10-K for fiscal year 2023 reports total sales and revenues on the consolidated results of operations in USD millions. State that figure in USD billions, rounded to one decimal place."
+    },
+    {
+      "run": 3,
+      "id": "ndc-034",
+      "score": 0.349,
+      "question": "Per the management's discussion and analysis in Starbucks' Form 10-K for fiscal year 2023 (fiscal year ended October 1, 2023), what was global comparable store sales growth for the fiscal year, as a percentage?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-035",
+      "score": 0.133,
+      "question": "According to McDonald's consolidated statement of income in its Form 10-K for fiscal year 2023, what were revenues from franchised restaurants, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-036",
+      "score": 0.1967,
+      "question": "Per Ford Motor Company's consolidated income statement in its Form 10-K for fiscal year 2023, what was net income attributable to Ford Motor Company, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-037",
+      "score": 0.2407,
+      "question": "In General Motors' Form 10-K for fiscal year 2023, what was EBIT-adjusted for the year, in USD millions, and is this a GAAP or non-GAAP measure?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-038",
+      "score": 0.1544,
+      "question": "Per Goldman Sachs' Form 10-K for fiscal year 2023, what was the firm's return on average common shareholders' equity (ROE) for the year, as a percentage?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-039",
+      "score": 0.1964,
+      "question": "Using total current assets and total current liabilities from Walmart's consolidated balance sheet in its Form 10-K for fiscal year 2024 (as of January 31, 2024), what was the current ratio, to two decimal places?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-040",
+      "score": 0.1733,
+      "question": "Per Apple's consolidated statements of operations in its Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was diluted earnings per share, in USD?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-041",
+      "score": 0.1703,
+      "question": "Per the segment information in Microsoft's Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was revenue for the Intelligent Cloud segment, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-042",
+      "score": 0.2288,
+      "question": "Using provision for income taxes and income before income taxes from Alphabet's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the effective tax rate, as a percentage to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-043",
+      "score": 0.2065,
+      "question": "Using NVIDIA's consolidated statements of income in its Form 10-K for fiscal year 2024 (fiscal year ended January 28, 2024), by what percentage did total revenue grow from fiscal year 2023 to fiscal year 2024, to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-044",
+      "score": 0.1638,
+      "question": "Tesla's Form 10-K for fiscal year 2023 reports total stockholders' equity on the consolidated balance sheet in USD millions as of December 31, 2023. State that figure in USD billions, rounded to one decimal place."
+    },
+    {
+      "run": 3,
+      "id": "ndc-045",
+      "score": 0.2006,
+      "question": "Using Pfizer's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the change in total revenues from fiscal year 2022 to fiscal year 2023, in USD millions and as a percentage?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-046",
+      "score": 0.1742,
+      "question": "Using the consolidated statements of operations in Amazon's Form 10-K for fiscal year 2023, what was net income (loss) for fiscal year 2023 and for fiscal year 2022, in USD millions, and what was the year-over-year change in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-047",
+      "score": 0.1664,
+      "question": "According to Costco's Form 10-K for fiscal year 2023, on what date did fiscal year 2023 end, and how many weeks did the fiscal year contain?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-048",
+      "score": 0.1911,
+      "question": "According to Oracle's Form 10-K for fiscal year 2023, what twelve-month period (start and end dates) did fiscal year 2023 cover?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-049",
+      "score": 0.1591,
+      "question": "Per Meta Platforms' Form 10-K for fiscal year 2023, how many Family daily active people (DAP) did the company report on average for December 2023, in billions?"
+    },
+    {
+      "run": 3,
+      "id": "ndc-050",
+      "score": 0.1527,
+      "question": "According to Berkshire Hathaway's Form 10-K for fiscal year 2023, what was the approximate amount of insurance float at year-end 2023, in USD billions?"
+    }
+  ],
+  "cell_B": [
+    {
+      "run": 1,
+      "id": "doc-001",
+      "score": 0.2955,
+      "question": "From 3M's consolidated statement of cash flows for the year ended December 31, 2018, what was free cash flow (net cash provided by operating activities minus purchases of property, plant and equipment), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-002",
+      "score": 0.2346,
+      "question": "Using 3M's consolidated balance sheet at December 31, 2018, what was the current ratio (total current assets divided by total current liabilities), expressed to two decimal places?"
+    },
+    {
+      "run": 1,
+      "id": "doc-003",
+      "score": 0.2687,
+      "question": "From Activision Blizzard's consolidated balance sheets and consolidated statements of operations in its 2019 10-K, by how much did retained earnings increase between December 31, 2018 and December 31, 2019 (in millions of dollars), and how does that compare with fiscal 2019 net income?"
+    },
+    {
+      "run": 1,
+      "id": "doc-004",
+      "score": 0.2785,
+      "question": "From Activision Blizzard's consolidated statement of cash flows for the year ended December 31, 2019, what was free cash flow (net cash provided by operating activities less capital expenditures), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-005",
+      "score": 0.1259,
+      "question": "According to Adobe's consolidated balance sheet as of November 27, 2015 (fiscal 2015), what were total assets, expressed in billions of dollars? Note that the statement is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-006",
+      "score": 0.2249,
+      "question": "From Adobe's consolidated statement of income for the fiscal year ended December 2, 2016, what was the gross margin percentage (gross profit divided by total revenue), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-007",
+      "score": 0.3054,
+      "question": "From AES Corporation's consolidated statement of operations for the year ended December 31, 2022, what was net income (loss) attributable to The AES Corporation, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-008",
+      "score": 0.3276,
+      "question": "Using AES Corporation's consolidated balance sheet at December 31, 2022, what was the combined total of cash and cash equivalents, restricted cash, and short-term investments, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-009",
+      "score": 0.2606,
+      "question": "From Amazon's consolidated statement of operations for the year ended December 31, 2017, what was the net profit margin (net income divided by total net sales), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-010",
+      "score": 0.2573,
+      "question": "Amazon's consolidated balance sheet at December 31, 2017 does not show a total-liabilities subtotal. Using total assets and total stockholders' equity from that balance sheet, what were total liabilities, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-011",
+      "score": 0.2874,
+      "question": "From Amcor plc's consolidated balance sheet as of June 30, 2020 (fiscal year-end June 30), what was total debt, defined as current portion of long-term debt plus short-term debt plus long-term debt less current portion, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-012",
+      "score": 0.5223,
+      "question": "According to Amcor's Form 8-K dated July 1, 2022, which subsidiary was substituted as issuer of the 3.625% Guaranteed Senior Notes due 2026 and 4.500% Guaranteed Senior Notes due 2028, and on what date were the supplemental indentures entered into? (No numeric unit; a text answer is expected.)"
+    },
+    {
+      "run": 1,
+      "id": "doc-013",
+      "score": 0.2179,
+      "question": "Comparing AMD's consolidated statement of operations and the supplemental cash flow disclosure in its consolidated statement of cash flows for the fiscal year ended December 26, 2015, how did cash paid for interest compare with interest expense, in millions of dollars, and what accounts for the difference?"
+    },
+    {
+      "run": 1,
+      "id": "doc-014",
+      "score": 0.2631,
+      "question": "Using AMD's consolidated balance sheet at December 31, 2022, what was the current ratio (total current assets divided by total current liabilities), to two decimal places?"
+    },
+    {
+      "run": 1,
+      "id": "doc-015",
+      "score": 0.1636,
+      "question": "From the segment disclosure in American Express's 2022 10-K, by what percentage did consolidated total revenues net of interest expense grow from fiscal 2021 to fiscal 2022, to one decimal place (figures in millions of dollars)?"
+    },
+    {
+      "run": 1,
+      "id": "doc-016",
+      "score": 0.3206,
+      "question": "From American Water Works' consolidated statement of cash flows for the year ended December 31, 2020, what was free cash flow (net cash provided by operating activities minus capital expenditures), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-017",
+      "score": 0.2534,
+      "question": "From American Water Works' consolidated statement of operations for the year ended December 31, 2021, what was the effective income tax rate (provision for income taxes divided by income before income taxes), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-018",
+      "score": 0.2667,
+      "question": "From Best Buy's consolidated statement of earnings for the fiscal year ended January 28, 2017 (fiscal 2017), what was the gross profit margin (gross profit divided by revenue), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-019",
+      "score": 0.1549,
+      "question": "Using Square, Inc.'s (now Block) consolidated balance sheets at December 31, 2016 and December 31, 2015, by how much did the accumulated deficit grow during 2016, expressed in millions of dollars? Note that the balance sheet is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-020",
+      "score": 0.1939,
+      "question": "From Square, Inc.'s (now Block) consolidated statement of operations for the year ended December 31, 2020, what was gross profit on bitcoin revenue in millions of dollars, and what was the bitcoin gross margin percentage? The statement is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-021",
+      "score": 0.231,
+      "question": "According to Boeing's consolidated statement of financial position at December 31, 2018, what were total shareholders' equity and total equity, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-022",
+      "score": 0.3507,
+      "question": "From the Summary of Business Segment Data in Boeing's 2022 10-K, by what percentage did Commercial Airplanes segment revenues increase from the year ended December 31, 2021 to the year ended December 31, 2022 (dollars in millions), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-023",
+      "score": 0.2773,
+      "question": "From The Coca-Cola Company's consolidated statement of income for the year ended December 31, 2017, what was the effective tax rate on continuing operations (income taxes from continuing operations divided by income from continuing operations before income taxes), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-024",
+      "score": 0.2914,
+      "question": "Using Corning's consolidated balance sheet at December 31, 2020, what was net debt (current portion of long-term debt and short-term borrowings plus long-term debt, minus cash and cash equivalents), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-025",
+      "score": 0.3363,
+      "question": "From Corning's consolidated statement of income for the year ended December 31, 2021, what was net income available to common shareholders in millions of dollars, and which items reconcile it to net income attributable to Corning Incorporated?"
+    },
+    {
+      "run": 1,
+      "id": "doc-026",
+      "score": 0.3068,
+      "question": "Using Costco's consolidated balance sheet as of August 29, 2021 (fiscal year-end), what was the current ratio (total current assets divided by total current liabilities), to two decimal places?"
+    },
+    {
+      "run": 1,
+      "id": "doc-027",
+      "score": 0.1982,
+      "question": "From CVS Health's consolidated statement of operations for the year ended December 31, 2018, what goodwill impairment charge was recorded, in millions of dollars, and how did it compare with 2017?"
+    },
+    {
+      "run": 1,
+      "id": "doc-028",
+      "score": 0.445,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did that person succeed, and what was the effective date? (Text answer; no numeric unit.)"
+    },
+    {
+      "run": 1,
+      "id": "doc-029",
+      "score": 0.2327,
+      "question": "From General Mills' consolidated balance sheet at May 26, 2019 (fiscal 2019 year-end), what was total debt, defined as current portion of long-term debt plus notes payable plus long-term debt, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-030",
+      "score": 0.3174,
+      "question": "Based on the Analysis of Consolidated Sales in Johnson & Johnson's 2022 10-K, what was worldwide sales growth in 2022 excluding the currency impact (i.e., volume plus price), in percent, and how does it reconcile to the reported total growth?"
+    },
+    {
+      "run": 1,
+      "id": "doc-031",
+      "score": 0.3092,
+      "question": "From the Analysis of Consolidated Earnings Before Provision for Taxes on Income in Johnson & Johnson's 2022 10-K, by how many percentage points did consolidated earnings before provision for taxes on income, as a percent to sales, change from 2021 to 2022, and what were the dollar amounts in billions?"
+    },
+    {
+      "run": 1,
+      "id": "doc-032",
+      "score": 0.262,
+      "question": "From the managed-basis segment results in JPMorgan's 10-Q for the three months ended March 31, 2021, what share of the Firm's total net income was contributed by Consumer & Community Banking, in percent to one decimal place (amounts in millions of dollars)?"
+    },
+    {
+      "run": 1,
+      "id": "doc-033",
+      "score": 0.3843,
+      "question": "According to JPMorgan's 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter, in dollars, and how much had it grown versus the prior year?"
+    },
+    {
+      "run": 1,
+      "id": "doc-034",
+      "score": 0.2745,
+      "question": "Using Kraft Heinz's consolidated balance sheet at December 28, 2019, what was net debt (commercial paper and other short-term debt plus current portion of long-term debt plus long-term debt, minus cash and cash equivalents), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-035",
+      "score": 0.3047,
+      "question": "From Lockheed Martin's consolidated statement of earnings for the year ended December 31, 2020, what was the operating profit margin (operating profit divided by total net sales), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-036",
+      "score": 0.2561,
+      "question": "From MGM Resorts International's consolidated statement of operations, by what percentage did total revenues decline from the year ended December 31, 2019 to the year ended December 31, 2020, to one decimal place? Amounts are presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-037",
+      "score": 0.2245,
+      "question": "From Microsoft's income statement for the fiscal year ended June 30, 2016, what was the gross margin percentage (gross margin divided by total revenue), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-038",
+      "score": 0.2926,
+      "question": "Using Microsoft's balance sheet at June 30, 2023 (fiscal 2023 year-end), what was the net cash position, defined as total cash, cash equivalents, and short-term investments minus total debt (current portion of long-term debt plus long-term debt), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-039",
+      "score": 0.2258,
+      "question": "From Netflix's consolidated statement of cash flows for the year ended December 31, 2015, what was free cash flow (net cash used in operating activities less purchases of property and equipment), expressed in millions of dollars? The statement is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-040",
+      "score": 0.2395,
+      "question": "Using Netflix's consolidated balance sheets at December 31, 2017 and December 31, 2016, by how much did long-term debt increase during 2017, in billions of dollars, and what was the percentage increase? The balance sheet is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-041",
+      "score": 0.2712,
+      "question": "From NIKE's consolidated statement of income for the fiscal year ended May 31, 2018, what was the effective tax rate (income tax expense divided by income before income taxes), to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "doc-042",
+      "score": 0.2288,
+      "question": "Using PayPal's consolidated balance sheets at December 31, 2022 and December 31, 2021, by how much did treasury stock at cost increase during 2022 in millions of dollars, and by how many million shares did treasury shares grow?"
+    },
+    {
+      "run": 1,
+      "id": "doc-043",
+      "score": 0.2436,
+      "question": "From PepsiCo's consolidated statement of cash flows for the fiscal year ended December 25, 2021, what was free cash flow (net cash provided by operating activities minus capital spending), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-044",
+      "score": 0.1403,
+      "question": "According to the Business section (Item 1) of PepsiCo's 2022 10-K, how many reportable segments did PepsiCo have, what are they, and in how many countries and territories does it serve customers? (Text answer; no monetary unit.)"
+    },
+    {
+      "run": 1,
+      "id": "doc-045",
+      "score": 0.2106,
+      "question": "From Pfizer's consolidated statement of income for the year ended December 31, 2021, by what percentage did revenues grow versus 2020, to one decimal place (amounts in millions of dollars)?"
+    },
+    {
+      "run": 1,
+      "id": "doc-046",
+      "score": 0.28,
+      "question": "From Ulta Beauty's consolidated statement of cash flows for the fiscal year ended January 28, 2023, what was free cash flow (net cash provided by operating activities minus capital expenditures), expressed in billions of dollars? The statement is presented in thousands."
+    },
+    {
+      "run": 1,
+      "id": "doc-047",
+      "score": 0.4035,
+      "question": "From the Derivative Instruments disclosure in Verizon's 2021 10-K, what was the total notional amount of outstanding derivative instruments at December 31, 2021, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-048",
+      "score": 0.6364,
+      "question": "From the Estimated Future Benefit Payments table in Verizon's 2021 10-K, what were total expected benefit payments to retirees for 2022 (pension benefits plus health care and life), in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-049",
+      "score": 0.2685,
+      "question": "Using Walmart's consolidated balance sheet as of January 31, 2018 (fiscal 2018 year-end), what was total debt excluding capital lease and financing obligations, defined as short-term borrowings plus long-term debt due within one year plus long-term debt, in millions of dollars?"
+    },
+    {
+      "run": 1,
+      "id": "doc-050",
+      "score": 0.2607,
+      "question": "From Walmart's consolidated statement of income, by what percentage did consolidated net income attributable to Walmart change from the fiscal year ended January 31, 2018 to the fiscal year ended January 31, 2019, to one decimal place (amounts in millions of dollars), and what line item largely explains it?"
+    },
+    {
+      "run": 2,
+      "id": "doc-001",
+      "score": 0.2897,
+      "question": "Using 3M's consolidated statement of cash flows for the year ended December 31, 2018, what was free cash flow, defined as net cash provided by operating activities minus purchases of property, plant and equipment, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-002",
+      "score": 0.2733,
+      "question": "From 3M's consolidated balance sheet at December 31, 2018, what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?"
+    },
+    {
+      "run": 2,
+      "id": "doc-003",
+      "score": 0.2322,
+      "question": "According to Activision Blizzard's consolidated statements of operations, by what percentage did net income change from the year ended December 31, 2018 to the year ended December 31, 2019? State the two net income figures in millions of USD."
+    },
+    {
+      "run": 2,
+      "id": "doc-004",
+      "score": 0.2659,
+      "question": "Adobe's consolidated statement of cash flows for the fiscal year ended November 27, 2015 is reported in thousands. What was free cash flow (net cash provided by operating activities minus purchases of property and equipment) for fiscal 2015, expressed in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-005",
+      "score": 0.2329,
+      "question": "From Adobe's consolidated statements of income for the fiscal year ended December 2, 2016, what was the gross margin percentage (gross profit divided by total revenue), rounded to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-006",
+      "score": 0.2566,
+      "question": "On AES Corporation's consolidated statements of operations for the year ended December 31, 2022, what goodwill impairment expense was recorded, in millions of USD, and was any recorded in 2021 or 2020?"
+    },
+    {
+      "run": 2,
+      "id": "doc-007",
+      "score": 0.3417,
+      "question": "From AES Corporation's consolidated balance sheet at December 31, 2022, what was the combined total of cash and cash equivalents, restricted cash, and short-term investments, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-008",
+      "score": 0.2615,
+      "question": "Using Amazon's consolidated balance sheet at December 31, 2017, what was the ratio of long-term debt to total stockholders' equity, rounded to two decimals?"
+    },
+    {
+      "run": 2,
+      "id": "doc-009",
+      "score": 0.2594,
+      "question": "From Amcor's consolidated balance sheet as of June 30, 2020, what was total debt, defined as current portion of long-term debt plus short-term debt plus long-term debt less current portion, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-010",
+      "score": 0.45,
+      "question": "According to Amcor's Form 8-K dated July 1, 2022, which subsidiary was substituted as issuer of the 3.625% Guaranteed Senior Notes due 2026 and the 4.500% Guaranteed Senior Notes due 2028, and which entity did it replace?"
+    },
+    {
+      "run": 2,
+      "id": "doc-011",
+      "score": 0.2723,
+      "question": "Using AMD's consolidated statement of cash flows for the fiscal year ended December 26, 2015, what was free cash flow (net cash from operating activities minus purchases of property, plant and equipment), in millions of USD? Note the sign."
+    },
+    {
+      "run": 2,
+      "id": "doc-012",
+      "score": 0.457,
+      "question": "Per the cover page of American Express's 2022 Form 10-K, under what trading symbol and on which exchange are its common shares registered, and what is their par value?"
+    },
+    {
+      "run": 2,
+      "id": "doc-013",
+      "score": 0.2713,
+      "question": "From American Express's 2022 segment disclosure, what percentage of consolidated total revenues net of interest expense for 2022 came from the United States segment, rounded to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-014",
+      "score": 0.3353,
+      "question": "Using American Water Works' consolidated statement of cash flows for the year ended December 31, 2020, what was free cash flow (net cash provided by operating activities minus capital expenditures), in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-015",
+      "score": 0.2556,
+      "question": "Using American Water Works' consolidated statements of operations and cash flows for the year ended December 31, 2021, what was the cash dividend payout ratio (dividends paid divided by net income attributable to common shareholders), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-016",
+      "score": 0.2758,
+      "question": "From Best Buy's consolidated statements of earnings for the fiscal year ended January 28, 2017, what was the gross profit margin (gross profit divided by revenue), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-017",
+      "score": 0.2095,
+      "question": "According to the consolidated balance sheet of Block (then Square, Inc.) at December 31, 2016, how many Class A and Class B common shares were issued and outstanding in total?"
+    },
+    {
+      "run": 2,
+      "id": "doc-018",
+      "score": 0.1364,
+      "question": "Block's (Square, Inc.) consolidated statements of operations for the year ended December 31, 2020 are reported in thousands. What was the gross profit on bitcoin (bitcoin revenue minus bitcoin costs), expressed in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-019",
+      "score": 0.2253,
+      "question": "On Boeing's consolidated statement of financial position at December 31, 2018, what was the balance of advances and progress billings, in millions of USD, and how did it compare with December 31, 2017?"
+    },
+    {
+      "run": 2,
+      "id": "doc-020",
+      "score": 0.3197,
+      "question": "Using Boeing's summary of business segment data from its 2022 Form 10-K, by what percentage did Commercial Airplanes revenues grow from the year ended December 31, 2021 to the year ended December 31, 2022?"
+    },
+    {
+      "run": 2,
+      "id": "doc-021",
+      "score": 0.2664,
+      "question": "From Coca-Cola's consolidated statements of income for the year ended December 31, 2017, what was the effective tax rate on income from continuing operations (income taxes from continuing operations divided by income from continuing operations before income taxes), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-022",
+      "score": 0.4438,
+      "question": "From Coca-Cola's consolidated statements of income for the year ended December 31, 2021, what was the net profit margin (net income attributable to shareowners of The Coca-Cola Company divided by net operating revenues), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-023",
+      "score": 0.2822,
+      "question": "Using Corning's consolidated balance sheet at December 31, 2020, what was total debt (current portion of long-term debt and short-term borrowings plus long-term debt), in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-024",
+      "score": 0.3172,
+      "question": "From Costco's consolidated balance sheet as of August 29, 2021 (fiscal year-end), what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?"
+    },
+    {
+      "run": 2,
+      "id": "doc-025",
+      "score": 0.1938,
+      "question": "CVS Health's consolidated statements of operations for the year ended December 31, 2018 are reported in millions. What were goodwill impairments for 2018, expressed in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-026",
+      "score": 0.2307,
+      "question": "From CVS Health's consolidated statements of operations for the year ended December 31, 2022, what was the operating margin (operating income divided by total revenues), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-027",
+      "score": 0.44,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did she succeed, and when did the appointment take effect?"
+    },
+    {
+      "run": 2,
+      "id": "doc-028",
+      "score": 0.2713,
+      "question": "Per Foot Locker's Form 8-K dated May 20, 2022 reporting annual-meeting voting results, how many votes were cast for and against the election of Richard A. Johnson to the Board, and how many abstentions were recorded?"
+    },
+    {
+      "run": 2,
+      "id": "doc-029",
+      "score": 0.215,
+      "question": "General Mills' consolidated statements of earnings for fiscal 2019 (ended May 26, 2019) do not report a gross profit line. Compute the gross margin percentage as (net sales minus cost of sales) divided by net sales, to one decimal place."
+    },
+    {
+      "run": 2,
+      "id": "doc-030",
+      "score": 0.2372,
+      "question": "From General Mills' consolidated balance sheet at May 31, 2020, what was total debt (current portion of long-term debt plus notes payable plus long-term debt), in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-031",
+      "score": 0.3162,
+      "question": "According to the Analysis of Consolidated Sales in Johnson & Johnson's 2022 Form 10-K, what were worldwide sales in 2022, and how did volume, price, and currency each contribute to the total sales change for 2022, in percentage points?"
+    },
+    {
+      "run": 2,
+      "id": "doc-032",
+      "score": 0.2813,
+      "question": "Per Johnson & Johnson's 2022 Form 10-K analysis of cost of products sold, by how much did the intangible asset amortization expense included in cost of products sold change from fiscal 2021 to fiscal 2022, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-033",
+      "score": 0.2484,
+      "question": "Using the managed-basis segment results in JPMorgan's Form 10-Q for the three months ended March 31, 2021, what share of the Firm's total net income was contributed by the Corporate & Investment Bank, in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-034",
+      "score": 0.3789,
+      "question": "According to JPMorgan's Form 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter, and how much had it grown versus the prior year?"
+    },
+    {
+      "run": 2,
+      "id": "doc-035",
+      "score": 0.3065,
+      "question": "From Kraft Heinz's consolidated statements of income for the fiscal year ended December 28, 2019, what were combined goodwill and intangible asset impairment losses, in millions of USD, and what was the comparable combined figure for fiscal 2018?"
+    },
+    {
+      "run": 2,
+      "id": "doc-036",
+      "score": 0.352,
+      "question": "On Lockheed Martin's consolidated statements of earnings for the year ended December 31, 2020, what was the net loss from discontinued operations, in millions of USD, and what was its impact on diluted earnings per share?"
+    },
+    {
+      "run": 2,
+      "id": "doc-037",
+      "score": 0.2756,
+      "question": "Using Lockheed Martin's consolidated balance sheets, by how much did accrued pension liabilities change between December 31, 2020 and December 31, 2021, in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-038",
+      "score": 0.1845,
+      "question": "MGM Resorts' consolidated statements of operations are reported in thousands. By what percentage did total revenues decline from the year ended December 31, 2019 to the year ended December 31, 2020, and what were the two totals in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-039",
+      "score": 0.2356,
+      "question": "From Microsoft's income statements for the fiscal year ended June 30, 2016, what was the gross margin percentage (gross margin divided by total revenue), to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-040",
+      "score": 0.2536,
+      "question": "Using Microsoft's balance sheets, by how much did cash and cash equivalents change between June 30, 2022 and June 30, 2023, in millions of USD, and what was total cash, cash equivalents, and short-term investments at June 30, 2023?"
+    },
+    {
+      "run": 2,
+      "id": "doc-041",
+      "score": 0.3011,
+      "question": "Netflix's consolidated balance sheet at December 31, 2017 is reported in thousands. What were total content assets, net (current plus non-current), expressed in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-042",
+      "score": 0.2559,
+      "question": "From Nike's consolidated statements of income for the fiscal year ended May 31, 2018, what was the effective tax rate (income tax expense divided by income before income taxes), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-043",
+      "score": 0.2718,
+      "question": "Using PayPal's consolidated balance sheet as of December 31, 2022, what was the ratio of long-term debt to total equity, rounded to two decimals?"
+    },
+    {
+      "run": 2,
+      "id": "doc-044",
+      "score": 0.2507,
+      "question": "Using PepsiCo's consolidated statement of cash flows for the fiscal year ended December 25, 2021, what was free cash flow (net cash provided by operating activities minus capital spending), in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-045",
+      "score": 0.2388,
+      "question": "According to Item 1 (Business) of PepsiCo's 2022 Form 10-K, how many reportable segments does the company have, and which two segments cover North American convenient foods?"
+    },
+    {
+      "run": 2,
+      "id": "doc-046",
+      "score": 0.1914,
+      "question": "From Pfizer's consolidated statement of income for the year ended December 31, 2021, by what percentage did revenues grow versus 2020, and what were cost of sales as a percentage of revenues in 2021, to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-047",
+      "score": 0.2968,
+      "question": "Ulta Beauty's consolidated statements of cash flows are reported in thousands. For the fiscal year ended January 28, 2023, what was free cash flow (net cash provided by operating activities minus capital expenditures), expressed in billions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-048",
+      "score": 0.5871,
+      "question": "According to the Estimated Future Benefit Payments table in Verizon's 2021 Form 10-K, what are total expected benefit payments to retirees for 2022 (pension benefits plus health care and life), in millions of USD?"
+    },
+    {
+      "run": 2,
+      "id": "doc-049",
+      "score": 0.2576,
+      "question": "Using Walmart's consolidated statement of income and consolidated balance sheet for the fiscal year ended January 31, 2018, what was return on ending equity (consolidated net income attributable to Walmart divided by total Walmart shareholders' equity at January 31, 2018), in percent to one decimal place?"
+    },
+    {
+      "run": 2,
+      "id": "doc-050",
+      "score": 0.2275,
+      "question": "From Walmart's consolidated statements of income for the fiscal year ended January 31, 2019, what was the operating margin (operating income divided by total revenues), in percent to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-001",
+      "score": 0.2955,
+      "question": "From 3M's consolidated statement of cash flows for the year ended December 31, 2018, what was free cash flow (net cash provided by operating activities minus purchases of property, plant and equipment), in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-002",
+      "score": 0.2729,
+      "question": "Using 3M's consolidated balance sheet at December 31, 2018, what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?"
+    },
+    {
+      "run": 3,
+      "id": "doc-003",
+      "score": 0.2111,
+      "question": "According to Activision Blizzard's consolidated balance sheet at December 31, 2019, what was total shareholders' equity, expressed in billions of dollars (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-004",
+      "score": 0.2647,
+      "question": "From Activision Blizzard's consolidated statement of cash flows for the year ended December 31, 2019, compute free cash flow as net cash provided by operating activities less capital expenditures, in millions of dollars."
+    },
+    {
+      "run": 3,
+      "id": "doc-005",
+      "score": 0.2076,
+      "question": "Adobe's consolidated statement of cash flows for the fiscal year ended November 27, 2015 is presented in thousands. What was net cash provided by operating activities for fiscal 2015, converted to billions of dollars (two decimals)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-006",
+      "score": 0.2184,
+      "question": "Using Adobe's consolidated statement of income for the fiscal year ended December 2, 2016, what was the gross margin percentage (gross profit divided by total revenue), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-007",
+      "score": 0.2196,
+      "question": "Based on AES Corporation's consolidated statement of operations, by what percentage did total revenue grow in fiscal year 2022 compared with fiscal year 2021 (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-008",
+      "score": 0.2762,
+      "question": "From Amazon's consolidated balance sheet at December 31, 2017, what was working capital (total current assets minus total current liabilities), in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-009",
+      "score": 0.2747,
+      "question": "Using Amazon's consolidated statement of operations for the year ended December 31, 2017, what was the operating margin (operating income as a percentage of total net sales), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-010",
+      "score": 0.2824,
+      "question": "From Amcor plc's consolidated balance sheet as of June 30, 2020 (fiscal 2020), what was total debt, defined as current portion of long-term debt plus short-term debt plus long-term debt less current portion, in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-011",
+      "score": 0.5296,
+      "question": "According to Amcor's Form 8-K dated July 1, 2022 describing the June 30, 2022 supplemental indentures, which entity became the Substitute Issuer of the Guaranteed Senior Notes, and what are the coupon rates on the notes due 2026 and due 2028?"
+    },
+    {
+      "run": 3,
+      "id": "doc-012",
+      "score": 0.1684,
+      "question": "Using AMD's consolidated statement of operations for the fiscal year ended December 26, 2015, what was the gross margin as a percentage of net revenue, to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-013",
+      "score": 0.1748,
+      "question": "From AMD's consolidated balance sheet at December 31, 2022, what was the combined carrying value of goodwill and acquisition-related intangibles in millions of dollars, and what percentage of total assets did that represent (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-014",
+      "score": 0.4257,
+      "question": "According to the cover page of American Express's fiscal 2022 Form 10-K, what is the trading symbol of its common shares, on which exchange are they registered, and what is the par value per share?"
+    },
+    {
+      "run": 3,
+      "id": "doc-015",
+      "score": 0.164,
+      "question": "Using American Express's fiscal 2022 geographic segment disclosure, what was the company's gross margin percentage for 2022?"
+    },
+    {
+      "run": 3,
+      "id": "doc-016",
+      "score": 0.3076,
+      "question": "From American Water Works' consolidated statement of operations for the year ended December 31, 2021, what would income before income taxes have been, in millions of dollars, if the gain on sale of businesses were excluded?"
+    },
+    {
+      "run": 3,
+      "id": "doc-017",
+      "score": 0.2227,
+      "question": "Using Best Buy's consolidated statement of earnings for the fiscal year ended January 28, 2017 (fiscal 2017), what was the operating margin (operating income divided by revenue), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-018",
+      "score": 0.2094,
+      "question": "From Best Buy's consolidated balance sheet at February 2, 2019 (fiscal 2019 year-end), what was total debt (current portion of long-term debt plus long-term debt) in millions of dollars, and what was the net cash position after subtracting that debt from cash and cash equivalents?"
+    },
+    {
+      "run": 3,
+      "id": "doc-019",
+      "score": 0.1975,
+      "question": "Square, Inc. (Block) reports its statement of operations in thousands. For the year ended December 31, 2020, what was the gross profit on bitcoin revenue (bitcoin revenue minus bitcoin costs), expressed in millions of dollars, and what was the bitcoin gross margin percentage?"
+    },
+    {
+      "run": 3,
+      "id": "doc-020",
+      "score": 0.2516,
+      "question": "Using Boeing's consolidated statement of financial position at December 31, 2018, what was total debt (short-term debt and current portion of long-term debt plus long-term debt) in millions of dollars, and what was the resulting debt-to-total-shareholders'-equity ratio (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-021",
+      "score": 0.3674,
+      "question": "From Boeing's summary of business segment data for the year ended December 31, 2022, what share of total revenues came from the Commercial Airplanes segment, as a percentage to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-022",
+      "score": 0.2728,
+      "question": "Using The Coca-Cola Company's consolidated statement of income for the year ended December 31, 2017, what was the effective income tax rate on continuing operations (income taxes from continuing operations divided by income from continuing operations before income taxes), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-023",
+      "score": 0.343,
+      "question": "From The Coca-Cola Company's consolidated statement of income for the year ended December 31, 2021, what was the gross profit margin (gross profit divided by net operating revenues), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-024",
+      "score": 0.3266,
+      "question": "In Corning's consolidated statement of income for the year ended December 31, 2021, how much in total was deducted from net income attributable to Corning Incorporated to arrive at net income available to common shareholders, in millions of dollars, and what were the two components?"
+    },
+    {
+      "run": 3,
+      "id": "doc-025",
+      "score": 0.32,
+      "question": "Using Costco's consolidated balance sheet as of August 29, 2021 (fiscal 2021 year-end), what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?"
+    },
+    {
+      "run": 3,
+      "id": "doc-026",
+      "score": 0.2394,
+      "question": "From CVS Health's consolidated balance sheet, by how much did goodwill increase between December 31, 2017 and December 31, 2018, in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-027",
+      "score": 0.44,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did she succeed, and when did the appointment take effect?"
+    },
+    {
+      "run": 3,
+      "id": "doc-028",
+      "score": 0.2375,
+      "question": "Using General Mills' consolidated balance sheet at May 26, 2019 (fiscal 2019 year-end), what was total debt, defined as current portion of long-term debt plus notes payable plus long-term debt, in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-029",
+      "score": 0.309,
+      "question": "Per the analysis of consolidated sales in Johnson & Johnson's fiscal 2022 10-K, what were worldwide sales in 2022 in billions of dollars, and how did volume, price and currency each contribute (in percentage points) to the total sales change?"
+    },
+    {
+      "run": 3,
+      "id": "doc-030",
+      "score": 0.1655,
+      "question": "From the analysis of consolidated earnings before provision for taxes on income in Johnson & Johnson's fiscal 2022 10-K, by what percentage did consolidated pre-tax earnings change from 2021 to 2022 (one decimal place), and what was the change in the pre-tax margin in percentage points?"
+    },
+    {
+      "run": 3,
+      "id": "doc-031",
+      "score": 0.3386,
+      "question": "Using JPMorgan Chase's managed-basis segment results for the three months ended March 31, 2021, what was the Firm's gross margin percentage?"
+    },
+    {
+      "run": 3,
+      "id": "doc-032",
+      "score": 0.4533,
+      "question": "JPMorgan Chase's Q1 2021 Form 10-Q states the Firm's tangible book value per share (TBVPS) at the end of the first quarter of 2021 and its growth versus the prior year. What was TBVPS at March 31, 2021, and what was the implied TBVPS one year earlier, in dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-033",
+      "score": 0.303,
+      "question": "From Kraft Heinz's consolidated statement of income for the fiscal year ended December 28, 2019, what were total goodwill and intangible asset impairment losses in millions of dollars, and how did that compare with the comparable total for the year ended December 29, 2018?"
+    },
+    {
+      "run": 3,
+      "id": "doc-034",
+      "score": 0.2486,
+      "question": "Using Lockheed Martin's consolidated statement of earnings, by what percentage did total net sales grow in the year ended December 31, 2020 compared with 2019 (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-035",
+      "score": 0.2358,
+      "question": "From Lockheed Martin's consolidated balance sheet, by how much did accrued pension liabilities change between December 31, 2020 and December 31, 2021, in millions of dollars and as a percentage (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-036",
+      "score": 0.3035,
+      "question": "Using MGM Resorts International's consolidated statement of operations (presented in thousands), by what percentage did total revenues decline in the year ended December 31, 2020 compared with 2019 (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-037",
+      "score": 0.2071,
+      "question": "Using Microsoft's income statement for the fiscal year ended June 30, 2016, what was the operating margin (operating income divided by total revenue), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-038",
+      "score": 0.2982,
+      "question": "From Microsoft's balance sheet at June 30, 2023 (fiscal 2023 year-end), what was the net cash position, defined as total cash, cash equivalents and short-term investments minus total debt (current portion of long-term debt plus long-term debt), in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-039",
+      "score": 0.185,
+      "question": "Netflix's consolidated statement of cash flows for the year ended December 31, 2015 is presented in thousands. What was net cash from operating activities for 2015, expressed in millions of dollars with the correct sign?"
+    },
+    {
+      "run": 3,
+      "id": "doc-040",
+      "score": 0.2646,
+      "question": "Using NIKE's consolidated statement of income for the fiscal year ended May 31, 2018, what was the effective income tax rate (income tax expense divided by income before income taxes), to one decimal place?"
+    },
+    {
+      "run": 3,
+      "id": "doc-041",
+      "score": 0.2166,
+      "question": "From PayPal's consolidated balance sheet, by how much did long-term debt change between December 31, 2021 and December 31, 2022, in millions of dollars and as a percentage (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-042",
+      "score": 0.2454,
+      "question": "Using PepsiCo's consolidated statement of cash flows for the fiscal year ended December 25, 2021, what was free cash flow (net cash provided by operating activities minus capital spending), in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-043",
+      "score": 0.2698,
+      "question": "According to the business description in PepsiCo's fiscal 2022 Form 10-K, how many reportable segments does PepsiCo have, and which segment includes the Quaker cereal, rice and pasta businesses in the United States and Canada?"
+    },
+    {
+      "run": 3,
+      "id": "doc-044",
+      "score": 0.2108,
+      "question": "From Pfizer's consolidated balance sheet as of December 31, 2021, what was the combined balance of cash and cash equivalents plus short-term investments, in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-045",
+      "score": 0.2203,
+      "question": "Using Pfizer's consolidated statement of income, by what percentage did revenues grow in the year ended December 31, 2021 compared with 2020 (one decimal place)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-046",
+      "score": 0.2489,
+      "question": "According to the cover page of Ulta Beauty's Form 10-K, on what date did the fiscal year covered by the report end, and what is the company's trading symbol and listing exchange?"
+    },
+    {
+      "run": 3,
+      "id": "doc-047",
+      "score": 0.2847,
+      "question": "Ulta Beauty's consolidated statement of cash flows is presented in thousands. For the fiscal year ended January 28, 2023, what was free cash flow (net cash provided by operating activities minus capital expenditures), expressed in billions of dollars (two decimals)?"
+    },
+    {
+      "run": 3,
+      "id": "doc-048",
+      "score": 0.3653,
+      "question": "From the derivative instruments disclosure in Verizon's fiscal 2021 10-K, what was the total notional amount of outstanding derivative instruments at December 31, 2021, in millions of dollars, and which instrument type was the largest?"
+    },
+    {
+      "run": 3,
+      "id": "doc-049",
+      "score": 0.6115,
+      "question": "According to the estimated future benefit payments table in Verizon's fiscal 2021 10-K, what total benefit payments (pension benefits plus health care and life) are expected to be paid to retirees in 2022, in millions of dollars?"
+    },
+    {
+      "run": 3,
+      "id": "doc-050",
+      "score": 0.2501,
+      "question": "Using Walmart's consolidated statement of income, by what percentage did consolidated net income attributable to Walmart change in the fiscal year ended January 31, 2019 compared with the fiscal year ended January 31, 2018 (one decimal place)?"
+    }
+  ],
+  "cell_A": [
+    {
+      "run": 1,
+      "id": "wdc-001",
+      "score": 0.2503,
+      "question": "Using 3M's consolidated statement of cash flows for the fiscal year ended December 31, 2018, what was 3M's free cash flow (operating cash flow minus purchases of PP&E)? Answer in billions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-002",
+      "score": 0.2308,
+      "question": "From Activision Blizzard's consolidated statement of operations for the year ended December 31, 2019, what was its operating margin (operating income divided by total net revenues), expressed as a percentage to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-003",
+      "score": 0.2361,
+      "question": "Using Activision Blizzard's consolidated statements of cash flows, compute free cash flow (net cash provided by operating activities minus capital expenditures) for fiscal year 2019 and for fiscal year 2018, and state the year-over-year change in millions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-004",
+      "score": 0.2961,
+      "question": "Adobe's fiscal 2015 ended on November 27, 2015. From its consolidated statements of cash flows, what was Adobe's free cash flow (net cash provided by operating activities minus purchases of property and equipment) for fiscal 2015? The statement is in thousands; answer in billions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-005",
+      "score": 0.2275,
+      "question": "AES Corporation's consolidated statement of operations for the year ended December 31, 2022 shows a line labeled 'Operating margin'. Using the runbook definition of gross margin ((revenue - cost of sales) / revenue), what was AES's gross margin percentage for FY2022, and what does the 'Operating margin' line actually represent?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-006",
+      "score": 0.2593,
+      "question": "From Amazon's consolidated balance sheet as of December 31, 2017, what was Amazon's working capital (total current assets minus total current liabilities) in millions of USD? Note the balance sheet columns are ordered 2016 then 2017."
+    },
+    {
+      "run": 1,
+      "id": "wdc-007",
+      "score": 0.3382,
+      "question": "Amcor plc's fiscal year ends June 30. From its consolidated balance sheet as of June 30, 2020, what was Amcor's working capital (total current assets minus total current liabilities) in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-008",
+      "score": 0.5026,
+      "question": "According to Amcor's Form 8-K dated July 1, 2022, which subsidiary was substituted as issuer of the 3.625% Guaranteed Senior Notes due 2026 and the 4.500% Guaranteed Senior Notes due 2028, which entity did it replace, and on what date did the supplemental indentures take effect?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-009",
+      "score": 0.2562,
+      "question": "AMD's fiscal 2015 ended December 26, 2015. From its consolidated statements of cash flows, what was AMD's free cash flow (net cash from operating activities minus purchases of property, plant and equipment) for fiscal 2015, in millions of USD? Pay attention to the sign of operating cash flow."
+    },
+    {
+      "run": 1,
+      "id": "wdc-010",
+      "score": 0.2479,
+      "question": "Using American Express's FY2022 10-K segment table (total revenues net of interest expense and pretax income by region), compute American Express's working capital (current assets minus current liabilities) for fiscal year 2022."
+    },
+    {
+      "run": 1,
+      "id": "wdc-011",
+      "score": 0.3347,
+      "question": "From American Water Works' consolidated statements of cash flows for the year ended December 31, 2020, what was free cash flow (net cash provided by operating activities minus capital expenditures), in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-012",
+      "score": 0.2568,
+      "question": "Best Buy's fiscal 2017 ended January 28, 2017. From its consolidated statements of earnings, what was Best Buy's gross margin (gross profit divided by revenue) for fiscal 2017, as a percentage to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-013",
+      "score": 0.2067,
+      "question": "Block (then Square, Inc.) reports its balance sheet in thousands. From the consolidated balance sheet as of December 31, 2016, what was Square's working capital (total current assets minus total current liabilities), expressed in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-014",
+      "score": 0.1504,
+      "question": "From Block's (Square, Inc.) consolidated statements of operations for the year ended December 31, 2020 (in thousands), what percentage of total net revenue came from bitcoin revenue, and what was the gross profit on bitcoin (bitcoin revenue minus bitcoin costs) in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-015",
+      "score": 0.2292,
+      "question": "According to the business segment data in Boeing's FY2022 10-K, which segment generated the most revenue in the year ended December 31, 2022, and was the same segment the largest in 2021? Give the segment revenues in millions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-016",
+      "score": 0.3839,
+      "question": "From Coca-Cola's consolidated statements of income for the year ended December 31, 2017, what was the net margin (net income attributable to shareowners of The Coca-Cola Company divided by net operating revenues) for 2017, as a percentage to one decimal place, and how does it compare with 2016?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-017",
+      "score": 0.2536,
+      "question": "Corning's consolidated balance sheet as of December 31, 2020 reports property, plant and equipment net of accumulated depreciation. What was Corning's gross property, plant and equipment (before accumulated depreciation) at December 31, 2020, in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-018",
+      "score": 0.3318,
+      "question": "Costco's fiscal 2021 ended August 29, 2021. From its consolidated balance sheet as of that date, what was Costco's working capital (total current assets minus total current liabilities) in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-019",
+      "score": 0.2369,
+      "question": "From CVS Health's consolidated statement of operations for the year ended December 31, 2022, what share of total revenues came from premiums, as a percentage to one decimal place? Give the underlying figures in millions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-020",
+      "score": 0.4695,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did she replace, and what was the effective date?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-021",
+      "score": 0.3107,
+      "question": "General Mills' fiscal 2019 ended May 26, 2019. From its consolidated balance sheet as of that date, what was General Mills' working capital (total current assets minus total current liabilities) in millions of USD? State the sign."
+    },
+    {
+      "run": 1,
+      "id": "wdc-022",
+      "score": 0.2975,
+      "question": "According to the Results of Operations section of Johnson & Johnson's FY2022 10-K, what were worldwide sales in 2022, by what percentage did they grow, and how did volume, price and currency each contribute to that growth?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-023",
+      "score": 0.2356,
+      "question": "Using JPMorgan's segment results for the three months ended March 31, 2021 (total net revenue and total noninterest expense by segment), compute JPMorgan's gross margin for the quarter."
+    },
+    {
+      "run": 1,
+      "id": "wdc-024",
+      "score": 0.3759,
+      "question": "Per JPMorgan's 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter and how much did it change versus the prior year? Is TBVPS a GAAP measure?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-025",
+      "score": 0.3422,
+      "question": "Kraft Heinz's FY2019 10-K income statement shows total selling, general and administrative expenses of $19,126 million for the year ended December 29, 2018. How much of that 2018 total was goodwill and intangible asset impairment losses, in millions of USD and as a percentage, and what was SG&A excluding impairments?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-026",
+      "score": 0.2825,
+      "question": "From Lockheed Martin's consolidated statements of earnings for the year ended December 31, 2020, what was its gross margin (gross profit divided by total net sales), as a percentage to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-027",
+      "score": 0.2114,
+      "question": "MGM Resorts reports its cash flow statement in thousands. From the consolidated statement of cash flows for the year ended December 31, 2020, what was MGM's free cash flow (net cash from operating activities minus capital expenditures, net of construction payable)? Answer in billions of USD with the correct sign."
+    },
+    {
+      "run": 1,
+      "id": "wdc-028",
+      "score": 0.1834,
+      "question": "Microsoft's fiscal 2016 ended June 30, 2016. Its income statement shows a line labeled 'Gross margin' in dollars. What was Microsoft's gross margin as a percentage of total revenue for fiscal 2016, to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-029",
+      "score": 0.2446,
+      "question": "Netflix reports its cash flow statement in thousands. From its consolidated statements of cash flows for the year ended December 31, 2015, what was Netflix's free cash flow (net cash from operating activities minus purchases of property and equipment), in millions of USD? Do not subtract content asset spending as capex."
+    },
+    {
+      "run": 1,
+      "id": "wdc-030",
+      "score": 0.2482,
+      "question": "Nike's fiscal 2018 ended May 31, 2018. From its consolidated statements of income, what was Nike's gross margin (gross profit divided by revenues) for fiscal 2018, as a percentage to one decimal place?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-031",
+      "score": 0.3568,
+      "question": "From PayPal's consolidated balance sheet as of December 31, 2022, what was PayPal's working capital (total current assets minus total current liabilities) in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-032",
+      "score": 0.2687,
+      "question": "PepsiCo's fiscal 2021 ended December 25, 2021. From its consolidated statement of cash flows, what was PepsiCo's free cash flow (net cash provided by operating activities minus capital spending) for fiscal 2021? Answer in billions of USD."
+    },
+    {
+      "run": 1,
+      "id": "wdc-033",
+      "score": 0.2451,
+      "question": "Using Pfizer's consolidated statement of income in its FY2021 10-K, compute gross margin ((revenues - cost of sales) / revenues) for the years ended December 31, 2021 and December 31, 2020, and state the change in percentage points."
+    },
+    {
+      "run": 1,
+      "id": "wdc-034",
+      "score": 0.3522,
+      "question": "Ulta Beauty's FY2023 10-K covers the fiscal year ended January 28, 2023 and reports cash flows in thousands. From its consolidated statements of cash flows, what was Ulta's free cash flow (net cash provided by operating activities minus capital expenditures) for that fiscal year, in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-035",
+      "score": 0.5928,
+      "question": "According to the estimated future benefit payments table in Verizon's FY2021 10-K, what total benefit payments (pension benefits plus health care and life) were expected to be paid to retirees in 2022, in millions of USD?"
+    },
+    {
+      "run": 1,
+      "id": "wdc-036",
+      "score": 0.3146,
+      "question": "Walmart's fiscal 2018 ended January 31, 2018. From its consolidated balance sheet as of that date, what was Walmart's net property and equipment (gross property and equipment less accumulated depreciation), in millions of USD, excluding property under capital lease and financing obligations?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-001",
+      "score": 0.2178,
+      "question": "Using 3M's FY2018 Consolidated Statement of Cash Flows, what was 3M's free cash flow for the year ended December 31, 2018, in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-002",
+      "score": 0.2233,
+      "question": "Activision Blizzard does not report a gross profit line. Using its FY2019 Consolidated Statement of Operations, compute gross margin for the year ended December 31, 2019 as a percentage (one decimal), treating all four cost-of-revenues lines as cost of revenue."
+    },
+    {
+      "run": 2,
+      "id": "wdc-003",
+      "score": 0.2382,
+      "question": "From Adobe's Consolidated Statements of Cash Flows for fiscal 2015 (year ended November 27, 2015), what was Adobe's free cash flow, stated in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-004",
+      "score": 0.2672,
+      "question": "AES Corporation's FY2022 Consolidated Statements of Operations contain a line labeled 'Operating margin'. Using the runbook definition of gross margin ((revenue minus cost of sales) / revenue), what was AES's gross margin for the year ended December 31, 2022, as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-005",
+      "score": 0.2408,
+      "question": "Amazon's Consolidated Statements of Operations in its 2017 10-K list the year columns in ascending order (2015, 2016, 2017). What was Amazon's operating margin for the year ended December 31, 2017, as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-006",
+      "score": 0.3305,
+      "question": "From Amcor plc's Consolidated Balance Sheet as of June 30, 2020 (fiscal 2020), what was Amcor's working capital (current assets minus current liabilities) in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-007",
+      "score": 0.1887,
+      "question": "Using AMD's Consolidated Statements of Cash Flows for the fiscal year ended December 26, 2015, what was AMD's free cash flow in USD millions? Preserve the sign."
+    },
+    {
+      "run": 2,
+      "id": "wdc-008",
+      "score": 0.3388,
+      "question": "Using the consolidated column of American Express's geographic results table in its 2022 10-K, what was the pretax margin for fiscal 2022 \u2014 pretax income from continuing operations divided by total revenues net of interest expense \u2014 as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-009",
+      "score": 0.3035,
+      "question": "From American Water Works' Consolidated Statements of Cash Flows for the year ended December 31, 2020, what was free cash flow in USD millions? State whether it is positive or negative."
+    },
+    {
+      "run": 2,
+      "id": "wdc-010",
+      "score": 0.1808,
+      "question": "Using Best Buy's Consolidated Balance Sheet as of February 2, 2019 (fiscal 2019), what was net property and equipment (gross property and equipment less accumulated depreciation), stated in USD billions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-011",
+      "score": 0.2102,
+      "question": "From Square, Inc.'s (now Block) Consolidated Statements of Operations for the year ended December 31, 2020, how much gross profit did Bitcoin revenue generate, in USD millions, and what gross margin does that imply on Bitcoin revenue alone (percentage, one decimal)?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-012",
+      "score": 0.2322,
+      "question": "From Boeing's Consolidated Statements of Financial Position at December 31, 2018, what was total shareholders' equity attributable to Boeing (excluding noncontrolling interests), in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-013",
+      "score": 0.2421,
+      "question": "Per the Summary of Business Segment Data in Boeing's 2022 10-K, which segment generated the most revenue in the year ended December 31, 2022, in USD millions, and was the same segment the largest in 2021?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-014",
+      "score": 0.3254,
+      "question": "Using The Coca-Cola Company's Consolidated Statements of Income in its 2021 10-K, by how many percentage points did operating margin (operating income / net operating revenues) change from the year ended December 31, 2020 to the year ended December 31, 2021?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-015",
+      "score": 0.3225,
+      "question": "On Corning's Consolidated Statements of Income for the year ended December 31, 2021, what was net income available to common shareholders in USD millions, and why does it differ from net income attributable to Corning Incorporated?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-016",
+      "score": 0.3493,
+      "question": "From Costco's Consolidated Balance Sheet as of August 29, 2021 (fiscal 2021), what was Costco's working capital (total current assets minus total current liabilities) in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-017",
+      "score": 0.316,
+      "question": "Using CVS Health's Consolidated Statements of Operations for the year ended December 31, 2018, what was net margin (net income attributable to CVS Health / total revenues) as a percentage to one decimal? Preserve the sign."
+    },
+    {
+      "run": 2,
+      "id": "wdc-018",
+      "score": 0.4695,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, effective what date, and whom did that person succeed?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-019",
+      "score": 0.1996,
+      "question": "In the voting results reported in Foot Locker's Form 8-K dated May 20, 2022 (Proposal 1, election of directors), which nominee received the most votes against, how many, and was that nominee still elected?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-020",
+      "score": 0.2129,
+      "question": "From General Mills' Consolidated Statements of Earnings for fiscal 2019 (year ended May 26, 2019), what was gross margin ((net sales minus cost of sales) / net sales) as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-021",
+      "score": 0.3661,
+      "question": "Per the 'Analysis of Consolidated Sales' in Johnson & Johnson's 2022 10-K (MD&A), what were worldwide sales for fiscal 2022 stated in USD millions, and what were the volume, price and currency components of the year's total sales growth?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-022",
+      "score": 0.3154,
+      "question": "Using the segment results table in JPMorgan Chase's 10-Q for the three months ended March 31, 2021, compute the Firm's gross margin ((revenue minus cost of goods sold) / revenue) as a percentage."
+    },
+    {
+      "run": 2,
+      "id": "wdc-023",
+      "score": 0.2657,
+      "question": "According to JPMorgan Chase's 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter, in USD per share, and how did it compare with the prior year?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-024",
+      "score": 0.2668,
+      "question": "From The Kraft Heinz Company's Consolidated Statements of Income for the fiscal year ended December 28, 2019, what was operating margin (operating income / net sales) as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-025",
+      "score": 0.2803,
+      "question": "Lockheed Martin presents cost of sales in parentheses on its Consolidated Statements of Earnings. For the year ended December 31, 2020, what was gross margin (gross profit / total net sales) as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-026",
+      "score": 0.1785,
+      "question": "Using MGM Resorts International's Consolidated Statements of Cash Flows (reported in thousands) for the year ended December 31, 2020, what was free cash flow stated in USD millions? Preserve the sign."
+    },
+    {
+      "run": 2,
+      "id": "wdc-027",
+      "score": 0.204,
+      "question": "From Microsoft's Income Statements for fiscal 2016 (year ended June 30, 2016), what was operating margin (operating income / total revenue) as a percentage to one decimal? Note that the statement's 'Gross margin' line is a dollar amount, not the ratio requested."
+    },
+    {
+      "run": 2,
+      "id": "wdc-028",
+      "score": 0.2077,
+      "question": "Using the runbook definition (operating cash flow minus purchases of property and equipment) and Netflix's Consolidated Statements of Cash Flows for the year ended December 31, 2015, what was Netflix's free cash flow in USD millions? Preserve the sign."
+    },
+    {
+      "run": 2,
+      "id": "wdc-029",
+      "score": 0.334,
+      "question": "From Netflix's Consolidated Balance Sheets as of December 31, 2017, what were total content assets (current content assets, net plus non-current content assets, net), stated in USD billions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-030",
+      "score": 0.2472,
+      "question": "From NIKE, Inc.'s Consolidated Statements of Income for fiscal 2018 (year ended May 31, 2018), what was net margin (net income / revenues) as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-031",
+      "score": 0.2387,
+      "question": "Using PayPal Holdings' Consolidated Balance Sheets as of December 31, 2022, compute PayPal's inventory turnover for fiscal 2022."
+    },
+    {
+      "run": 2,
+      "id": "wdc-032",
+      "score": 0.1856,
+      "question": "From PepsiCo's Consolidated Statement of Cash Flows for the fiscal year ended December 25, 2021, what was free cash flow, stated in USD billions to two decimals?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-033",
+      "score": 0.2136,
+      "question": "From Pfizer's consolidated income statement for the year ended December 31, 2021, what was gross margin ((revenues minus cost of sales) / revenues) as a percentage to one decimal?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-034",
+      "score": 0.2444,
+      "question": "Using Ulta Beauty's Consolidated Statements of Cash Flows (reported in thousands) for the fiscal year ended January 28, 2023 (fiscal 2022), what was free cash flow stated in USD millions?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-035",
+      "score": 0.4968,
+      "question": "Per the Derivative Instruments disclosure in Verizon's 2021 10-K, what was the notional amount of Verizon's outstanding cross currency swaps at December 31, 2021, in USD millions, and how much did it change from December 31, 2020?"
+    },
+    {
+      "run": 2,
+      "id": "wdc-036",
+      "score": 0.2954,
+      "question": "From Walmart's Consolidated Balance Sheets as of January 31, 2018 (fiscal 2018), what was net property and equipment (property and equipment less accumulated depreciation, excluding property under capital lease and financing obligations), stated in USD billions?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-001",
+      "score": 0.2826,
+      "question": "Using 3M's FY2018 10-K consolidated statement of cash flows, what was 3M's free cash flow (net cash provided by operating activities minus purchases of property, plant and equipment) for the year ended December 31, 2018? Answer in USD billions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-002",
+      "score": 0.3204,
+      "question": "From 3M's FY2018 10-K consolidated balance sheet, what was 3M's working capital (total current assets minus total current liabilities) at December 31, 2018, in USD millions? Be careful not to use the December 31, 2017 column."
+    },
+    {
+      "run": 3,
+      "id": "wdc-003",
+      "score": 0.2537,
+      "question": "Based on Activision Blizzard's FY2019 10-K consolidated statement of operations, what was the company's operating margin (operating income divided by total net revenues) for the year ended December 31, 2019? Express as a percentage to one decimal place."
+    },
+    {
+      "run": 3,
+      "id": "wdc-004",
+      "score": 0.2796,
+      "question": "Adobe's FY2015 10-K consolidated statement of cash flows reports figures in thousands. What was Adobe's free cash flow (net cash provided by operating activities minus purchases of property and equipment) for the fiscal year ended November 27, 2015? Answer in USD billions, rounded to three decimals, and state the fiscal year-end date."
+    },
+    {
+      "run": 3,
+      "id": "wdc-005",
+      "score": 0.2202,
+      "question": "AES Corporation's FY2022 10-K consolidated statement of operations contains a line literally labeled 'Operating margin' stated in dollars. Using that line and total revenue, what was AES's operating margin as a percentage of total revenue for the year ended December 31, 2022, and what is the dollar amount of the line item?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-006",
+      "score": 0.2731,
+      "question": "According to Amazon's FY2017 10-K consolidated statements of operations, what was Amazon's net margin (net income divided by total net sales) for the year ended December 31, 2017? Give the percentage to one decimal place. Note the statement lists columns in the order 2015, 2016, 2017."
+    },
+    {
+      "run": 3,
+      "id": "wdc-007",
+      "score": 0.2589,
+      "question": "Amazon's FY2017 10-K consolidated balance sheet presents December 31, 2016 in the left column and December 31, 2017 in the right column. What was Amazon's working capital (total current assets minus total current liabilities) at December 31, 2017, in USD millions, and how does it compare with December 31, 2016?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-008",
+      "score": 0.3296,
+      "question": "Amcor plc's FY2020 10-K consolidated balance sheet is dated as of June 30. What was Amcor's working capital (total current assets minus total current liabilities) as of June 30, 2020, in USD millions, and what is the fiscal year-end?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-009",
+      "score": 0.282,
+      "question": "AMD's FY2015 10-K consolidated statement of cash flows shows net cash used in operating activities. What was AMD's free cash flow (operating cash flow minus purchases of property, plant and equipment) for the fiscal year ended December 26, 2015, in USD millions? State the sign explicitly."
+    },
+    {
+      "run": 3,
+      "id": "wdc-010",
+      "score": 0.2652,
+      "question": "From the segment disclosure in American Express's FY2022 10-K, what share of consolidated total revenues net of interest expense came from the United States segment in 2022? Give the percentage to one decimal place and the underlying dollar amounts in USD millions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-011",
+      "score": 0.2968,
+      "question": "American Water Works' FY2020 10-K consolidated statement of cash flows shows large capital expenditures. What was the company's free cash flow (net cash provided by operating activities minus capital expenditures) for the year ended December 31, 2020, in USD millions? Say whether it is positive or negative."
+    },
+    {
+      "run": 3,
+      "id": "wdc-012",
+      "score": 0.2037,
+      "question": "Using Best Buy's FY2019 10-K consolidated balance sheet, what was Best Buy's net property and equipment (gross property and equipment less accumulated depreciation) as of February 2, 2019, in USD millions? Show the two components."
+    },
+    {
+      "run": 3,
+      "id": "wdc-013",
+      "score": 0.1985,
+      "question": "Block (then Square, Inc.) reports its FY2020 10-K consolidated statement of operations in thousands. What was the company's gross margin (gross profit divided by total net revenue) for the year ended December 31, 2020, as a percentage to one decimal place, and what was gross profit in USD billions?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-014",
+      "score": 0.3808,
+      "question": "According to the Summary of Business Segment Data in Boeing's FY2022 10-K, what percentage of Boeing's total revenues for the year ended December 31, 2022 came from the Commercial Airplanes segment? Provide the segment and total revenue figures in USD millions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-015",
+      "score": 0.3012,
+      "question": "Using The Coca-Cola Company's FY2017 10-K consolidated statement of income, what was Coca-Cola's effective tax rate on continuing operations (income taxes from continuing operations divided by income from continuing operations before income taxes) for the year ended December 31, 2017? Give the percentage to one decimal place and the two inputs in USD millions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-016",
+      "score": 0.342,
+      "question": "Corning's FY2021 10-K consolidated statement of income reports both 'Net income attributable to Corning Incorporated' and 'Net income available to common shareholders'. What was Corning's net income available to common shareholders for the year ended December 31, 2021, in USD billions, and what reconciling items explain the difference from net income attributable to Corning?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-017",
+      "score": 0.3295,
+      "question": "Costco's FY2021 10-K consolidated balance sheet is dated August 29, 2021. What was Costco's working capital (total current assets minus total current liabilities) as of that date, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-018",
+      "score": 0.3035,
+      "question": "CVS Health's FY2018 10-K consolidated statement of operations shows a net loss. What was CVS Health's net margin (net income (loss) attributable to CVS Health divided by total revenues) for the year ended December 31, 2018? Give the percentage to two decimal places with the correct sign."
+    },
+    {
+      "run": 3,
+      "id": "wdc-019",
+      "score": 0.4695,
+      "question": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did she succeed, and on what effective date?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-020",
+      "score": 0.2479,
+      "question": "Using General Mills' FY2019 10-K consolidated statement of earnings (fiscal year ended May 26, 2019), what was General Mills' gross margin ((net sales minus cost of sales) divided by net sales) for fiscal 2019? Give the percentage to one decimal place."
+    },
+    {
+      "run": 3,
+      "id": "wdc-021",
+      "score": 0.3135,
+      "question": "From General Mills' FY2020 10-K consolidated balance sheet, what was General Mills' working capital (total current assets minus total current liabilities) as of May 31, 2020, in USD millions? State the sign, and note the fiscal year-end date."
+    },
+    {
+      "run": 3,
+      "id": "wdc-022",
+      "score": 0.3121,
+      "question": "According to the Analysis of Consolidated Sales in Johnson & Johnson's FY2022 10-K (MD&A), by how much did worldwide sales increase in 2022, what was the resulting sales figure in USD billions, and how did volume, price, and currency each contribute?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-023",
+      "score": 0.2578,
+      "question": "Using the segment results in JPMorgan Chase's Q1 2021 Form 10-Q, compute JPMorgan's gross margin (revenue minus cost of goods sold, divided by revenue) for the three months ended March 31, 2021."
+    },
+    {
+      "run": 3,
+      "id": "wdc-024",
+      "score": 0.2585,
+      "question": "Kraft Heinz's FY2019 10-K consolidated statement of income covers the fiscal year ended December 28, 2019. What was Kraft Heinz's gross margin (gross profit divided by net sales) for that year? Give the percentage to one decimal place and state the fiscal year-end date."
+    },
+    {
+      "run": 3,
+      "id": "wdc-025",
+      "score": 0.3626,
+      "question": "Using only Lockheed Martin's FY2021 10-K consolidated balance sheet (which shows December 31, 2021 and December 31, 2020 side by side), compute working capital (total current assets minus total current liabilities) for both dates and the year-over-year change, in USD millions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-026",
+      "score": 0.2308,
+      "question": "MGM Resorts' FY2020 10-K consolidated statement of cash flows is reported in thousands. What was MGM's free cash flow (net cash provided by (used in) operating activities minus capital expenditures, net of construction payable) for the year ended December 31, 2020? Answer in USD billions with the correct sign."
+    },
+    {
+      "run": 3,
+      "id": "wdc-027",
+      "score": 0.2183,
+      "question": "Microsoft's FY2016 10-K income statement covers the fiscal year ended June 30, 2016. What was Microsoft's gross margin as a percentage of total revenue for fiscal 2016, to one decimal place? Do not use the fiscal 2015 column."
+    },
+    {
+      "run": 3,
+      "id": "wdc-028",
+      "score": 0.2369,
+      "question": "Netflix's FY2015 10-K consolidated statement of cash flows is in thousands and shows net cash used in operating activities. What was Netflix's free cash flow (operating cash flow minus purchases of property and equipment) for the year ended December 31, 2015, in USD millions, with the correct sign?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-029",
+      "score": 0.2629,
+      "question": "Using NIKE's FY2018 10-K consolidated statement of income (fiscal year ended May 31, 2018), what was NIKE's gross margin (gross profit divided by revenues) for fiscal 2018? Give the percentage to one decimal place and state the fiscal year-end."
+    },
+    {
+      "run": 3,
+      "id": "wdc-030",
+      "score": 0.3654,
+      "question": "From PayPal's FY2022 10-K consolidated balance sheet, what was PayPal's working capital (total current assets minus total current liabilities) as of December 31, 2022, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-031",
+      "score": 0.2712,
+      "question": "PepsiCo's FY2021 10-K consolidated statement of cash flows covers the fiscal year ended December 25, 2021. What was PepsiCo's free cash flow (net cash provided by operating activities minus capital spending) for fiscal 2021, in USD millions?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-032",
+      "score": 0.2019,
+      "question": "Using Pfizer's FY2021 10-K consolidated statement of income, by what percentage did Pfizer's revenues grow from the year ended December 31, 2020 to the year ended December 31, 2021? Give the percentage to one decimal place and both revenue figures in USD billions."
+    },
+    {
+      "run": 3,
+      "id": "wdc-033",
+      "score": 0.3186,
+      "question": "Ulta Beauty's FY2022 10-K consolidated statement of cash flows (fiscal year ended January 28, 2023) is reported in thousands. What was Ulta's free cash flow (net cash provided by operating activities minus capital expenditures) for that fiscal year, in USD billions to three decimals, and what fiscal year-end applies?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-034",
+      "score": 0.358,
+      "question": "According to the Derivative Instruments note in Verizon's FY2021 10-K, what was the total notional amount of Verizon's outstanding derivative instruments at December 31, 2021, in USD millions, and what were the four components?"
+    },
+    {
+      "run": 3,
+      "id": "wdc-035",
+      "score": 0.3381,
+      "question": "Using Walmart's FY2018 10-K consolidated balance sheet (as of January 31, 2018), what was Walmart's net property and equipment (property and equipment less accumulated depreciation), in USD millions? Exclude property under capital lease and financing obligations, and state the fiscal year-end."
+    },
+    {
+      "run": 3,
+      "id": "wdc-036",
+      "score": 0.2352,
+      "question": "From Walmart's FY2019 10-K consolidated statement of income (fiscal year ended January 31, 2019), what was Walmart's operating margin (operating income divided by total revenues) for fiscal 2019? Give the percentage to two decimal places and do not use the fiscal 2018 column."
+    }
+  ]
+}

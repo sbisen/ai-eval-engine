@@ -1,0 +1,11 @@
+{
+  "arm": "B_docs_only",
+  "run": 1,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-28T00:57:48Z",
+  "ended_at": "2026-08-28T01:04:21Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Authored in-session from prompt_system.txt + prompt_user.txt (61 evidence rows, no runbook); 50 grounded cases over 32 companies, 49 of 61 rows used in order; no API call, no templating, no refusal/metric-applicability cases; validated: schema, ids, non-empty expected, all grounding numbers present in the company's evidence."
+}

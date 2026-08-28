@@ -1,0 +1,1 @@
+{"arm":"B_docs_only","run":2,"model":"claude-fable-5 (Claude Code subagent)","started_at":"2026-08-28T00:57:53Z","ended_at":"2026-08-28T01:02:42Z","input_tokens":null,"output_tokens":null,"seed":null,"notes":"Subagent read all 61 evidence rows and hand-authored 50 grounded cases (one or two per company, 32 companies); validation passed first pass with zero fixes."}

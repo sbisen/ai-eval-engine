@@ -1,0 +1,242 @@
+[
+  {
+    "arm": "C",
+    "id": "ndc-002",
+    "question": "What was Microsoft Corporation's total revenue for fiscal year 2023 (fiscal year ended June 30, 2023) as reported on the income statement in its 10-K, in millions of U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Real issuer/period (MSFT FY2023 in dataset) but expected answer empty and raw evidence holds only the balance sheet; no revenue figure to check."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-006",
+    "question": "Per The Coca-Cola Company's FY2023 10-K, what was total inventories on the consolidated balance sheet at year-end, in millions of U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Sensible lookup; KO FY2023 filing not in dataset (only 2017/2021/2022) and expected answer empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-010",
+    "question": "Per Nike, Inc.'s 10-K for the fiscal year ended May 31, 2023, what was diluted earnings per share on the consolidated statement of income, in U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Correct fiscal framing; NIKE_2023_10K exists but evidence is cash-flow only, no EPS figure; expected answer empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-014",
+    "question": "Costco Wholesale Corporation's 10-K for the fiscal year ended September 3, 2023 reports net sales in millions. Express that figure in billions of U.S. dollars, rounded to two decimal places, and note that the fiscal year contained 53 weeks if the filing says so.",
+    "relevance": 0.8,
+    "groundedness": 0.5,
+    "note": "Fiscal date is right (53-wk year) but the 'note if the filing says so' hedge is odd for an owner question; COSTCO FY2023 not in dataset; expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-018",
+    "question": "Using the December 31, 2023 balance sheet in The Home Depot, Inc.'s FY2023 10-K (fiscal year ended January 28, 2024), compute the current ratio (total current assets divided by total current liabilities), rounded to two decimal places.",
+    "relevance": 0.7,
+    "groundedness": 0.4,
+    "note": "Internally inconsistent: cites a Dec 31, 2023 balance sheet for a Jan 28, 2024 year-end; Home Depot not in dataset; expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-022",
+    "question": "Using Walmart Inc.'s 10-K for the fiscal year ended January 31, 2024, compute inventory turnover as cost of sales divided by the average of beginning and ending inventories, rounded to one decimal place.",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Well-formed derived metric; Walmart FY2024 not in dataset (only FY2018-2020); expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-026",
+    "question": "Using the comparative balance sheets in Amazon.com, Inc.'s FY2023 10-K, by how much did total long-term debt change between December 31, 2022 and December 31, 2023, in millions of U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Good YoY question; Amazon FY2023 not in dataset (2017/2019 only); expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-030",
+    "question": "According to the segment information in Amazon.com, Inc.'s FY2023 10-K, what was operating income for the AWS segment, in millions of U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Real segment, real issuer; FY2023 not in dataset; expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-033",
+    "question": "Per The Walt Disney Company's 10-K for the fiscal year ended September 30, 2023, what were revenues for the Experiences segment, in millions of U.S. dollars?",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Correct segment name and FYE; Disney not in dataset; expected empty."
+  },
+  {
+    "arm": "C",
+    "id": "ndc-035",
+    "question": "Using Apple Inc.'s FY2023 10-K, compute return on assets as FY2023 net income divided by the average of total assets at the end of FY2022 and FY2023, expressed as a percentage rounded to one decimal place.",
+    "relevance": 1.0,
+    "groundedness": 0.5,
+    "note": "Standard ROA framing; Apple not in dataset; expected empty."
+  },
+  {
+    "arm": "B",
+    "id": "doc-002",
+    "question": "Using 3M's consolidated balance sheet at December 31, 2018, what was the current ratio (total current assets divided by total current liabilities), expressed to two decimal places?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "13,709 and 7,244 both in 3M_2018_10K evidence; 1.89 checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-006",
+    "question": "From Adobe's consolidated statement of income for the fiscal year ended December 2, 2016, what was the gross margin percentage (gross profit divided by total revenue), to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "5,034,522 / 5,854,430 in ADOBE_2016_10K evidence; 86.0% checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-010",
+    "question": "Amazon's consolidated balance sheet at December 31, 2017 does not show a total-liabilities subtotal. Using total assets and total stockholders' equity from that balance sheet, what were total liabilities, in millions of dollars?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "131,310 and 27,709 in AMAZON_2017_10K evidence; 103,601 checks and reconciles to the three liability lines."
+  },
+  {
+    "arm": "B",
+    "id": "doc-014",
+    "question": "Using AMD's consolidated balance sheet at December 31, 2022, what was the current ratio (total current assets divided by total current liabilities), to two decimal places?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "15,019 / 6,369 in AMD_2022_10K evidence; 2.36 checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-018",
+    "question": "From Best Buy's consolidated statement of earnings for the fiscal year ended January 28, 2017 (fiscal 2017), what was the gross profit margin (gross profit divided by revenue), to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "9,440 / 39,403 in BESTBUY_2017_10K evidence; 24.0% checks; fiscal-year labeling correct."
+  },
+  {
+    "arm": "B",
+    "id": "doc-022",
+    "question": "From the Summary of Business Segment Data in Boeing's 2022 10-K, by what percentage did Commercial Airplanes segment revenues increase from the year ended December 31, 2021 to the year ended December 31, 2022 (dollars in millions), to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "25,867 and 19,493 in BOEING_2022_10K evidence; 32.7% checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-026",
+    "question": "Using Costco's consolidated balance sheet as of August 29, 2021 (fiscal year-end), what was the current ratio (total current assets divided by total current liabilities), to two decimal places?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "29,505 / 29,441 in COSTCO_2021_10K evidence; 1.00 checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-030",
+    "question": "Based on the Analysis of Consolidated Sales in Johnson & Johnson's 2022 10-K, what was worldwide sales growth in 2022 excluding the currency impact (i.e., volume plus price), in percent, and how does it reconcile to the reported total growth?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "Volume 6.9 / price -0.8 / currency -4.8 / total 1.3 all in JNJ_2022_10K evidence; 6.1% ex-FX checks."
+  },
+  {
+    "arm": "B",
+    "id": "doc-033",
+    "question": "According to JPMorgan's 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter, in dollars, and how much had it grown versus the prior year?",
+    "relevance": 0.9,
+    "groundedness": 1.0,
+    "note": "Valid bank metric but sourced from a 10-Q not a 10-K; $66.56 up 10% verbatim in JPMORGAN_2021Q1_10Q evidence."
+  },
+  {
+    "arm": "B",
+    "id": "doc-035",
+    "question": "From Lockheed Martin's consolidated statement of earnings for the year ended December 31, 2020, what was the operating profit margin (operating profit divided by total net sales), to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "8,644 / 65,398 in LOCKHEEDMARTIN_2020_10K evidence; 13.2% checks."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-002",
+    "question": "From Activision Blizzard's consolidated statement of operations for the year ended December 31, 2019, what was its operating margin (operating income divided by total net revenues), expressed as a percentage to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "1,607 / 6,489 in ACTIVISIONBLIZZARD_2019_10K evidence; 24.8% checks."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-006",
+    "question": "From Amazon's consolidated balance sheet as of December 31, 2017, what was Amazon's working capital (total current assets minus total current liabilities) in millions of USD? Note the balance sheet columns are ordered 2016 then 2017.",
+    "relevance": 0.9,
+    "groundedness": 1.0,
+    "note": "60,197 - 57,883 = 2,314 in AMAZON_2017_10K evidence; the column-order hint is a generator artifact an owner would not write."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-010",
+    "question": "Using American Express's FY2022 10-K segment table (total revenues net of interest expense and pretax income by region), compute American Express's working capital (current assets minus current liabilities) for fiscal year 2022.",
+    "relevance": 0.6,
+    "groundedness": 0.5,
+    "note": "Trick/inapplicable-metric question: asks for working capital from a segment table for a bank; real issuer and figures (52,862 / 9,585) in evidence but no numeric answer to verify."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-014",
+    "question": "From Block's (Square, Inc.) consolidated statements of operations for the year ended December 31, 2020 (in thousands), what percentage of total net revenue came from bitcoin revenue, and what was the gross profit on bitcoin (bitcoin revenue minus bitcoin costs) in millions of USD?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "4,571,543 / 9,497,578 / 4,474,534 all in BLOCK_2020_10K evidence; 48.1% and $97.0M check."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-018",
+    "question": "Costco's fiscal 2021 ended August 29, 2021. From its consolidated balance sheet as of that date, what was Costco's working capital (total current assets minus total current liabilities) in millions of USD?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "29,505 - 29,441 = 64 in COSTCO_2021_10K evidence."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-022",
+    "question": "According to the Results of Operations section of Johnson & Johnson's FY2022 10-K, what were worldwide sales in 2022, by what percentage did they grow, and how did volume, price and currency each contribute to that growth?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "$94.9B, +1.3%, 6.9 / -0.8 / -4.8 all in JNJ_2022_10K evidence."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-026",
+    "question": "From Lockheed Martin's consolidated statements of earnings for the year ended December 31, 2020, what was its gross margin (gross profit divided by total net sales), as a percentage to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "8,654 / 65,398 in LOCKHEEDMARTIN_2020_10K evidence; 13.2% checks."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-030",
+    "question": "Nike's fiscal 2018 ended May 31, 2018. From its consolidated statements of income, what was Nike's gross margin (gross profit divided by revenues) for fiscal 2018, as a percentage to one decimal place?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "15,956 / 36,397 in NIKE_2018_10K evidence; 43.8% checks."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-033",
+    "question": "Using Pfizer's consolidated statement of income in its FY2021 10-K, compute gross margin ((revenues - cost of sales) / revenues) for the years ended December 31, 2021 and December 31, 2020, and state the change in percentage points.",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "81,288 / 30,821 / 41,651 / 8,484 in PFIZER_2021_10K evidence; 62.1%, 79.6%, -17.6pp check."
+  },
+  {
+    "arm": "A",
+    "id": "wdc-035",
+    "question": "According to the estimated future benefit payments table in Verizon's FY2021 10-K, what total benefit payments (pension benefits plus health care and life) were expected to be paid to retirees in 2022, in millions of USD?",
+    "relevance": 1.0,
+    "groundedness": 1.0,
+    "note": "2,049 + 906 = 2,955 in VERIZON_2021_10K evidence."
+  }
+]

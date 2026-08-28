@@ -1,0 +1,407 @@
+{
+  "set": "documents_only",
+  "generator_input": "61 filing-evidence rows (company, doc_name, doc_type, evidence) from 32 companies' 10-K/10-Q/8-K excerpts; no runbook, no questions or answers supplied.",
+  "case_count": 50,
+  "cases": [
+    {
+      "id": "doc-001",
+      "input": "Using 3M's consolidated statement of cash flows for the year ended December 31, 2018, what was free cash flow, defined as net cash provided by operating activities minus purchases of property, plant and equipment, in millions of USD?",
+      "expected": "$4,862 million (6,439 - 1,577).",
+      "grounding": "Net cash provided by (used in) operating activities 6,439 6,240 6,662 ... Purchases of property, plant and equipment (PP&E) (1,577) (1,373) (1,420)",
+      "company": "3M",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-002",
+      "input": "From 3M's consolidated balance sheet at December 31, 2018, what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?",
+      "expected": "Approximately 1.89 (13,709 / 7,244).",
+      "grounding": "Total current assets 13,709 14,277 ... Total current liabilities 7,244 7,687",
+      "company": "3M",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-003",
+      "input": "According to Activision Blizzard's consolidated statements of operations, by what percentage did net income change from the year ended December 31, 2018 to the year ended December 31, 2019? State the two net income figures in millions of USD.",
+      "expected": "Net income fell about 18.7%, from $1,848 million in 2018 to $1,503 million in 2019 (a decrease of $345 million).",
+      "grounding": "Net income $ 1,503 $ 1,848 $ 273",
+      "company": "Activision Blizzard",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-004",
+      "input": "Adobe's consolidated statement of cash flows for the fiscal year ended November 27, 2015 is reported in thousands. What was free cash flow (net cash provided by operating activities minus purchases of property and equipment) for fiscal 2015, expressed in billions of USD?",
+      "expected": "Approximately $1.28 billion (1,469,502 - 184,936 = 1,284,566 thousand).",
+      "grounding": "Net cash provided by operating activities 1,469,502 1,287,482 1,151,686 ... Purchases of property and equipment (184,936) (148,332) (188,358)",
+      "company": "Adobe",
+      "question_type": "scale-conversion"
+    },
+    {
+      "id": "doc-005",
+      "input": "From Adobe's consolidated statements of income for the fiscal year ended December 2, 2016, what was the gross margin percentage (gross profit divided by total revenue), rounded to one decimal place?",
+      "expected": "Approximately 86.0% (5,034,522 / 5,854,430, both in thousands).",
+      "grounding": "Total revenue 5,854,430 4,795,511 4,147,065 ... Gross profit 5,034,522 4,051,194 3,524,985",
+      "company": "Adobe",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-006",
+      "input": "On AES Corporation's consolidated statements of operations for the year ended December 31, 2022, what goodwill impairment expense was recorded, in millions of USD, and was any recorded in 2021 or 2020?",
+      "expected": "$777 million of goodwill impairment expense in 2022; no goodwill impairment expense is shown for 2021 or 2020.",
+      "grounding": "Goodwill impairment expense (777)",
+      "company": "AES Corporation",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-007",
+      "input": "From AES Corporation's consolidated balance sheet at December 31, 2022, what was the combined total of cash and cash equivalents, restricted cash, and short-term investments, in millions of USD?",
+      "expected": "$2,640 million (1,374 + 536 + 730).",
+      "grounding": "Cash and cash equivalents $ 1,374 $ 943 Restricted cash 536 304 Short-term investments 730 232",
+      "company": "AES Corporation",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-008",
+      "input": "Using Amazon's consolidated balance sheet at December 31, 2017, what was the ratio of long-term debt to total stockholders' equity, rounded to two decimals?",
+      "expected": "Approximately 0.89 (24,743 / 27,709, in millions).",
+      "grounding": "Long-term debt 7,694 24,743 ... Total stockholders equity 19,285 27,709",
+      "company": "Amazon",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-009",
+      "input": "From Amcor's consolidated balance sheet as of June 30, 2020, what was total debt, defined as current portion of long-term debt plus short-term debt plus long-term debt less current portion, in millions of USD?",
+      "expected": "$6,234.7 million (11.1 + 195.2 + 6,028.4).",
+      "grounding": "Current portion of long-term debt $ 11.1 $ 5.4 Short-term debt 195.2 788.8 ... Long-term debt, less current portion 6,028.4 5,309.0",
+      "company": "Amcor",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-010",
+      "input": "According to Amcor's Form 8-K dated July 1, 2022, which subsidiary was substituted as issuer of the 3.625% Guaranteed Senior Notes due 2026 and the 4.500% Guaranteed Senior Notes due 2028, and which entity did it replace?",
+      "expected": "Amcor Flexibles North America, Inc. became the Substitute Issuer, replacing Amcor Finance (USA), Inc. (the Former Issuer); both are wholly-owned subsidiaries of Amcor plc.",
+      "grounding": "On June 30, 2022, Amcor Finance (USA), Inc. (the Former Issuer) and Amcor Flexibles North America, Inc. (the Substitute Issuer), each a wholly-owned subsidiary of Amcor plc (the Company) ... governing the Former Issuers (a) 3.625% Guaranteed Senior Notes due 2026 (the 2026 Notes) and (b) 4.500% Guaranteed Senior Notes due 2028 ... relating to the substitution of the Substitute Issuer for the Former Issuer",
+      "company": "Amcor",
+      "question_type": "text-lookup"
+    },
+    {
+      "id": "doc-011",
+      "input": "Using AMD's consolidated statement of cash flows for the fiscal year ended December 26, 2015, what was free cash flow (net cash from operating activities minus purchases of property, plant and equipment), in millions of USD? Note the sign.",
+      "expected": "Negative $322 million: net cash used in operating activities of (226) less purchases of PP&E of 96.",
+      "grounding": "Net cash used in operating activities (226) (98) (148) ... Purchases of property, plant and equipment (96) (95) (84)",
+      "company": "AMD",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-012",
+      "input": "Per the cover page of American Express's 2022 Form 10-K, under what trading symbol and on which exchange are its common shares registered, and what is their par value?",
+      "expected": "Trading symbol AXP on the New York Stock Exchange; par value $0.20 per share.",
+      "grounding": "Common Shares (par value $0.20 per Share) AXP New York Stock Exchange",
+      "company": "American Express",
+      "question_type": "text-lookup"
+    },
+    {
+      "id": "doc-013",
+      "input": "From American Express's 2022 segment disclosure, what percentage of consolidated total revenues net of interest expense for 2022 came from the United States segment, rounded to one decimal place?",
+      "expected": "Approximately 78.3% (41,396 / 52,862, in millions).",
+      "grounding": "2022 Total revenues net of interest expense $ 41,396 $ 4,871 $ 3,835 $ 2,917 $ (157) $ 52,862",
+      "company": "American Express",
+      "question_type": "segment-share"
+    },
+    {
+      "id": "doc-014",
+      "input": "Using American Water Works' consolidated statement of cash flows for the year ended December 31, 2020, what was free cash flow (net cash provided by operating activities minus capital expenditures), in millions of USD?",
+      "expected": "Negative $396 million (1,426 - 1,822).",
+      "grounding": "Net cash provided by operating activities 1,426 1,383 1,386 ... Capital expenditures (1,822) (1,654) (1,586)",
+      "company": "American Water Works",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-015",
+      "input": "Using American Water Works' consolidated statements of operations and cash flows for the year ended December 31, 2021, what was the cash dividend payout ratio (dividends paid divided by net income attributable to common shareholders), in percent to one decimal place?",
+      "expected": "Approximately 33.9% (428 / 1,263, in millions).",
+      "grounding": "Net income attributable to common shareholders $ 1,263 $ 709 $ 621 ... Dividends paid (428) (389) (353)",
+      "company": "American Water Works",
+      "question_type": "cross-statement"
+    },
+    {
+      "id": "doc-016",
+      "input": "From Best Buy's consolidated statements of earnings for the fiscal year ended January 28, 2017, what was the gross profit margin (gross profit divided by revenue), in percent to one decimal place?",
+      "expected": "Approximately 24.0% (9,440 / 39,403, in millions).",
+      "grounding": "Revenue $ 39,403 $ 39,528 $ 40,339 ... Grossprofit 9,440 9,191 9,047",
+      "company": "Best Buy",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-017",
+      "input": "According to the consolidated balance sheet of Block (then Square, Inc.) at December 31, 2016, how many Class A and Class B common shares were issued and outstanding in total?",
+      "expected": "364,547,376 shares (198,746,620 Class A + 165,800,756 Class B).",
+      "grounding": "ClassAcommonstock ... 198,746,620and31,717,133issuedandoutstandingatDecember31,2016andDecember31,2015,respectively. ClassBcommonstock ... 165,800,756and303,232,312issuedandoutstandingatDecember31,2016andDecember31,2015,respectively.",
+      "company": "Block",
+      "question_type": "multi-step"
+    },
+    {
+      "id": "doc-018",
+      "input": "Block's (Square, Inc.) consolidated statements of operations for the year ended December 31, 2020 are reported in thousands. What was the gross profit on bitcoin (bitcoin revenue minus bitcoin costs), expressed in millions of USD?",
+      "expected": "Approximately $97.0 million (4,571,543 - 4,474,534 = 97,009 thousand).",
+      "grounding": "Bitcoinrevenue 4,571,543 516,465 166,517 ... Bitcoincosts 4,474,534 508,239 164,827",
+      "company": "Block",
+      "question_type": "scale-conversion"
+    },
+    {
+      "id": "doc-019",
+      "input": "On Boeing's consolidated statement of financial position at December 31, 2018, what was the balance of advances and progress billings, in millions of USD, and how did it compare with December 31, 2017?",
+      "expected": "$50,676 million at December 31, 2018, up from $48,042 million at December 31, 2017 (an increase of $2,634 million).",
+      "grounding": "Advances and progress billings 50,676 48,042",
+      "company": "Boeing",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-020",
+      "input": "Using Boeing's summary of business segment data from its 2022 Form 10-K, by what percentage did Commercial Airplanes revenues grow from the year ended December 31, 2021 to the year ended December 31, 2022?",
+      "expected": "Approximately 32.7% growth, from $19,493 million to $25,867 million (an increase of $6,374 million).",
+      "grounding": "Revenues: Commercial Airplanes $25,867 $19,493 $16,162",
+      "company": "Boeing",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-021",
+      "input": "From Coca-Cola's consolidated statements of income for the year ended December 31, 2017, what was the effective tax rate on income from continuing operations (income taxes from continuing operations divided by income from continuing operations before income taxes), in percent to one decimal place?",
+      "expected": "Approximately 82.5% (5,560 / 6,742, in millions).",
+      "grounding": "INCOME FROM CONTINUING OPERATIONS BEFORE INCOME TAXES 6,742 8,136 9,605 Income taxes from continuing operations 5,560 1,586 2,239",
+      "company": "Coca-Cola",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-022",
+      "input": "From Coca-Cola's consolidated statements of income for the year ended December 31, 2021, what was the net profit margin (net income attributable to shareowners of The Coca-Cola Company divided by net operating revenues), in percent to one decimal place?",
+      "expected": "Approximately 25.3% (9,771 / 38,655, in millions).",
+      "grounding": "Net Operating Revenues $ 38,655 $ 33,014 $ 37,266 ... Net Income Attributable to Shareowners of The Coca-Cola Company $ 9,771 $ 7,747 $ 8,920",
+      "company": "Coca-Cola",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-023",
+      "input": "Using Corning's consolidated balance sheet at December 31, 2020, what was total debt (current portion of long-term debt and short-term borrowings plus long-term debt), in millions of USD?",
+      "expected": "$7,972 million (156 + 7,816).",
+      "grounding": "Currentportionoflong-termdebtandshort-termborrowings(Note12) $ 156 $ 11 ... Long-termdebt(Note12) 7,816 7,729",
+      "company": "Corning",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-024",
+      "input": "From Costco's consolidated balance sheet as of August 29, 2021 (fiscal year-end), what was the current ratio (total current assets divided by total current liabilities), rounded to two decimals?",
+      "expected": "Approximately 1.00 (29,505 / 29,441, in millions).",
+      "grounding": "Total current assets 29,505 28,120 ... Total current liabilities 29,441 24,844",
+      "company": "Costco",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-025",
+      "input": "CVS Health's consolidated statements of operations for the year ended December 31, 2018 are reported in millions. What were goodwill impairments for 2018, expressed in billions of USD?",
+      "expected": "Approximately $6.1 billion ($6,149 million).",
+      "grounding": "Goodwillimpairments 6,149 181",
+      "company": "CVS Health",
+      "question_type": "scale-conversion"
+    },
+    {
+      "id": "doc-026",
+      "input": "From CVS Health's consolidated statements of operations for the year ended December 31, 2022, what was the operating margin (operating income divided by total revenues), in percent to one decimal place?",
+      "expected": "Approximately 2.4% (7,746 / 322,467, in millions).",
+      "grounding": "Total revenues 322,467 292,111 268,706 ... Operating income 7,746 13,193 13,911",
+      "company": "CVS Health",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-027",
+      "input": "According to Foot Locker's Form 8-K dated August 19, 2022, who was appointed President and Chief Executive Officer, whom did she succeed, and when did the appointment take effect?",
+      "expected": "Mary N. Dillon (former Executive Chair and CEO of Ulta Beauty) was appointed President and CEO, succeeding Richard A. Johnson, effective September 1, 2022.",
+      "grounding": "Richard A. Johnson will step down as President and Chief Executive Officer of the Company, effective September 1, 2022. Mary N. Dillon, 61, former Executive Chair and Chief Executive Officer of Ulta Beauty, Inc., has been appointed President and Chief Executive Officer and a member of the Companys Board of Directors ... each effective September 1, 2022.",
+      "company": "Foot Locker",
+      "question_type": "text-lookup"
+    },
+    {
+      "id": "doc-028",
+      "input": "Per Foot Locker's Form 8-K dated May 20, 2022 reporting annual-meeting voting results, how many votes were cast for and against the election of Richard A. Johnson to the Board, and how many abstentions were recorded?",
+      "expected": "54,484,293 votes for, 16,105,005 votes against, and 77,685 abstentions (with 6,884,223 broker non-votes).",
+      "grounding": "Richard A. Johnson 54,484,293 16,105,005 77,685 6,884,223",
+      "company": "Foot Locker",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-029",
+      "input": "General Mills' consolidated statements of earnings for fiscal 2019 (ended May 26, 2019) do not report a gross profit line. Compute the gross margin percentage as (net sales minus cost of sales) divided by net sales, to one decimal place.",
+      "expected": "Approximately 34.1% ((16,865.2 - 11,108.4) / 16,865.2 = 5,756.8 / 16,865.2, in millions).",
+      "grounding": "Net sales $ 16,865.2 $ 15,740.4 $ 15,619.8 Cost of sales 11,108.4 10,304.8 10,052.0",
+      "company": "General Mills",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-030",
+      "input": "From General Mills' consolidated balance sheet at May 31, 2020, what was total debt (current portion of long-term debt plus notes payable plus long-term debt), in millions of USD?",
+      "expected": "$13,539.5 million (2,331.5 + 279.0 + 10,929.0).",
+      "grounding": "Current portion of long-term debt 2,331.5 1,396.5 Notes payable 279.0 1,468.7 ... Long-term debt 10,929.0 11,624.8",
+      "company": "General Mills",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-031",
+      "input": "According to the Analysis of Consolidated Sales in Johnson & Johnson's 2022 Form 10-K, what were worldwide sales in 2022, and how did volume, price, and currency each contribute to the total sales change for 2022, in percentage points?",
+      "expected": "Worldwide sales were $94.9 billion, up 1.3%: volume +6.9%, price (0.8)%, currency (4.8)%.",
+      "grounding": "In 2022, worldwide sales increased 1.3% to $94.9 billion ... Volume 6.9 % 12.9 % Price (0.8) (0.7) Currency (4.8) 1.4 Total 1.3 % 13.6 %",
+      "company": "Johnson & Johnson",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-032",
+      "input": "Per Johnson & Johnson's 2022 Form 10-K analysis of cost of products sold, by how much did the intangible asset amortization expense included in cost of products sold change from fiscal 2021 to fiscal 2022, in millions of USD?",
+      "expected": "It decreased by about $400 million, from $4.7 billion in 2021 to $4.3 billion in 2022.",
+      "grounding": "The intangible asset amortization expense included in cost of products sold was $4.3 billion and $4.7 billion for the fiscal years 2022 and 2021, respectively.",
+      "company": "Johnson & Johnson",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-033",
+      "input": "Using the managed-basis segment results in JPMorgan's Form 10-Q for the three months ended March 31, 2021, what share of the Firm's total net income was contributed by the Corporate & Investment Bank, in percent to one decimal place?",
+      "expected": "Approximately 40.1% (5,740 / 14,300, in millions).",
+      "grounding": "Corporate & Investment Bank ... Net income/(loss) 5,740 1,985 189 ... Total ... Net income/(loss) ... 14,300 2,865 399",
+      "company": "JPMorgan",
+      "question_type": "segment-share"
+    },
+    {
+      "id": "doc-034",
+      "input": "According to JPMorgan's Form 10-Q for the first quarter of 2021, what was tangible book value per share (TBVPS) at the end of the quarter, and how much had it grown versus the prior year?",
+      "expected": "$66.56, up 10% versus the prior year.",
+      "grounding": "The Firm grew TBVPS, ending the first quarter of 2021 at $66.56, up 10% versus the prior year.",
+      "company": "JPMorgan",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-035",
+      "input": "From Kraft Heinz's consolidated statements of income for the fiscal year ended December 28, 2019, what were combined goodwill and intangible asset impairment losses, in millions of USD, and what was the comparable combined figure for fiscal 2018?",
+      "expected": "$1,899 million in 2019 (1,197 goodwill + 702 intangible), versus $15,936 million in 2018 (7,008 + 8,928).",
+      "grounding": "Goodwill impairment losses 1,197 7,008 Intangible asset impairment losses 702 8,928 49",
+      "company": "Kraft Heinz",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-036",
+      "input": "On Lockheed Martin's consolidated statements of earnings for the year ended December 31, 2020, what was the net loss from discontinued operations, in millions of USD, and what was its impact on diluted earnings per share?",
+      "expected": "A net loss from discontinued operations of $55 million, reducing diluted EPS by $0.20 (from $24.50 for continuing operations to $24.30 total).",
+      "grounding": "Net loss from discontinued operations (55) ... Diluted Continuing operations $ 24.50 $ 21.95 $ 17.59 Discontinued operations (0.20) Diluted earnings per common share $ 24.30 $ 21.95 $ 17.59",
+      "company": "Lockheed Martin",
+      "question_type": "lookup"
+    },
+    {
+      "id": "doc-037",
+      "input": "Using Lockheed Martin's consolidated balance sheets, by how much did accrued pension liabilities change between December 31, 2020 and December 31, 2021, in millions of USD?",
+      "expected": "They decreased by $4,555 million, from $12,874 million to $8,319 million.",
+      "grounding": "Accrued pension liabilities 8,319 12,874",
+      "company": "Lockheed Martin",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-038",
+      "input": "MGM Resorts' consolidated statements of operations are reported in thousands. By what percentage did total revenues decline from the year ended December 31, 2019 to the year ended December 31, 2020, and what were the two totals in billions of USD?",
+      "expected": "Total revenues fell about 60.0%, from approximately $12.90 billion (12,899,672 thousand) in 2019 to approximately $5.16 billion (5,162,082 thousand) in 2020.",
+      "grounding": "Revenues ... Reimbursedcosts 244,949 436,887 425,492 5,162,082 12,899,672 11,763,096",
+      "company": "MGM Resorts",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-039",
+      "input": "From Microsoft's income statements for the fiscal year ended June 30, 2016, what was the gross margin percentage (gross margin divided by total revenue), to one decimal place?",
+      "expected": "Approximately 61.6% (52,540 / 85,320, in millions).",
+      "grounding": "Total revenue 85,320 93,580 86,833 ... Gross margin 52,540 60,542 59,755",
+      "company": "Microsoft",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-040",
+      "input": "Using Microsoft's balance sheets, by how much did cash and cash equivalents change between June 30, 2022 and June 30, 2023, in millions of USD, and what was total cash, cash equivalents, and short-term investments at June 30, 2023?",
+      "expected": "Cash and cash equivalents rose by $20,773 million (from $13,931 million to $34,704 million); total cash, cash equivalents, and short-term investments were $111,262 million at June 30, 2023.",
+      "grounding": "Cash and cash equivalents $ 34,704 $ 13,931 Short-term investments 76,558 90,826 Total cash, cash equivalents, and short-term investments 111,262 104,757",
+      "company": "Microsoft",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-041",
+      "input": "Netflix's consolidated balance sheet at December 31, 2017 is reported in thousands. What were total content assets, net (current plus non-current), expressed in billions of USD?",
+      "expected": "Approximately $14.68 billion (4,310,934 + 10,371,055 = 14,681,989 thousand).",
+      "grounding": "Current content assets, net 4,310,934 3,726,307 ... Non-current content assets, net 10,371,055 7,274,501",
+      "company": "Netflix",
+      "question_type": "multi-step"
+    },
+    {
+      "id": "doc-042",
+      "input": "From Nike's consolidated statements of income for the fiscal year ended May 31, 2018, what was the effective tax rate (income tax expense divided by income before income taxes), in percent to one decimal place?",
+      "expected": "Approximately 55.3% (2,392 / 4,325, in millions).",
+      "grounding": "Income before income taxes 4,325 4,886 4,623 Income tax expense 2,392 646 863",
+      "company": "Nike",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-043",
+      "input": "Using PayPal's consolidated balance sheet as of December 31, 2022, what was the ratio of long-term debt to total equity, rounded to two decimals?",
+      "expected": "Approximately 0.51 (10,417 / 20,274, in millions).",
+      "grounding": "Long-term debt 10,417 8,049 ... Total equity 20,274 21,727",
+      "company": "Paypal",
+      "question_type": "ratio"
+    },
+    {
+      "id": "doc-044",
+      "input": "Using PepsiCo's consolidated statement of cash flows for the fiscal year ended December 25, 2021, what was free cash flow (net cash provided by operating activities minus capital spending), in millions of USD?",
+      "expected": "$6,991 million (11,616 - 4,625).",
+      "grounding": "Net Cash Provided by Operating Activities 11,616 10,613 9,649 Investing Activities Capital spending (4,625) (4,240) (4,232)",
+      "company": "PepsiCo",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-045",
+      "input": "According to Item 1 (Business) of PepsiCo's 2022 Form 10-K, how many reportable segments does the company have, and which two segments cover North American convenient foods?",
+      "expected": "Seven reportable segments (FLNA, QFNA, PBNA, LatAm, Europe, AMESA, APAC); the North American convenient food segments are Frito-Lay North America (FLNA) and Quaker Foods North America (QFNA).",
+      "grounding": "We are organized into seven reportable segments (also referred to as divisions), as follows: 1) Frito-Lay North America (FLNA), which includes our branded convenient food businesses in the United States and Canada; 2) Quaker Foods North America (QFNA), which includes our branded convenient food businesses, such as cereal, rice, pasta and other branded food, in the United States and Canada; 3) PepsiCo Beverages North America (PBNA) ... 4) Latin America (LatAm) ... 5) Europe ... 6) Africa, Middle East and South Asia (AMESA) ... 7) Asia Pacific, Australia and New Zealand and China Region (APAC)",
+      "company": "PepsiCo",
+      "question_type": "text-lookup"
+    },
+    {
+      "id": "doc-046",
+      "input": "From Pfizer's consolidated statement of income for the year ended December 31, 2021, by what percentage did revenues grow versus 2020, and what were cost of sales as a percentage of revenues in 2021, to one decimal place?",
+      "expected": "Revenues grew about 95.2% (from $41,651 million to $81,288 million); cost of sales was about 37.9% of revenues (30,821 / 81,288).",
+      "grounding": "Revenues $ 81,288 $ 41,651 $ 40,905 Costs and expenses: Cost of sales 30,821 8,484 8,054",
+      "company": "Pfizer",
+      "question_type": "yoy-change"
+    },
+    {
+      "id": "doc-047",
+      "input": "Ulta Beauty's consolidated statements of cash flows are reported in thousands. For the fiscal year ended January 28, 2023, what was free cash flow (net cash provided by operating activities minus capital expenditures), expressed in billions of USD?",
+      "expected": "Approximately $1.17 billion (1,481,915 - 312,126 = 1,169,789 thousand).",
+      "grounding": "Net cash provided by operating activities 1,481,915 1,059,265 810,355 ... Capital expenditures (312,126) (172,187) (151,866)",
+      "company": "Ulta Beauty",
+      "question_type": "scale-conversion"
+    },
+    {
+      "id": "doc-048",
+      "input": "According to the Estimated Future Benefit Payments table in Verizon's 2021 Form 10-K, what are total expected benefit payments to retirees for 2022 (pension benefits plus health care and life), in millions of USD?",
+      "expected": "$2,955 million (2,049 pension + 906 health care and life).",
+      "grounding": "Year Pension Benefits Health Care and Life 2022 $ 2,049 $ 906",
+      "company": "Verizon",
+      "question_type": "derived-metric"
+    },
+    {
+      "id": "doc-049",
+      "input": "Using Walmart's consolidated statement of income and consolidated balance sheet for the fiscal year ended January 31, 2018, what was return on ending equity (consolidated net income attributable to Walmart divided by total Walmart shareholders' equity at January 31, 2018), in percent to one decimal place?",
+      "expected": "Approximately 12.7% (9,862 / 77,869, in millions).",
+      "grounding": "Consolidated net income attributable to Walmart $ 9,862 $ 13,643 $ 14,694 ... Total Walmart shareholders' equity 77,869 77,798",
+      "company": "Walmart",
+      "question_type": "cross-statement"
+    },
+    {
+      "id": "doc-050",
+      "input": "From Walmart's consolidated statements of income for the fiscal year ended January 31, 2019, what was the operating margin (operating income divided by total revenues), in percent to one decimal place?",
+      "expected": "Approximately 4.3% (21,957 / 514,405, in millions).",
+      "grounding": "Total revenues 514,405 500,343 485,873 ... Operatingincome 21,957 20,437 22,764",
+      "company": "Walmart",
+      "question_type": "ratio"
+    }
+  ]
+}

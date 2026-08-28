@@ -14,14 +14,21 @@ sets in this directory and to say which reading of the "0 compliance probes" res
    The June run also handed the generator FinanceBench rows *including their question and
    answer fields*, so its with-context questions are largely paraphrases of the benchmark.
 
-2. **2026-08-27 factorial rerun** (`rerun_2026-08-27_2x2/`) — the canonical, fully archived
-   experiment. Every run's `prompt_system.txt` and `prompt_user.txt` are committed exactly as
-   sent, with a `run_meta.json` (model, timestamps). The prompts are reproduced in
-   [`rerun_2026-08-27_2x2/PROMPTS.md`](rerun_2026-08-27_2x2/PROMPTS.md). Design: one system
-   prompt for all cells; factors **documents** (filing evidence text only — the benchmark's
-   questions and answers removed) × **runbook** (the Domain Compliance Runbook); k = 3
-   generation runs per cell. An intermediate three-arm rerun (`rerun_2026-08-27/`) is kept
-   for the record; it still exposed the benchmark Q&A and is superseded.
+2. **2026-08-28 three-arm rerun** (`rerun_2026-08-28_3arm/`) — the canonical, fully archived
+   experiment reported in the paper: **blind** / **documents only** / **documents + runbook**,
+   one identical system prompt, k = 3 generations per arm; every run's `prompt_system.txt` and
+   `prompt_user.txt` are committed exactly as sent, with a `run_meta.json`. The evidence given
+   to the two documents arms is filing text only — FinanceBench's `question` and `answer`
+   fields are withheld, so no arm can paraphrase the benchmark. Prompts:
+   [`rerun_2026-08-28_3arm/PROMPTS.md`](rerun_2026-08-28_3arm/PROMPTS.md).
+
+3. **2026-08-27 2 × 2 replication** (`rerun_2026-08-27_2x2/`) — the same three conditions plus a
+   runbook-only cell, k = 3; kept as a replication and as the source of the "14 probes without
+   documents" observation.
+
+4. **Removed:** an earlier 2026-08-27 three-arm run that handed the generator FinanceBench rows
+   *including* their `question`/`answer` fields; its outputs reproduced the benchmark's targets
+   and are not a valid comparison. It was deleted from the repository rather than kept.
 
 ## Which reading of "0 compliance probes" applies
 
@@ -35,6 +42,6 @@ the reading the paper states in §Results.
 ## Scoring note
 
 The "domain accuracy" figures are produced by a **rule-based scorer applied identically to
-every cell** (`rerun_2026-08-27/make_rerun_plots.py::score`), not by an LLM judge. The June
+every arm** (`plot_common.py::score`), not by an LLM judge. The June
 `make_domain_accuracy_chart.py` used a different scorer per arm; its numbers are not
 comparable and are not used in the revised paper.

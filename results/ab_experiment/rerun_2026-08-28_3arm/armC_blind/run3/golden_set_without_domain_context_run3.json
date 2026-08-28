@@ -1,0 +1,407 @@
+{
+  "set": "without_domain_context",
+  "generator_input": "Set name 'without_domain_context' and ID prefix 'ndc' only; no evidence rows, no domain data file, and no Domain Compliance Runbook were provided.",
+  "case_count": 50,
+  "cases": [
+    {
+      "id": "ndc-001",
+      "input": "According to Apple's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what were total net sales on the consolidated statements of operations, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-002",
+      "input": "Per Microsoft's Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was net income on the income statement, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-003",
+      "input": "On Amazon's consolidated balance sheet in its Form 10-K for fiscal year 2023 (year ended December 31, 2023), what was the balance of cash and cash equivalents, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-004",
+      "input": "In Alphabet's Form 10-K for fiscal year 2023, what was net cash provided by operating activities on the consolidated statements of cash flows, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-005",
+      "input": "Per JPMorgan Chase's Form 10-K for fiscal year 2023, what was net interest income on the consolidated statements of income, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "JPMorgan Chase & Co.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-006",
+      "input": "Walmart's Form 10-K for fiscal year 2024 (fiscal year ended January 31, 2024) reports total revenues on the consolidated statements of income in USD millions. State that figure converted to USD billions, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Walmart Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-007",
+      "input": "According to Exxon Mobil's Form 10-K for fiscal year 2023, what were total revenues and other income on the consolidated statement of income, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-008",
+      "input": "In Pfizer's Form 10-K for fiscal year 2023, what was research and development expense on the consolidated statements of income, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-009",
+      "input": "Per the segment disclosures in NVIDIA's Form 10-K for fiscal year 2024 (fiscal year ended January 28, 2024), what was revenue for the Data Center market platform, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "NVIDIA Corporation",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-010",
+      "input": "Using net operating revenues and gross profit from The Coca-Cola Company's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the gross margin as a percentage of net operating revenues, to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Coca-Cola Company",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-011",
+      "input": "In Tesla's Form 10-K for fiscal year 2023, what were total automotive revenues on the consolidated statements of operations, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-012",
+      "input": "Per Costco's Form 10-K for fiscal year 2023 (53-week fiscal year ended September 3, 2023), what was membership fee revenue on the consolidated statements of income, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Costco Wholesale Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-013",
+      "input": "According to the segment note in Boeing's Form 10-K for fiscal year 2023, what were revenues for the Commercial Airplanes segment, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Boeing Company",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-014",
+      "input": "On Nike's consolidated balance sheet in its Form 10-K for fiscal year 2023 (fiscal year ended May 31, 2023), what was the inventories balance, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "NIKE, Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-015",
+      "input": "Using Oracle's consolidated balance sheet in its Form 10-K for fiscal year 2023 (fiscal year ended May 31, 2023), what was total borrowings, defined as notes payable and other borrowings, current plus non-current, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Oracle Corporation",
+      "question_type": "multi_step"
+    },
+    {
+      "id": "ndc-016",
+      "input": "Meta Platforms' Form 10-K for fiscal year 2023 reports purchases of property and equipment on the consolidated statements of cash flows in USD millions. State that figure in USD billions, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Meta Platforms, Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-017",
+      "input": "Using JPMorgan Chase's Form 10-K for fiscal year 2023, compute the company's inventory turnover ratio (cost of goods sold divided by average inventory).",
+      "expected": "",
+      "grounding": null,
+      "company": "JPMorgan Chase & Co.",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-018",
+      "input": "What was Microsoft's net interest margin for fiscal year 2023 (fiscal year ended June 30, 2023), based on its Form 10-K?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-019",
+      "input": "From Apple's Form 10-K for fiscal year 2023, what was the company's combined ratio (losses and expenses as a percentage of premiums earned)?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-020",
+      "input": "Based on Bank of America's Form 10-K for fiscal year 2023, what was the company's same-store sales growth for the year?",
+      "expected": "",
+      "grounding": null,
+      "company": "Bank of America Corporation",
+      "question_type": "metric_applicability"
+    },
+    {
+      "id": "ndc-021",
+      "input": "Using operating income and net sales from Procter & Gamble's consolidated statements of earnings in its Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was the operating margin, as a percentage to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Procter & Gamble Company",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-022",
+      "input": "Per the management's discussion and analysis in The Home Depot's Form 10-K for fiscal year 2023 (fiscal year ended January 28, 2024), what was the change in total comparable sales for the fiscal year, as a percentage?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Home Depot, Inc.",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-023",
+      "input": "Using Johnson & Johnson's consolidated statements of cash flows in its Form 10-K for fiscal year 2023, compute free cash flow as cash flows from operating activities minus additions to property, plant and equipment, in USD millions.",
+      "expected": "",
+      "grounding": null,
+      "company": "Johnson & Johnson",
+      "question_type": "multi_step"
+    },
+    {
+      "id": "ndc-024",
+      "input": "Using the consolidated statement of income in Chevron's Form 10-K for fiscal year 2023, by what percentage did net income attributable to Chevron Corporation change from fiscal year 2022 to fiscal year 2023, to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Chevron Corporation",
+      "question_type": "cross_year"
+    },
+    {
+      "id": "ndc-025",
+      "input": "Using net revenue and gross margin from Intel's consolidated statements of income in its Form 10-K for fiscal year 2023, what was gross margin as a percentage of net revenue for 2023, and by how many percentage points did it change versus 2022?",
+      "expected": "",
+      "grounding": null,
+      "company": "Intel Corporation",
+      "question_type": "cross_year"
+    },
+    {
+      "id": "ndc-026",
+      "input": "Per UnitedHealth Group's Form 10-K for fiscal year 2023, what was the consolidated medical care ratio for the year, as a percentage?",
+      "expected": "",
+      "grounding": null,
+      "company": "UnitedHealth Group Incorporated",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-027",
+      "input": "According to Netflix's Form 10-K for fiscal year 2023, how many global paid memberships did the company report as of December 31, 2023, in millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Netflix, Inc.",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-028",
+      "input": "Per the segment disclosures in The Walt Disney Company's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was segment operating income for the Experiences segment, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Walt Disney Company",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-029",
+      "input": "According to Visa's Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was total payments volume for the fiscal year, in USD trillions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Visa Inc.",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-030",
+      "input": "Per the segment information in Amazon's Form 10-K for fiscal year 2023, what was operating income for the AWS segment, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-031",
+      "input": "Using AT&T's consolidated balance sheet in its Form 10-K for fiscal year 2023, what was total debt, defined as debt maturing within one year plus long-term debt, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "AT&T Inc.",
+      "question_type": "multi_step"
+    },
+    {
+      "id": "ndc-032",
+      "input": "On Verizon's consolidated statements of cash flows in its Form 10-K for fiscal year 2023, what was depreciation and amortization expense, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Verizon Communications Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-033",
+      "input": "Caterpillar's Form 10-K for fiscal year 2023 reports total sales and revenues on the consolidated results of operations in USD millions. State that figure in USD billions, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Caterpillar Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-034",
+      "input": "Per the management's discussion and analysis in Starbucks' Form 10-K for fiscal year 2023 (fiscal year ended October 1, 2023), what was global comparable store sales growth for the fiscal year, as a percentage?",
+      "expected": "",
+      "grounding": null,
+      "company": "Starbucks Corporation",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-035",
+      "input": "According to McDonald's consolidated statement of income in its Form 10-K for fiscal year 2023, what were revenues from franchised restaurants, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "McDonald's Corporation",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-036",
+      "input": "Per Ford Motor Company's consolidated income statement in its Form 10-K for fiscal year 2023, what was net income attributable to Ford Motor Company, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Ford Motor Company",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-037",
+      "input": "In General Motors' Form 10-K for fiscal year 2023, what was EBIT-adjusted for the year, in USD millions, and is this a GAAP or non-GAAP measure?",
+      "expected": "",
+      "grounding": null,
+      "company": "General Motors Company",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-038",
+      "input": "Per Goldman Sachs' Form 10-K for fiscal year 2023, what was the firm's return on average common shareholders' equity (ROE) for the year, as a percentage?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Goldman Sachs Group, Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-039",
+      "input": "Using total current assets and total current liabilities from Walmart's consolidated balance sheet in its Form 10-K for fiscal year 2024 (as of January 31, 2024), what was the current ratio, to two decimal places?",
+      "expected": "",
+      "grounding": null,
+      "company": "Walmart Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-040",
+      "input": "Per Apple's consolidated statements of operations in its Form 10-K for fiscal year 2023 (fiscal year ended September 30, 2023), what was diluted earnings per share, in USD?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "direct_lookup"
+    },
+    {
+      "id": "ndc-041",
+      "input": "Per the segment information in Microsoft's Form 10-K for fiscal year 2023 (fiscal year ended June 30, 2023), what was revenue for the Intelligent Cloud segment, in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "segment_lookup"
+    },
+    {
+      "id": "ndc-042",
+      "input": "Using provision for income taxes and income before income taxes from Alphabet's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the effective tax rate, as a percentage to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "derived_ratio"
+    },
+    {
+      "id": "ndc-043",
+      "input": "Using NVIDIA's consolidated statements of income in its Form 10-K for fiscal year 2024 (fiscal year ended January 28, 2024), by what percentage did total revenue grow from fiscal year 2023 to fiscal year 2024, to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "NVIDIA Corporation",
+      "question_type": "cross_year"
+    },
+    {
+      "id": "ndc-044",
+      "input": "Tesla's Form 10-K for fiscal year 2023 reports total stockholders' equity on the consolidated balance sheet in USD millions as of December 31, 2023. State that figure in USD billions, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "unit_conversion"
+    },
+    {
+      "id": "ndc-045",
+      "input": "Using Pfizer's consolidated statements of income in its Form 10-K for fiscal year 2023, what was the change in total revenues from fiscal year 2022 to fiscal year 2023, in USD millions and as a percentage?",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "cross_year"
+    },
+    {
+      "id": "ndc-046",
+      "input": "Using the consolidated statements of operations in Amazon's Form 10-K for fiscal year 2023, what was net income (loss) for fiscal year 2023 and for fiscal year 2022, in USD millions, and what was the year-over-year change in USD millions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "cross_year"
+    },
+    {
+      "id": "ndc-047",
+      "input": "According to Costco's Form 10-K for fiscal year 2023, on what date did fiscal year 2023 end, and how many weeks did the fiscal year contain?",
+      "expected": "",
+      "grounding": null,
+      "company": "Costco Wholesale Corporation",
+      "question_type": "fiscal_calendar"
+    },
+    {
+      "id": "ndc-048",
+      "input": "According to Oracle's Form 10-K for fiscal year 2023, what twelve-month period (start and end dates) did fiscal year 2023 cover?",
+      "expected": "",
+      "grounding": null,
+      "company": "Oracle Corporation",
+      "question_type": "fiscal_calendar"
+    },
+    {
+      "id": "ndc-049",
+      "input": "Per Meta Platforms' Form 10-K for fiscal year 2023, how many Family daily active people (DAP) did the company report on average for December 2023, in billions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Meta Platforms, Inc.",
+      "question_type": "other_disclosure"
+    },
+    {
+      "id": "ndc-050",
+      "input": "According to Berkshire Hathaway's Form 10-K for fiscal year 2023, what was the approximate amount of insurance float at year-end 2023, in USD billions?",
+      "expected": "",
+      "grounding": null,
+      "company": "Berkshire Hathaway Inc.",
+      "question_type": "other_disclosure"
+    }
+  ]
+}

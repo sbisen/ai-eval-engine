@@ -1,0 +1,11 @@
+{
+  "arm": "C_blind",
+  "run": 3,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-28T00:58:15Z",
+  "ended_at": "2026-08-28T01:00:02Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Blind arm: no evidence rows or runbook given, so all 50 expected='' / grounding=null per the grounding rule; 4 metric_applicability cases included per the VARIETY clause (judgment call vs. the no-refusal rule)."
+}

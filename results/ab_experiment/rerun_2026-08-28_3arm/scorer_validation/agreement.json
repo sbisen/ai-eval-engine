@@ -1,0 +1,20 @@
+{
+ "n": 30,
+ "mae": 0.087,
+ "spearman": 0.74,
+ "per_arm": {
+  "C": {
+   "hand_mean": 0.72,
+   "scorer_mean": 0.75
+  },
+  "B": {
+   "hand_mean": 0.995,
+   "scorer_mean": 0.9
+  },
+  "A": {
+   "hand_mean": 0.95,
+   "scorer_mean": 0.887
+  }
+ },
+ "note": "hand labels by an independent rater blind to scorer output; combined = mean(relevance, groundedness)"
+}

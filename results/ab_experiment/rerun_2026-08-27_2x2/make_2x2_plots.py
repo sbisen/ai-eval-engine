@@ -16,7 +16,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "rerun_2026-08-27"))
 # --- import the shared pieces explicitly (make_rerun_plots defines them at module level)
 import importlib.util
-_spec = importlib.util.spec_from_file_location("mrp", Path(__file__).resolve().parent.parent / "rerun_2026-08-27" / "make_rerun_plots.py")
+_spec = importlib.util.spec_from_file_location("mrp", Path(__file__).resolve().parent.parent / "plot_common.py")
 mrp = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(mrp)
 score, relatedness, specificity, stats, figure_verifiable, auto_topics, shell, DECLINE, PROBE = (
     mrp.score, mrp.relatedness, mrp.specificity, mrp.stats, mrp.figure_verifiable, mrp.auto_topics, mrp.shell, mrp.DECLINE, mrp.PROBE)
@@ -212,7 +212,7 @@ def main():
     for k, c in active.items():
         rs = [row(r) for r in c["runs"]]
         agg[k] = {f: msd([x[f] for x in rs]) for f in ("cap", "named", "answered", "verifiable", "decline", "probes", "covered")}
-        agg[k]["crit"] = {p: msd([x["crit"].get(p, 0) for x in rs])[0] for p in CRITERIA if any(x["crit"].get(p) for x in rs)}
+        agg[k]["crit"] = {p: m for p in CRITERIA for m in [msd([x["crit"].get(p, 0) for x in rs])[0]] if m >= 0.5}
         agg[k]["k"] = len(rs)
     def fmt(m, sd, k): return f"{m:.0f}" if k == 1 or sd == 0 else f"{m:.1f} ± {sd:.1f}"
     def cell(txt, ok): return f'<td class="{"ok" if ok else "no"}">{txt}</td>'

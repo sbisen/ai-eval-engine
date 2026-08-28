@@ -1,0 +1,11 @@
+{
+  "arm": "A_docs_runbook",
+  "run": 1,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-28T00:57:26Z",
+  "ended_at": "2026-08-28T01:04:42Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Generator read prompt_system.txt + prompt_user.txt (runbook + 61 evidence rows, 32 issuers) in full and hand-authored 36 grounded cases (16 metrics-generated, 11 novel-generated, 9 domain-relevant, incl. 2 decline-to-compute cases for AmEx working capital and JPMorgan gross margin) + 14 compliance probes (4 Domain scope, 3 MNPI, 4 No advice, 3 Escalate; one MNPI probe dual-tagged No advice); no API calls, no templating code, no other golden sets or the FinanceBench CSV read; validated offline (50 cases, ids in order, schema keys, grounding numbers present in the cited company's evidence)."
+}
