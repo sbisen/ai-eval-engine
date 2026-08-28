@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>Golden-set question topics — three arms (rerun 2026-08-27)</title><style>
+  :root{ --ink:#1f2329; --muted:#5b6470; --line:#e6e8eb; --bg:#ffffff;
+         --grounded:#5B8FF9; --generic:#94a3b8; --comp:#E8684A; --leaf:#cdd0d4; }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f6f7f9;color:var(--ink);
+       font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1060px;margin:0 auto;padding:28px 22px 60px;}
+  h1{font-size:23px;margin:0 0 4px;letter-spacing:-.2px;}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 22px;}
+  .panel{background:var(--bg);border:1px solid var(--line);border-radius:12px;
+         padding:18px 18px 6px;margin:0 0 22px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .ptitle{font-size:19px;font-weight:650;margin:0 0 2px;}
+  .ptitle .chip{font-size:13px;font-weight:600;padding:2px 8px;border-radius:20px;
+                vertical-align:middle;margin-left:8px;}
+  .chip.good{background:#eaf1ff;color:#2b58c6;}
+  .chip.warn{background:#fdecea;color:#c0392b;}
+  .pnote{color:var(--muted);font-size:15.5px;margin:2px 0 6px;}
+  .pnote b{color:var(--ink);}
+  svg{width:100%;height:auto;display:block;}
+  .colhead{fill:var(--muted);font-size:15px;font-weight:600;letter-spacing:.3px;text-transform:uppercase;}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;align-items:center;color:var(--muted);font-size:15px;margin:6px 2px 2px;}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;}
+  .foot{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px;margin-top:6px;}
+  code{background:#f0f1f3;padding:1px 5px;border-radius:4px;font-size:12px;}
+</style></head><body><div class="wrap">
+<h1>Golden-set question topics — blind vs raw data vs data + runbook</h1>
+<p class="sub">Topics: hand-verified topic_model_assignments.json. Same system prompt and 50-question budget in every arm; only the data sections differ. Each diagram flows root → sub-category → topic.</p>
+<div class="panel"><div class="ptitle">With context (data + runbook) <span class="chip good">36 capability &middot; 14 compliance probes</span></div><div class="pnote">12 topics &middot; 4 compliance criteria probed</div><div id="pA"></div></div><div class="panel"><div class="ptitle">Raw data only (no runbook) <span class="chip warn">50 capability &middot; 0 compliance probes</span></div><div class="pnote">8 topics &middot; 0 compliance criteria probed</div><div id="pB"></div></div><div class="panel"><div class="ptitle">Blind (no data, no runbook) <span class="chip warn">50 capability &middot; 0 compliance probes</span></div><div class="pnote">8 topics &middot; 0 compliance criteria probed</div><div id="pC"></div></div>
+<p class="sub">Sources: rerun_2026-08-27/arm*/golden_set_*_run1.json. Self-contained — inline SVG, no network.</p></div>
+<script>const barW=14, COLX=[34,392,712], GAP=8, SCALE=5.0, TOP=58;
+
+function buildSVG(spec){
+  const byId={}; spec.nodes.forEach(n=>byId[n.id]=n);
+  [0,1,2].forEach(c=>{
+    let y=TOP;
+    spec.nodes.filter(n=>n.col===c).forEach(n=>{
+      n.x=COLX[c];
+      n.h = n.ghost ? 24 : Math.max(n.value*SCALE, n.value>0?3:0);
+      if(n.ghostGap) y+=56;
+      n.y0=y; n.outAcc=0; n.inAcc=0;
+      y+=n.h+GAP;
+    });
+  });
+  let maxY=0; spec.nodes.forEach(n=> maxY=Math.max(maxY,n.y0+n.h));
+  const H=maxY+38, W=1120;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
+
+  // ribbons
+  spec.links.forEach(l=>{
+    const src=byId[l.from], tgt=byId[l.to], v=l.value*SCALE;
+    const sx=src.x+barW, sy=src.y0+src.outAcc; src.outAcc+=v;
+    const tx=tgt.x, ty=tgt.y0+tgt.inAcc; tgt.inAcc+=v;
+    const mx=(sx+tx)/2;
+    s+=`<path d="M${sx},${sy} C${mx},${sy} ${mx},${ty} ${tx},${ty} `+
+       `L${tx},${ty+v} C${mx},${ty+v} ${mx},${sy+v} ${sx},${sy+v} Z" `+
+       `fill="${l.color}" fill-opacity="0.38"/>`;
+  });
+
+  // nodes + labels
+  spec.nodes.forEach(n=>{
+    if(n.ghost){
+      s+=`<rect x="${n.x}" y="${n.y0}" width="${barW}" height="${n.h}" fill="none" `+
+         `stroke="#d4504a" stroke-width="1.4" stroke-dasharray="4 3" rx="2"/>`;
+    } else {
+      s+=`<rect x="${n.x}" y="${n.y0}" width="${barW}" height="${n.h}" fill="${n.color}" rx="2"/>`;
+    }
+    const pct=Math.round(n.value/spec.n*100);
+    const label = n.ghost ? `${n.label} — 0% (0) · none generated`
+                          : `${n.label} ${pct}% (${n.value})`;
+    const lx=n.x+barW+7, ly=n.y0+n.h/2;
+    if(n.col<2){ // white halo so label reads over ribbons
+      const w=label.length*6.0+10;
+      s+=`<rect x="${lx-4}" y="${ly-9}" width="${w}" height="18" fill="#ffffff" fill-opacity="0.82" rx="3"/>`;
+    }
+    const weight = n.col===1 ? ' font-weight="650"' : (n.col===0?' font-weight="600"':'');
+    const fill = n.ghost ? '#c0392b' : (n.col===2 ? '#3a4048' : '#22272e');
+    s+=`<text x="${lx}" y="${ly+0.5}" font-size="15.5" dominant-baseline="middle"${weight} `+
+       `fill="${fill}">${label}</text>`;
+  });
+
+  // column headers
+  const heads=[['Golden set',COLX[0]],['Sub-category',COLX[1]],['Topic (NMF)',COLX[2]]];
+  heads.forEach(([t,x])=> s+=`<text class="colhead" x="${x}" y="${H-8}">${t}</text>`);
+
+  s+='</svg>';
+  return s;
+}
+
+const SPEC_A={"n": 50, "nodes": [{"id": "r", "col": 0, "label": "With context", "value": 50, "color": "#9aa0a6"}, {"id": "cap", "col": 1, "label": "Domain-grounded analysis", "value": 36, "color": "#5B8FF9"}, {"id": "cmp", "col": 1, "label": "Agent-compliance / safety", "value": 14, "color": "#E8684A"}, {"id": "t0", "col": 2, "label": "Income-statement metrics", "value": 3, "color": "#cdd0d4"}, {"id": "t1", "col": 2, "label": "Balance-sheet items", "value": 8, "color": "#cdd0d4"}, {"id": "t2", "col": 2, "label": "Ratios & multi-step computation", "value": 8, "color": "#cdd0d4"}, {"id": "t3", "col": 2, "label": "Cash-flow metrics", "value": 3, "color": "#cdd0d4"}, {"id": "t4", "col": 2, "label": "YoY change & multi-year averages", "value": 5, "color": "#cdd0d4"}, {"id": "t5", "col": 2, "label": "Segment & revenue mix", "value": 3, "color": "#cdd0d4"}, {"id": "t6", "col": 2, "label": "Footnote & 8-K disclosures", "value": 2, "color": "#cdd0d4"}, {"id": "t7", "col": 2, "label": "Metric applicability / when-to-decline", "value": 4, "color": "#cdd0d4"}, {"id": "t8", "col": 2, "label": "Off-domain / out-of-scope refusal", "value": 4, "color": "#cdd0d4"}, {"id": "t9", "col": 2, "label": "MNPI / confidential-data refusal", "value": 3, "color": "#cdd0d4"}, {"id": "t10", "col": 2, "label": "No advice / no personal opinion", "value": 4, "color": "#cdd0d4"}, {"id": "t11", "col": 2, "label": "Escalate / withhold unauthorized action", "value": 3, "color": "#cdd0d4"}], "links": [{"from": "r", "to": "cap", "value": 36, "color": "#5B8FF9"}, {"from": "r", "to": "cmp", "value": 14, "color": "#E8684A"}, {"from": "cap", "to": "t0", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t1", "value": 8, "color": "#5B8FF9"}, {"from": "cap", "to": "t2", "value": 8, "color": "#5B8FF9"}, {"from": "cap", "to": "t3", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t4", "value": 5, "color": "#5B8FF9"}, {"from": "cap", "to": "t5", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t6", "value": 2, "color": "#5B8FF9"}, {"from": "cap", "to": "t7", "value": 4, "color": "#5B8FF9"}, {"from": "cmp", "to": "t8", "value": 4, "color": "#E8684A"}, {"from": "cmp", "to": "t9", "value": 3, "color": "#E8684A"}, {"from": "cmp", "to": "t10", "value": 4, "color": "#E8684A"}, {"from": "cmp", "to": "t11", "value": 3, "color": "#E8684A"}]};
+const SPEC_B={"n": 50, "nodes": [{"id": "r", "col": 0, "label": "Raw data only", "value": 50, "color": "#9aa0a6"}, {"id": "cap", "col": 1, "label": "Data-grounded questions", "value": 50, "color": "#5B8FF9"}, {"id": "cmp", "col": 1, "label": "Agent-compliance / safety", "value": 0, "color": "#E8684A", "ghost": true, "ghostGap": true}, {"id": "t0", "col": 2, "label": "Income-statement metrics", "value": 3, "color": "#cdd0d4"}, {"id": "t1", "col": 2, "label": "Balance-sheet items", "value": 9, "color": "#cdd0d4"}, {"id": "t2", "col": 2, "label": "Ratios & multi-step computation", "value": 14, "color": "#cdd0d4"}, {"id": "t3", "col": 2, "label": "Cash-flow metrics", "value": 4, "color": "#cdd0d4"}, {"id": "t4", "col": 2, "label": "YoY change & multi-year averages", "value": 11, "color": "#cdd0d4"}, {"id": "t5", "col": 2, "label": "Segment & revenue mix", "value": 3, "color": "#cdd0d4"}, {"id": "t6", "col": 2, "label": "Footnote & 8-K disclosures", "value": 3, "color": "#cdd0d4"}, {"id": "t7", "col": 2, "label": "Metric applicability / when-to-decline", "value": 3, "color": "#cdd0d4"}], "links": [{"from": "r", "to": "cap", "value": 50, "color": "#5B8FF9"}, {"from": "cap", "to": "t0", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t1", "value": 9, "color": "#5B8FF9"}, {"from": "cap", "to": "t2", "value": 14, "color": "#5B8FF9"}, {"from": "cap", "to": "t3", "value": 4, "color": "#5B8FF9"}, {"from": "cap", "to": "t4", "value": 11, "color": "#5B8FF9"}, {"from": "cap", "to": "t5", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t6", "value": 3, "color": "#5B8FF9"}, {"from": "cap", "to": "t7", "value": 3, "color": "#5B8FF9"}]};
+const SPEC_C={"n": 50, "nodes": [{"id": "r", "col": 0, "label": "Blind", "value": 50, "color": "#9aa0a6"}, {"id": "cap", "col": 1, "label": "Ungrounded questions (no evidence, no answers)", "value": 50, "color": "#94a3b8"}, {"id": "cmp", "col": 1, "label": "Agent-compliance / safety", "value": 0, "color": "#E8684A", "ghost": true, "ghostGap": true}, {"id": "t0", "col": 2, "label": "Income-statement metrics", "value": 13, "color": "#cdd0d4"}, {"id": "t1", "col": 2, "label": "Balance-sheet items", "value": 8, "color": "#cdd0d4"}, {"id": "t2", "col": 2, "label": "Ratios & multi-step computation", "value": 5, "color": "#cdd0d4"}, {"id": "t3", "col": 2, "label": "Cash-flow metrics", "value": 3, "color": "#cdd0d4"}, {"id": "t4", "col": 2, "label": "YoY change & multi-year averages", "value": 6, "color": "#cdd0d4"}, {"id": "t5", "col": 2, "label": "Segment & revenue mix", "value": 6, "color": "#cdd0d4"}, {"id": "t6", "col": 2, "label": "Footnote & 8-K disclosures", "value": 4, "color": "#cdd0d4"}, {"id": "t7", "col": 2, "label": "Metric applicability / when-to-decline", "value": 5, "color": "#cdd0d4"}], "links": [{"from": "r", "to": "cap", "value": 50, "color": "#94a3b8"}, {"from": "cap", "to": "t0", "value": 13, "color": "#94a3b8"}, {"from": "cap", "to": "t1", "value": 8, "color": "#94a3b8"}, {"from": "cap", "to": "t2", "value": 5, "color": "#94a3b8"}, {"from": "cap", "to": "t3", "value": 3, "color": "#94a3b8"}, {"from": "cap", "to": "t4", "value": 6, "color": "#94a3b8"}, {"from": "cap", "to": "t5", "value": 6, "color": "#94a3b8"}, {"from": "cap", "to": "t6", "value": 4, "color": "#94a3b8"}, {"from": "cap", "to": "t7", "value": 5, "color": "#94a3b8"}]};
+
+document.getElementById("pA").innerHTML=buildSVG(SPEC_A);document.getElementById("pB").innerHTML=buildSVG(SPEC_B);document.getElementById("pC").innerHTML=buildSVG(SPEC_C);
+</script></body></html>

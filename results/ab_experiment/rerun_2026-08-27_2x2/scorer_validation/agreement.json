@@ -1,0 +1,25 @@
+{
+ "n": 32,
+ "mae": 0.082,
+ "spearman": 0.84,
+ "pearson": 0.77,
+ "per_cell": {
+  "00": {
+   "hand_mean": 0.706,
+   "scorer_mean": 0.75
+  },
+  "10": {
+   "hand_mean": 0.656,
+   "scorer_mean": 0.75
+  },
+  "01": {
+   "hand_mean": 0.994,
+   "scorer_mean": 0.9
+  },
+  "11": {
+   "hand_mean": 0.994,
+   "scorer_mean": 0.922
+  }
+ },
+ "note": "hand labels by an independent rater blind to scorer output; combined = mean(relevance, groundedness); scorer is slightly lenient on the no-documents cells and slightly strict on the documents cells"
+}

@@ -1,0 +1,258 @@
+[
+ {
+  "cell": "00",
+  "id": "ndc-002",
+  "question": "According to Microsoft's fiscal 2023 10-K, what was total revenue for the year ended June 30, 2023, in millions of USD?",
+  "relevance": 1.0,
+  "groundedness": 0.5,
+  "note": "MSFT FY23 10-K in dataset but no revenue figure in evidence; expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-007",
+  "question": "From the consolidated statement of cash flows in Exxon Mobil's 2023 10-K, what was net cash provided by operating activities for fiscal year 2023, in millions of USD?",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Exxon not in dataset; expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-012",
+  "question": "What was Pfizer's goodwill balance as of December 31, 2023, in millions of USD, as reported on the consolidated balance sheet?",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Pfizer 2023 10-K not in dataset (2021 10-K, 2023Q2 10-Q only); expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-017",
+  "question": "Using the consolidated statement of operations in Apple's fiscal 2023 10-K, compute Apple's gross margin percentage for fiscal 2023 (gross margin divided by total net sales), to one decimal place.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Apple not in dataset; expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-022",
+  "question": "Using Coca-Cola's fiscal 2023 balance sheet, compute the debt-to-equity ratio defined as total long-term debt (including current maturities) divided by total equity attributable to shareowners, to two decimal places.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Coca-Cola FY2023 not in dataset (2017/2021/2022 only); expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-027",
+  "question": "Compute Home Depot's return on assets for fiscal 2023 (net earnings divided by the average of total assets at the fiscal 2022 and fiscal 2023 year-ends), as a percentage to one decimal place, using its consolidated statements.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Home Depot not in dataset; expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-032",
+  "question": "By how much, in millions of USD, did Amazon's net cash provided by operating activities change from fiscal 2022 to fiscal 2023, per the consolidated statements of cash flows in the 2023 10-K?",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Amazon 2023 10-K not in dataset (2017/2019 only); expected empty"
+ },
+ {
+  "cell": "00",
+  "id": "ndc-035",
+  "question": "What was the year-over-year percentage change in Exxon Mobil's net income attributable to ExxonMobil from fiscal 2022 to fiscal 2023, to one decimal place?",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Exxon not in dataset; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-002",
+  "question": "From Microsoft's FY2022 10-K (fiscal year ended June 30, 2022), what was operating income on the income statement, in millions of USD as reported?",
+  "relevance": 1.0,
+  "groundedness": 0.5,
+  "note": "MSFT FY22 op income not in evidence (only 2016/2023 10-Ks); expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-007",
+  "question": "Using only Amazon's FY2022 10-K consolidated statement of cash flows, compute free cash flow for the year ended December 31, 2022, defined as net cash provided by (used in) operating activities minus purchases of property and equipment. Report in billions of USD and show both inputs.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Amazon FY2022 10-K not in dataset; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-012",
+  "question": "In Intel's FY2022 10-K, what were (a) gross property, plant and equipment and (b) accumulated depreciation as of December 31, 2022, and what is the resulting net PP&E? Report all three in millions of USD and cite the balance-sheet or note line items.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Intel not in dataset; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-017",
+  "question": "Per Nike's FY2023 10-K (fiscal year ended May 31, 2023), what percentage of NIKE Brand revenues came from the North America operating segment? Cite the segment revenue figures used.",
+  "relevance": 1.0,
+  "groundedness": 0.5,
+  "note": "Nike FY23 10-K in dataset but no segment revenue in evidence; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-022",
+  "question": "Using Pfizer's FY2022 10-K consolidated statement of income, what were research and development expenses as a percentage of total revenues for 2022? Cite both line items in millions of USD.",
+  "relevance": 1.0,
+  "groundedness": 0.4,
+  "note": "Pfizer FY2022 10-K not in dataset; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-027",
+  "question": "An analyst asks for Walmart's 'calendar-year 2023 revenue'. Walmart's fiscal year ends January 31. Explain which Walmart fiscal year most closely corresponds to calendar 2023, and report total revenues for that fiscal year from the relevant 10-K in millions of USD, noting that the figure is fiscal, not calendar.",
+  "relevance": 0.9,
+  "groundedness": 0.4,
+  "note": "Reasonable fiscal-vs-calendar framing, but Walmart FY2024 not in dataset (2018-2020); expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-032",
+  "question": "PepsiCo's fiscal year ends on the last Saturday of December. Per its FY2022 10-K, what is the exact fiscal year-end date for fiscal 2022, and what were total current liabilities on the consolidated balance sheet as of that date, in millions of USD?",
+  "relevance": 1.0,
+  "groundedness": 0.6,
+  "note": "PepsiCo FY22 year-end Dec 31 2022 confirmed in evidence; current liabilities figure absent; expected empty"
+ },
+ {
+  "cell": "10",
+  "id": "rbk-035",
+  "question": "From Bank of America's FY2022 10-K consolidated balance sheet, compute working capital as total current assets minus total current liabilities as of December 31, 2022.",
+  "relevance": 0.3,
+  "groundedness": 0.1,
+  "note": "Banks do not report current assets/liabilities; BofA not in dataset; expected empty"
+ },
+ {
+  "cell": "01",
+  "id": "doc-002",
+  "question": "From 3M's consolidated balance sheet at December 31, 2018, compute the current ratio (total current assets divided by total current liabilities). Give the ratio to two decimal places.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "3M 2018 CA 13,709 / CL 7,244 = 1.89 verified in evidence"
+ },
+ {
+  "cell": "01",
+  "id": "doc-007",
+  "question": "Based on AES Corporation's consolidated statement of operations, by what percentage did total revenue grow from the year ended December 31, 2021 to the year ended December 31, 2022? Answer to one decimal place.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "AES revenue 12,617 vs 11,141 = +13.2% verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-012",
+  "question": "Per Amcor's Form 8-K dated July 1, 2022 describing the June 30, 2022 supplemental indentures, what are the coupon rates and maturity years of the two series of Guaranteed Senior Notes whose issuer was substituted?",
+  "relevance": 0.9,
+  "groundedness": 1.0,
+  "note": "Amcor 8-K (not 10-K) but note terms 3.625%/2026, 4.500%/2028 verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-017",
+  "question": "From American Water Works' consolidated statement of cash flows for the year ended December 31, 2020, compute free cash flow as net cash provided by operating activities minus capital expenditures. Answer in USD millions, indicating the sign.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "AWK 2020 CFO 1,426 - capex 1,822 = -396 verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-022",
+  "question": "Using Square, Inc.'s (Block) consolidated statement of operations for the year ended December 31, 2020, what was the gross profit on bitcoin revenue (bitcoin revenue minus bitcoin costs), and what was the bitcoin gross margin percentage? Answer in USD millions to one decimal place and a percentage to one decimal place.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Block 2020 bitcoin rev 4,571,543 - cost 4,474,534 = 97.0M, 2.1% verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-027",
+  "question": "Using Costco's consolidated balance sheet as of August 29, 2021 (fiscal year-end), what was Costco's net cash position, defined as cash and cash equivalents minus the sum of the current portion of long-term debt and long-term debt excluding current portion? Answer in USD millions.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Costco 2021 cash 11,258 - debt (799+6,692) = 3,767 verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-032",
+  "question": "According to General Mills' consolidated balance sheets, by how much did cash and cash equivalents change between May 26, 2019 and May 31, 2020 (fiscal year-end)? Answer in USD millions to one decimal place, indicating direction.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "General Mills cash 450.0 -> 1,677.8 = +1,227.8 verified"
+ },
+ {
+  "cell": "01",
+  "id": "doc-035",
+  "question": "Using JPMorgan Chase's managed-basis segment results for the three months ended March 31, 2021 (Q1 2021 10-Q), what was the firmwide overhead ratio, defined as total noninterest expense divided by total net revenue? Answer as a percentage to one decimal place.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "JPM Q1 2021 18,725 / 33,119 = 56.5% verified (10-Q)"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-002",
+  "question": "From the consolidated balance sheet in 3M's FY2018 10-K, what was 3M's net property, plant and equipment as of December 31, 2017 (the prior-year comparative column), in millions of USD? Show the gross PP&E and accumulated depreciation that produce it.",
+  "relevance": 0.9,
+  "groundedness": 1.0,
+  "note": "Prior-year comparative column is slightly contrived; 24,914 - 16,048 = 8,866 verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-007",
+  "question": "From Amcor plc's consolidated balance sheet as of June 30, 2020 (fiscal year 2020), what was Amcor's working capital in millions of USD?",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Amcor FY20 CA 4,534.7 - CL 3,973.6 = 561.1 verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-012",
+  "question": "From Best Buy's consolidated balance sheet as of February 2, 2019 (fiscal 2019), what was Best Buy's net property and equipment in millions of USD? Show the gross figure and accumulated depreciation used.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Best Buy FY19 9,200 - 6,690 = 2,510 verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-017",
+  "question": "From Costco's consolidated balance sheet as of August 29, 2021 (fiscal 2021), what was Costco's working capital in millions of USD?",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Costco FY21 29,505 - 29,441 = 64 verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-022",
+  "question": "According to the managed-basis segment results in JPMorgan's 10-Q for the three months ended March 31, 2021, what was total net revenue for the Corporate & Investment Bank segment, and what was the year-over-year change? Disclose the accounting basis and the period type.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "JPM CIB net revenue 14,605 vs 10,003 (+46%) verified (10-Q, managed basis)"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-027",
+  "question": "Using Microsoft's income statement for the fiscal year ended June 30, 2016, what was Microsoft's FY2016 gross margin as a percentage of total revenue?",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "MSFT FY16 52,540 / 85,320 = 61.6% verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-032",
+  "question": "Using Pfizer's consolidated statement of income for the fiscal year ended December 31, 2021, what was Pfizer's FY2021 gross margin as a percentage of revenues?",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Pfizer FY21 (81,288-30,821)/81,288 = 62.1% verified"
+ },
+ {
+  "cell": "11",
+  "id": "wdc-035",
+  "question": "From Walmart's consolidated balance sheet as of January 31, 2018 (fiscal 2018), what was Walmart's net property and equipment in millions of USD, excluding property under capital lease and financing obligations? Show the gross figure and accumulated depreciation.",
+  "relevance": 1.0,
+  "groundedness": 1.0,
+  "note": "Walmart FY18 185,154 - 77,479 = 107,675 verified"
+ }
+]

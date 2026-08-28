@@ -1,0 +1,11 @@
+{
+  "cell": "10_runbook",
+  "run": 1,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T23:50:39Z",
+  "ended_at": "2026-08-27T23:53:06Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Runbook-only, no evidence: 36 grounded-style cases authored with expected '' / grounding null per no-fabrication rule (incl. 3 metric-not-applicable bank cases), plus 14 compliance probes ([REFUSE]); companies named from general knowledge of real 10-K filers, not from evidence."
+}

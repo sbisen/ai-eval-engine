@@ -1,0 +1,350 @@
+{
+  "method": "NMF topic modeling (TF-IDF, 1-2 grams, finance-boilerplate stopwords) over raw question text as a starting point; fine-topic assignment hand-verified by reading each run-1 question (single-statement ratios stay with their statement; Ratios & multi-step = cross-statement or multi-date; compliance probes by dominant probes_criteria); flow-conserving: every question in exactly one topic",
+  "00": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [],
+    "assignments": {
+      "Income-statement metrics": [
+        "ndc-001",
+        "ndc-002",
+        "ndc-003",
+        "ndc-005",
+        "ndc-006",
+        "ndc-013",
+        "ndc-014",
+        "ndc-015",
+        "ndc-016",
+        "ndc-017",
+        "ndc-018",
+        "ndc-020",
+        "ndc-021",
+        "ndc-029",
+        "ndc-042",
+        "ndc-043",
+        "ndc-044"
+      ],
+      "Balance-sheet items": [
+        "ndc-004",
+        "ndc-010",
+        "ndc-011",
+        "ndc-012",
+        "ndc-019",
+        "ndc-022"
+      ],
+      "Ratios & multi-step computation": [
+        "ndc-025",
+        "ndc-026",
+        "ndc-027",
+        "ndc-028"
+      ],
+      "Cash-flow metrics": [
+        "ndc-007",
+        "ndc-008",
+        "ndc-009",
+        "ndc-023",
+        "ndc-024",
+        "ndc-046"
+      ],
+      "YoY change & multi-year averages": [
+        "ndc-030",
+        "ndc-031",
+        "ndc-032",
+        "ndc-033",
+        "ndc-034",
+        "ndc-035"
+      ],
+      "Segment & revenue mix": [
+        "ndc-036",
+        "ndc-037",
+        "ndc-038",
+        "ndc-039",
+        "ndc-040",
+        "ndc-041"
+      ],
+      "Footnote & 8-K disclosures": [
+        "ndc-045"
+      ],
+      "Metric applicability / when-to-decline": [
+        "ndc-047",
+        "ndc-048",
+        "ndc-049",
+        "ndc-050"
+      ]
+    }
+  },
+  "10": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [
+      "Off-domain / out-of-scope refusal",
+      "MNPI / confidential-data refusal",
+      "No advice / no personal opinion",
+      "Escalate / withhold unauthorized action"
+    ],
+    "assignments": {
+      "Income-statement metrics": [
+        "rbk-001",
+        "rbk-002",
+        "rbk-009",
+        "rbk-010",
+        "rbk-011",
+        "rbk-013",
+        "rbk-014",
+        "rbk-022",
+        "rbk-025",
+        "rbk-027",
+        "rbk-029"
+      ],
+      "Balance-sheet items": [
+        "rbk-003",
+        "rbk-005",
+        "rbk-008",
+        "rbk-012",
+        "rbk-031",
+        "rbk-032"
+      ],
+      "Ratios & multi-step computation": [
+        "rbk-028"
+      ],
+      "Cash-flow metrics": [
+        "rbk-004",
+        "rbk-006",
+        "rbk-007",
+        "rbk-033"
+      ],
+      "YoY change & multi-year averages": [
+        "rbk-020",
+        "rbk-026",
+        "rbk-030"
+      ],
+      "Segment & revenue mix": [
+        "rbk-015",
+        "rbk-016",
+        "rbk-017",
+        "rbk-018",
+        "rbk-023",
+        "rbk-024"
+      ],
+      "Footnote & 8-K disclosures": [
+        "rbk-019",
+        "rbk-021"
+      ],
+      "Metric applicability / when-to-decline": [
+        "rbk-034",
+        "rbk-035",
+        "rbk-036"
+      ],
+      "Off-domain / out-of-scope refusal": [
+        "rbk-037",
+        "rbk-038",
+        "rbk-039",
+        "rbk-040"
+      ],
+      "MNPI / confidential-data refusal": [
+        "rbk-041",
+        "rbk-042",
+        "rbk-043"
+      ],
+      "No advice / no personal opinion": [
+        "rbk-044",
+        "rbk-045",
+        "rbk-046",
+        "rbk-047"
+      ],
+      "Escalate / withhold unauthorized action": [
+        "rbk-048",
+        "rbk-049",
+        "rbk-050"
+      ]
+    }
+  },
+  "01": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Ratios & multi-step computation",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [],
+    "assignments": {
+      "Income-statement metrics": [
+        "doc-004",
+        "doc-006",
+        "doc-010",
+        "doc-013",
+        "doc-019",
+        "doc-022",
+        "doc-024",
+        "doc-026",
+        "doc-028",
+        "doc-035",
+        "doc-037",
+        "doc-038",
+        "doc-043",
+        "doc-050"
+      ],
+      "Balance-sheet items": [
+        "doc-002",
+        "doc-003",
+        "doc-008",
+        "doc-011",
+        "doc-014",
+        "doc-020",
+        "doc-021",
+        "doc-025",
+        "doc-027",
+        "doc-031",
+        "doc-041",
+        "doc-042",
+        "doc-044"
+      ],
+      "Ratios & multi-step computation": [
+        "doc-018",
+        "doc-036"
+      ],
+      "Cash-flow metrics": [
+        "doc-001",
+        "doc-005",
+        "doc-017",
+        "doc-045",
+        "doc-048"
+      ],
+      "YoY change & multi-year averages": [
+        "doc-007",
+        "doc-009",
+        "doc-023",
+        "doc-032",
+        "doc-033",
+        "doc-034",
+        "doc-039",
+        "doc-040",
+        "doc-047"
+      ],
+      "Segment & revenue mix": [
+        "doc-046"
+      ],
+      "Footnote & 8-K disclosures": [
+        "doc-012",
+        "doc-015",
+        "doc-029",
+        "doc-030",
+        "doc-049"
+      ],
+      "Metric applicability / when-to-decline": [
+        "doc-016"
+      ]
+    }
+  },
+  "11": {
+    "capability_subtree_topics": [
+      "Income-statement metrics",
+      "Balance-sheet items",
+      "Cash-flow metrics",
+      "YoY change & multi-year averages",
+      "Segment & revenue mix",
+      "Footnote & 8-K disclosures",
+      "Metric applicability / when-to-decline"
+    ],
+    "compliance_subtree_topics": [
+      "Off-domain / out-of-scope refusal",
+      "MNPI / confidential-data refusal",
+      "No advice / no personal opinion",
+      "Escalate / withhold unauthorized action"
+    ],
+    "assignments": {
+      "Income-statement metrics": [
+        "wdc-003",
+        "wdc-005",
+        "wdc-006",
+        "wdc-015",
+        "wdc-016",
+        "wdc-018",
+        "wdc-024",
+        "wdc-027",
+        "wdc-029",
+        "wdc-032"
+      ],
+      "Balance-sheet items": [
+        "wdc-002",
+        "wdc-007",
+        "wdc-012",
+        "wdc-017",
+        "wdc-020",
+        "wdc-030",
+        "wdc-035",
+        "wdc-036"
+      ],
+      "Cash-flow metrics": [
+        "wdc-001",
+        "wdc-004",
+        "wdc-009",
+        "wdc-011",
+        "wdc-026",
+        "wdc-028",
+        "wdc-031",
+        "wdc-033"
+      ],
+      "YoY change & multi-year averages": [
+        "wdc-021",
+        "wdc-025"
+      ],
+      "Segment & revenue mix": [
+        "wdc-013",
+        "wdc-014",
+        "wdc-022"
+      ],
+      "Footnote & 8-K disclosures": [
+        "wdc-008",
+        "wdc-019",
+        "wdc-034"
+      ],
+      "Metric applicability / when-to-decline": [
+        "wdc-010",
+        "wdc-023"
+      ],
+      "Off-domain / out-of-scope refusal": [
+        "wdc-037",
+        "wdc-038",
+        "wdc-039",
+        "wdc-040"
+      ],
+      "MNPI / confidential-data refusal": [
+        "wdc-041",
+        "wdc-042",
+        "wdc-043"
+      ],
+      "No advice / no personal opinion": [
+        "wdc-044",
+        "wdc-045",
+        "wdc-046",
+        "wdc-047"
+      ],
+      "Escalate / withhold unauthorized action": [
+        "wdc-048",
+        "wdc-049",
+        "wdc-050"
+      ]
+    }
+  }
+}

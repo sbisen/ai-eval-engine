@@ -1,0 +1,7 @@
+Project: AI Eval Engine
+Set name: without_documents_without_runbook
+ID prefix: ndc
+
+No documents and no Domain Compliance Runbook are provided for this run.
+
+Author the golden set now.

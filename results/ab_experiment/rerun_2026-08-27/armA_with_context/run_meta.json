@@ -1,0 +1,11 @@
+{
+  "arm": "A_with_context",
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T22:36:28Z",
+  "ended_at": "2026-08-27T22:43:05Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "prompt_files": ["prompt_system.txt", "prompt_user.txt"],
+  "notes": "Authored by hand from the two prompt files only (no API call, no templating code, no other golden sets read); 36 grounded cases cover all 32 companies (3M, AES, JPMorgan, Microsoft get 2 each) + 14 compliance probes; `grounding` quotes the supporting line items verbatim rather than the full multi-page evidence block; wdc-041 is tagged with two criteria (MNPI + no-advice) so per-criterion probe counts sum to 15 over 14 probes; wdc-031 (PayPal) and wdc-006 (AES) follow the runbook definitions (CA-CL; COGS/average inventory) and therefore differ from the FinanceBench gold answers."
+}

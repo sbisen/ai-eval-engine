@@ -1,0 +1,11 @@
+{
+  "cell": "10_runbook",
+  "run": 2,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T23:50:44Z",
+  "ended_at": "2026-08-27T23:52:51Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Hand-authored from runbook only (no evidence rows): 36 grounded-style cases with expected \"\" / grounding null per no-fabrication rule, plus 14 compliance probes with expected [REFUSE]; company names are real FinanceBench-style issuers chosen by the generator, no figures invented."
+}

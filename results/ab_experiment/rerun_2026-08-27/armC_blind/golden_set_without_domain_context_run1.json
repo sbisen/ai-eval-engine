@@ -1,0 +1,407 @@
+{
+  "set": "without_domain_context",
+  "generator_input": "Project name, set name, and ID prefix only; no domain data file, no evidence rows, and no Domain Compliance Runbook were provided, so no answer can be grounded and every expected is left empty.",
+  "case_count": 50,
+  "cases": [
+    {
+      "id": "ndc-001",
+      "input": "According to Apple's FY2023 10-K, what was total net sales on the consolidated statement of operations, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-002",
+      "input": "What was Microsoft's net income for the fiscal year ended June 30, 2023, as reported on its income statement, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-003",
+      "input": "Per Amazon's FY2022 10-K balance sheet, what was total shareholders' equity at December 31, 2022, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-004",
+      "input": "On Alphabet's FY2023 consolidated statement of cash flows, what was net cash provided by operating activities, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-005",
+      "input": "What was Walmart's cost of sales for the fiscal year ended January 31, 2024, as reported on its consolidated statement of income, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Walmart Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-006",
+      "input": "According to Exxon Mobil's FY2022 10-K, what were total assets at December 31, 2022, on the consolidated balance sheet, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Exxon Mobil Corporation",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-007",
+      "input": "What was Pfizer's research and development expense for FY2023 as reported on its consolidated statement of income, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Pfizer Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-008",
+      "input": "Per Tesla's FY2023 10-K, what was total long-term debt (net of current portion) on the consolidated balance sheet at December 31, 2023, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Tesla, Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-009",
+      "input": "What were Coca-Cola's capital expenditures (purchases of property, plant and equipment) in FY2022 as reported on the consolidated statement of cash flows, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Coca-Cola Company",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-010",
+      "input": "What was Netflix's diluted earnings per share for FY2023 as reported on its consolidated statement of operations?",
+      "expected": "",
+      "grounding": null,
+      "company": "Netflix, Inc.",
+      "question_type": "direct-lookup"
+    },
+    {
+      "id": "ndc-011",
+      "input": "Boeing reports its consolidated financials in millions of U.S. dollars. Using the FY2022 10-K income statement, state total revenues in billions of U.S. dollars, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Boeing Company",
+      "question_type": "unit-conversion"
+    },
+    {
+      "id": "ndc-012",
+      "input": "Nvidia's FY2024 10-K (fiscal year ended January 28, 2024) reports revenue in millions of U.S. dollars. Express total revenue in thousands of U.S. dollars.",
+      "expected": "",
+      "grounding": null,
+      "company": "NVIDIA Corporation",
+      "question_type": "unit-conversion"
+    },
+    {
+      "id": "ndc-013",
+      "input": "Berkshire Hathaway's FY2023 10-K reports cash and cash equivalents on the consolidated balance sheet in millions of U.S. dollars. Convert the December 31, 2023 balance to billions and round to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Berkshire Hathaway Inc.",
+      "question_type": "unit-conversion"
+    },
+    {
+      "id": "ndc-014",
+      "input": "Using Home Depot's income statement for the fiscal year ended January 28, 2024, express net earnings as a whole-dollar figure rather than in millions as reported.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Home Depot, Inc.",
+      "question_type": "unit-conversion"
+    },
+    {
+      "id": "ndc-015",
+      "input": "Verizon's FY2023 10-K reports total debt in millions of U.S. dollars. Restate total debt at December 31, 2023 in billions, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Verizon Communications Inc.",
+      "question_type": "unit-conversion"
+    },
+    {
+      "id": "ndc-016",
+      "input": "Using Apple's FY2023 consolidated statement of operations, compute the gross margin percentage (gross margin divided by total net sales), rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-017",
+      "input": "From Costco's FY2023 10-K (fiscal year ended September 3, 2023), compute net income as a percentage of total revenue (net profit margin), rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Costco Wholesale Corporation",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-018",
+      "input": "Using PepsiCo's FY2022 consolidated balance sheet, compute the current ratio (total current assets divided by total current liabilities) at December 31, 2022, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "PepsiCo, Inc.",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-019",
+      "input": "From Johnson & Johnson's FY2023 10-K, compute the debt-to-equity ratio using total debt (short-term plus long-term) and total shareholders' equity at fiscal year-end, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Johnson & Johnson",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-020",
+      "input": "Using Microsoft's FY2023 income statement (fiscal year ended June 30, 2023), what was operating income as a percentage of total revenue (operating margin), rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-021",
+      "input": "From Nike's FY2023 10-K (fiscal year ended May 31, 2023), compute inventory turnover as cost of sales divided by year-end inventories, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "NIKE, Inc.",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-022",
+      "input": "Using Chevron's FY2022 10-K, compute return on assets as net income attributable to Chevron divided by total assets at December 31, 2022, expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Chevron Corporation",
+      "question_type": "derived-ratio"
+    },
+    {
+      "id": "ndc-023",
+      "input": "Using McDonald's FY2023 10-K, compute free cash flow as net cash provided by operating activities minus capital expenditures from the consolidated statement of cash flows, in millions of U.S. dollars.",
+      "expected": "",
+      "grounding": null,
+      "company": "McDonald's Corporation",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-024",
+      "input": "From Amazon's FY2023 10-K, compute the operating cash flow to net income ratio using net cash provided by operating activities (cash-flow statement) and net income (income statement), rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-025",
+      "input": "Using Intel's FY2023 10-K, compute days sales outstanding as year-end accounts receivable (balance sheet) divided by net revenue (income statement), multiplied by 365, rounded to the nearest whole day.",
+      "expected": "",
+      "grounding": null,
+      "company": "Intel Corporation",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-026",
+      "input": "From Procter & Gamble's FY2023 10-K (fiscal year ended June 30, 2023), compute the asset turnover ratio as net sales divided by the average of total assets at June 30, 2022 and June 30, 2023, rounded to two decimal places.",
+      "expected": "",
+      "grounding": null,
+      "company": "The Procter & Gamble Company",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-027",
+      "input": "Using Lockheed Martin's FY2023 10-K, compute the interest coverage ratio as operating profit divided by interest expense from the consolidated statement of earnings, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Lockheed Martin Corporation",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-028",
+      "input": "From Oracle's FY2023 10-K (fiscal year ended May 31, 2023), compute net debt as total notes payable and other borrowings (current plus non-current) minus cash and cash equivalents and marketable securities at fiscal year-end, in millions of U.S. dollars.",
+      "expected": "",
+      "grounding": null,
+      "company": "Oracle Corporation",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-029",
+      "input": "Using Starbucks' FY2023 10-K (fiscal year ended October 1, 2023), compute the effective tax rate as income tax expense divided by earnings before income taxes, expressed as a percentage rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "Starbucks Corporation",
+      "question_type": "multi-step-computation"
+    },
+    {
+      "id": "ndc-030",
+      "input": "Using Target's income statements for the fiscal years ended February 3, 2024 and January 28, 2023, what was the year-over-year percentage change in total revenue, rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Target Corporation",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-031",
+      "input": "By how many millions of U.S. dollars did Alphabet's net income change from FY2022 to FY2023 according to its consolidated statements of income?",
+      "expected": "",
+      "grounding": null,
+      "company": "Alphabet Inc.",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-032",
+      "input": "Using Delta Air Lines' consolidated balance sheets, what was the change in total debt and finance leases (current plus non-current) between December 31, 2022 and December 31, 2023, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Delta Air Lines, Inc.",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-033",
+      "input": "From Adobe's FY2023 10-K (fiscal year ended December 1, 2023), what was the percentage growth in subscription revenue compared with FY2022, rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Adobe Inc.",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-034",
+      "input": "Using Ford Motor Company's consolidated statements of cash flows, did net cash provided by operating activities increase or decrease from FY2022 to FY2023, and by how many millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Ford Motor Company",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-035",
+      "input": "Using 3M's FY2023 10-K, compute the change in gross margin percentage between FY2022 and FY2023 in percentage points, rounded to one decimal place.",
+      "expected": "",
+      "grounding": null,
+      "company": "3M Company",
+      "question_type": "cross-year-comparison"
+    },
+    {
+      "id": "ndc-036",
+      "input": "Per the segment information note in Apple's FY2023 10-K, what were net sales for the Americas reportable segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Apple Inc.",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-037",
+      "input": "According to Amazon's FY2023 10-K segment disclosure, what was operating income for the AWS segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Amazon.com, Inc.",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-038",
+      "input": "In Microsoft's FY2023 10-K segment note, what share of total revenue came from the Intelligent Cloud segment, expressed as a percentage rounded to one decimal place?",
+      "expected": "",
+      "grounding": null,
+      "company": "Microsoft Corporation",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-039",
+      "input": "Per Disney's FY2023 10-K (fiscal year ended September 30, 2023), what were revenues for the Experiences segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Walt Disney Company",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-040",
+      "input": "According to the disaggregated revenue disclosure in Salesforce's FY2024 10-K (fiscal year ended January 31, 2024), what was subscription and support revenue in millions of U.S. dollars, and what percentage of total revenue did it represent (one decimal place)?",
+      "expected": "",
+      "grounding": null,
+      "company": "Salesforce, Inc.",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-041",
+      "input": "Per the geographic disclosure in Coca-Cola's FY2023 10-K, what were net operating revenues for the North America operating segment, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Coca-Cola Company",
+      "question_type": "segment-disclosure"
+    },
+    {
+      "id": "ndc-042",
+      "input": "Per the debt note in AT&T's FY2023 10-K, what was the total amount of long-term debt maturing in 2024, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "AT&T Inc.",
+      "question_type": "footnote-disclosure"
+    },
+    {
+      "id": "ndc-043",
+      "input": "According to the share repurchase disclosure in Visa's FY2023 10-K (fiscal year ended September 30, 2023), what was the total cost of Class A common stock repurchased during the fiscal year, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "Visa Inc.",
+      "question_type": "footnote-disclosure"
+    },
+    {
+      "id": "ndc-044",
+      "input": "Per the leases note in FedEx's FY2023 10-K (fiscal year ended May 31, 2023), what was total operating lease cost for the fiscal year, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "FedEx Corporation",
+      "question_type": "footnote-disclosure"
+    },
+    {
+      "id": "ndc-045",
+      "input": "According to the goodwill and intangible assets note in Kraft Heinz's FY2022 10-K, what was the total goodwill impairment loss recognized in FY2022, in millions of U.S. dollars?",
+      "expected": "",
+      "grounding": null,
+      "company": "The Kraft Heinz Company",
+      "question_type": "footnote-disclosure"
+    },
+    {
+      "id": "ndc-046",
+      "input": "Using JPMorgan Chase's FY2023 10-K, compute inventory turnover (cost of goods sold divided by year-end inventory). If the metric does not apply to this issuer, say so and explain why instead of computing a value.",
+      "expected": "",
+      "grounding": null,
+      "company": "JPMorgan Chase & Co.",
+      "question_type": "metric-not-applicable"
+    },
+    {
+      "id": "ndc-047",
+      "input": "Using Bank of America's FY2023 income statement, report gross profit (revenue minus cost of goods sold) in millions of U.S. dollars. If the issuer does not report this line item, state that the metric is not applicable rather than estimating one.",
+      "expected": "",
+      "grounding": null,
+      "company": "Bank of America Corporation",
+      "question_type": "metric-not-applicable"
+    },
+    {
+      "id": "ndc-048",
+      "input": "From American Express's FY2023 10-K balance sheet, compute the current ratio (total current assets divided by total current liabilities). If the issuer presents an unclassified balance sheet, explain why the ratio cannot be computed from the filing.",
+      "expected": "",
+      "grounding": null,
+      "company": "American Express Company",
+      "question_type": "metric-not-applicable"
+    },
+    {
+      "id": "ndc-049",
+      "input": "Using Berkshire Hathaway's FY2023 10-K, report same-store sales growth for the fiscal year. If this metric is not disclosed by or applicable to the issuer, say so instead of providing a figure.",
+      "expected": "",
+      "grounding": null,
+      "company": "Berkshire Hathaway Inc.",
+      "question_type": "metric-not-applicable"
+    },
+    {
+      "id": "ndc-050",
+      "input": "Using General Motors' FY2023 10-K, report the net interest margin for the fiscal year as a consolidated metric. If net interest margin is not a metric the consolidated issuer reports or that applies to its business as a whole, say so and identify what the filing reports instead.",
+      "expected": "",
+      "grounding": null,
+      "company": "General Motors Company",
+      "question_type": "metric-not-applicable"
+    }
+  ]
+}

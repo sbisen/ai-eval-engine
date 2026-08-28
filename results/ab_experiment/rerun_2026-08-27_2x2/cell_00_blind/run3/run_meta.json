@@ -1,0 +1,11 @@
+{
+  "cell": "00_blind",
+  "run": 3,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T23:50:11Z",
+  "ended_at": "2026-08-27T23:51:53Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Authored directly by the subagent from prompt_system.txt + prompt_user.txt; no API call, no templating, no data or other golden sets read; all 50 cases have expected \"\" and grounding null per the no-evidence grounding rule."
+}

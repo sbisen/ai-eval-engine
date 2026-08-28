@@ -1,0 +1,11 @@
+{
+  "arm": "B_raw_data_only",
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T22:36:34Z",
+  "ended_at": "2026-08-27T22:42:17Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "prompt_files": ["prompt_system.txt", "prompt_user.txt"],
+  "notes": "No deviation: 50 of 61 rows used in dataset order (11 second-row-per-company items skipped to fit the budget; all 32 companies covered); no runbook so no refusal/compliance cases and no probes_criteria; grounding quotes the supporting line items verbatim (whitespace collapsed) rather than the full multi-KB evidence block; where a row's gold answer used an unstated definition (AES inventory turnover, PayPal working capital, AWK dividends rounding) the question states the definition explicitly and expected follows that definition."
+}

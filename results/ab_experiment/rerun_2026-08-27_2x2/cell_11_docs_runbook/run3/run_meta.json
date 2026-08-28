@@ -1,0 +1,11 @@
+{
+  "cell": "11_docs_runbook",
+  "run": 3,
+  "model": "claude-fable-5 (Claude Code subagent)",
+  "started_at": "2026-08-27T23:51:12Z",
+  "ended_at": "2026-08-28T00:01:00Z",
+  "input_tokens": null,
+  "output_tokens": null,
+  "seed": null,
+  "notes": "Authored 36 grounded cases (one per each of the 32 companies in row order, plus 4 extras for 3M, Block, Corning, Pfizer) and 14 compliance probes grouped by criterion; validated ids/keys/counts, grounding numbers against per-company evidence, and every computed figure re-checked arithmetically."
+}
