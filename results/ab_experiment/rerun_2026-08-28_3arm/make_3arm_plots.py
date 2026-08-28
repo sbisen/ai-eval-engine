@@ -2,6 +2,7 @@
 Reads cell_*/run*/golden_set_*.json; writes into THIS folder only:
   domain_accuracy_results.json / domain_accuracy_chart.html   (3 bars, mean +- sd over runs)
   relatedness_results.json     / relatedness_boxplot.html     (3 boxes, questions pooled over runs)
+  golden_set_composition.json  / golden_set_composition.html  (3 stacked bars: what the 50 cases are, mean over runs)
   bubble_results.json          / bubble_chart.html            (run1 per arm; hand-verified topics if present)
   golden_set_question_types.html                              (3 panels, run1 per arm)
   coverage_table.html                                         (3 columns, mean +- sd over runs)
@@ -18,8 +19,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "rerun_2026-08-2
 import importlib.util
 _spec = importlib.util.spec_from_file_location("mrp", Path(__file__).resolve().parent.parent / "plot_common.py")
 mrp = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(mrp)
-score, relatedness, specificity, stats, figure_verifiable, auto_topics, shell, DECLINE, PROBE = (
-    mrp.score, mrp.relatedness, mrp.specificity, mrp.stats, mrp.figure_verifiable, mrp.auto_topics, mrp.shell, mrp.DECLINE, mrp.PROBE)
+score, relatedness, specificity, stats, figure_verifiable, auto_topics, shell, DECLINE, PROBE, disclosure = (
+    mrp.score, mrp.relatedness, mrp.specificity, mrp.stats, mrp.figure_verifiable, mrp.auto_topics, mrp.shell, mrp.DECLINE, mrp.PROBE, mrp.disclosure)
 
 HERE = Path(__file__).resolve().parent
 CELLS = [  # key, docs, runbook, label, color, dir
@@ -86,8 +87,68 @@ def main():
     def g(k): return f"{100*da[k]['mean']:.0f}%" if k in da else "–"
     foot = (f"Three arms, one system prompt, k = 3 generations each. <b>Documents</b> = filing evidence text only (the benchmark's own questions and answers are withheld, so no arm can paraphrase them); "
             f"<b>runbook</b> = the extracted Domain Compliance Runbook. Groundedness is verified against the raw filing data, so it is a <i>documents</i> effect: {g('C')} → {g('B')} → {g('A')}. "
-            f"The runbook's contribution appears on the coverage table and specificity, not on this metric. Compliance probes excluded. Rerun 2026-08-28.")
+            f"The runbook's contribution appears on the coverage table and specificity, not on this metric. Guardrail tests excluded. Rerun 2026-08-28.")
     (HERE / "domain_accuracy_chart.html").write_text(shell("Domain accuracy of generated questions &mdash; three arms", "FinanceBench golden sets &middot; three-arm rerun 2026-08-28 &middot; we test the questions, not the answers", svg, foot, 1040))
+
+    # ---------------- composition of the 50-case budget, mean over runs
+    # capability answers are tiered by provenance markers (plot_common.disclosure): 0-1 / 2-3 / 4-5 of
+    # {source pointer, statement or line item, units/scale, fiscal period, GAAP basis}; guardrail tests by first criterion
+    SEG = [  # key, label, color
+        ("no_answer", "unanswerable — no reference answer", "#9aa3ad"),
+        ("prov_low", "answer · 0–1 of 5 provenance markers", "#cfe3d6"),
+        ("prov_mid", "answer · 2–3 of 5 provenance markers", "#8fc4a3"),
+        ("prov_full", "answer · 4–5 of 5 provenance markers", "#3f6fb0"),
+        ("Domain scope", "guardrail test: domain scope", "#d97706"),
+        ("MNPI & confidential-information safeguard", "guardrail test: MNPI & confidentiality", "#b91c1c"),
+        ("No personal bias / no advice", "guardrail test: biased advice", "#7c3aed"),
+        ("Escalate to Human", "guardrail test: human escalation", "#0e7490"),
+    ]
+    comp = {}
+    for k, c in active.items():
+        per_run = []
+        for r in c["runs"]:
+            d = {sk: 0 for sk, _, _ in SEG}
+            for x in r["cases"]:
+                e = (x.get("expected") or "")
+                if x.get("question_type") == PROBE or e == "[REFUSE]":
+                    crit = (x.get("probes_criteria") or ["Domain scope"])[0]; d[crit] = d.get(crit, 0) + 1
+                elif not e.strip():
+                    d["no_answer"] += 1
+                else:
+                    n = round(disclosure(x)[0] * 5); d["prov_low" if n <= 1 else "prov_mid" if n <= 3 else "prov_full"] += 1
+            per_run.append(d)
+        comp[k] = {"label": c["label"], "per_run": per_run, "mean": {sk: round(float(np.mean([d[sk] for d in per_run])), 2) for sk, _, _ in SEG}}
+    (HERE / "golden_set_composition.json").write_text(json.dumps({"summary": {
+        "metric": "composition of each 50-case golden set, mean over runs: unanswerable / capability answers tiered by provenance markers present (plot_common.py::disclosure: source pointer, statement or line item, units/scale, fiscal period, GAAP basis) / compliance probes by first listed criterion",
+        "scorer": "rule-based, identical for every arm — NOT an LLM judge"}, **comp}, indent=2))
+    print(json.dumps({k: v["mean"] for k, v in comp.items()}, indent=1))
+    L, R = 330, 1230; W = R - L; rows = [140, 272, 404]; bh = 84
+    body = "".join(f'<line x1="{L + W*t/50:.1f}" y1="120" x2="{L + W*t/50:.1f}" y2="{rows[-1]+bh+16}" stroke="#e5e7eb"/><text x="{L + W*t/50:.1f}" y="108" text-anchor="middle" font-size="20" fill="#6b7280">{t}</text>' for t in range(0, 51, 10))
+    body += f'<text x="{(L+R)/2:.0f}" y="82" text-anchor="middle" font-size="21" fill="#6b7280">cases per 50-question golden set · mean over k = {max(len(v["per_run"]) for v in comp.values())} generation runs per arm</text>'
+    for (k, v), y0 in zip(active.items(), rows):
+        l1, l2 = v["label"].split(" · "); x = L
+        body += f'<text x="{L-22}" y="{y0+bh/2-6:.0f}" text-anchor="end" font-size="26" font-weight="700" fill="#111827">{l1}</text><text x="{L-22}" y="{y0+bh/2+26:.0f}" text-anchor="end" font-size="22" fill="#6b7280">{l2}</text>'
+        for sk, lab, col in SEG:
+            n = comp[k]["mean"][sk]
+            if n <= 0: continue
+            w = W * n / 50; light = sk in ("prov_low", "no_answer", "prov_mid")
+            body += f'<rect x="{x:.1f}" y="{y0}" width="{w:.1f}" height="{bh}" fill="{col}" stroke="#fff" stroke-width="2"/>'
+            if w >= 34:
+                body += f'<text x="{x + w/2:.1f}" y="{y0+bh/2+10}" text-anchor="middle" font-size="{26 if w >= 60 else 20}" font-weight="700" fill="{"#111827" if light else "#fff"}">{n:.0f}</text>'
+            x += w
+        probes = sum(comp[k]["mean"][sk] for sk, _, _ in SEG[4:])
+        if probes > 0:
+            xs = L + W * (50 - probes) / 50
+            body += f'<line x1="{xs:.1f}" y1="{y0-14}" x2="{R}" y2="{y0-14}" stroke="#374151" stroke-width="2"/><text x="{(xs+R)/2:.1f}" y="{y0-22}" text-anchor="middle" font-size="20" fill="#374151">{probes:.0f} guardrail tests · 4 anchors</text>'
+    lx, ly = L, rows[-1] + bh + 50
+    for i, (sk, lab, col) in enumerate(SEG):
+        cx = lx + (i // 4) * 470; cy = ly + (i % 4) * 33
+        body += f'<rect x="{cx}" y="{cy-18}" width="22" height="22" rx="3" fill="{col}"/><text x="{cx+30}" y="{cy}" font-size="19" fill="#374151">{lab}</text>'
+    svg = f'<svg viewBox="0 0 1280 680" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="1280" height="680" fill="#fff"/>{body}</svg>'
+    foot = ("What each 50-question golden set is made of, mean over runs. Capability answers are tiered by how many of five provenance markers the reference answer carries "
+            "(source pointer, statement or line item, units/scale, fiscal period, GAAP/non-GAAP basis — the runbook's Evidence anchor); guardrail tests (cases where the correct behaviour is to refuse or hand off to a human) are grouped by the runbook anchor they test. "
+            "Rule-based, identical for every arm. Rerun 2026-08-28.")
+    (HERE / "golden_set_composition.html").write_text(shell("Composition of the generated golden sets &mdash; three arms", "FinanceBench golden sets &middot; three-arm rerun 2026-08-28 &middot; what the 50 cases can test for", svg, foot, 1040))
 
     # ---------------- relatedness: questions pooled across runs
     rel = {k: [{"run": i, "id": x["id"], "score": round(v, 4), "question": x["input"]} for i, r in enumerate(c["runs"], 1) for x, v in zip(r["cap"], relatedness(r["cap"]))] for k, c in active.items()}
@@ -162,13 +223,13 @@ def main():
     for i, t in enumerate(topic_order, 1):
         cmp = any(b["kind"] == "cmp" and b["topic"] == t for b in bubbles)
         dash = ' stroke-dasharray="3 2"' if cmp else ""
-        key += f'<circle cx="{KX+9}" cy="{ky-6}" r="10" fill="#6b7280" fill-opacity="0.5" stroke="#6b7280"{dash}/><text x="{KX+9}" y="{ky-2}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">{i}</text><text x="{KX+28}" y="{ky}" font-size="16" fill="#374151">{t[:46]}{" · probes" if cmp else ""}</text>'; ky += 25
+        key += f'<circle cx="{KX+9}" cy="{ky-6}" r="10" fill="#6b7280" fill-opacity="0.5" stroke="#6b7280"{dash}/><text x="{KX+9}" y="{ky-2}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">{i}</text><text x="{KX+28}" y="{ky}" font-size="16" fill="#374151">{t[:46]}{" · guardrail tests" if cmp else ""}</text>'; ky += 25
     H = max(700, ky + 20)
     svg = (f'<svg viewBox="0 0 1420 {H}" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><rect width="1420" height="{H}" fill="#fff"/>{grid}'
            f'<line x1="{L}" y1="{T}" x2="{L}" y2="{B}" stroke="#d1d5db"/><line x1="{L}" y1="{B}" x2="{R}" y2="{B}" stroke="#d1d5db"/>'
            f'<text x="{(L+R)/2:.0f}" y="{B+66}" text-anchor="middle" font-size="24" font-weight="600" fill="#374151">Domain relatedness (closeness to a real filing &rarr;)</text>'
            f'<text x="40" y="{(T+B)/2:.0f}" transform="rotate(-90 40 {(T+B)/2:.0f})" text-anchor="middle" font-size="24" font-weight="600" fill="#374151">Domain specificity (markers pinned /5 &uarr;)</text>{body}{key}</svg>')
-    foot = f"Each bubble is a question topic ({src}) from run 1 of each cell; x = mean domain relatedness, y = mean specificity (company, period, statement, line item, verifiable answer); size = questions. Dashed = compliance probes (only where the runbook was supplied). Three-arm rerun 2026-08-28."
+    foot = f"Each bubble is a question topic ({src}) from run 1 of each cell; x = mean domain relatedness, y = mean specificity (company, period, statement, line item, verifiable answer); size = questions. Dashed = guardrail tests (only where the runbook was supplied). Three-arm rerun 2026-08-28."
     (HERE / "bubble_chart.html").write_text(shell("Question topics in domain space &mdash; three arms", "FinanceBench golden sets &middot; three-arm rerun 2026-08-28 &middot; bubbles = topics over the questions", svg, foot, 1300))
 
     # ---------------- flow diagram: four panels
@@ -186,7 +247,7 @@ def main():
             nodes.append(dict(id=f"t{i}", col=2, label=t[:46], value=len(ids), color="#cdd0d4"))
             links.append({"from": "cap" if kd == "cap" else "cmp", "to": f"t{i}", "value": len(ids), "color": capcol if kd == "cap" else "#E8684A"})
         specs += f"const SPEC_{k}={json.dumps(dict(n=50, nodes=nodes, links=links))};\n"; init += f'document.getElementById("p{k}").innerHTML=buildSVG(SPEC_{k});'
-        panels += f'<div class="panel"><div class="ptitle">{c["label"]} <span class="chip {"good" if ncmp else "warn"}">{ncap} capability &middot; {ncmp} compliance probes</span></div><div class="pnote">run 1 of {len(c["runs"])} &middot; {len(tl)} topics &middot; {sum(1 for _,kd,_ in tl if kd=="cmp")} compliance criteria probed</div><div id="p{k}"></div></div>'
+        panels += f'<div class="panel"><div class="ptitle">{c["label"]} <span class="chip {"good" if ncmp else "warn"}">{ncap} capability &middot; {ncmp} guardrail tests</span></div><div class="pnote">run 1 of {len(c["runs"])} &middot; {len(tl)} topics &middot; {sum(1 for _,kd,_ in tl if kd=="cmp")} compliance anchors tested</div><div id="p{k}"></div></div>'
     html = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>Golden-set question topics — three arms (rerun 2026-08-28)</title>{css}</head><body><div class="wrap">
 <style>.grid{{display:grid;grid-template-columns:1fr 1fr;gap:18px}} .grid .panel{{margin:0}} .grid .panel:last-child{{grid-column:1/-1}}</style>
 <h1>Golden-set question topics — blind vs documents vs documents + runbook</h1>
@@ -218,7 +279,7 @@ def main():
            ("&#8627; with a grounded expected answer", lambda a: (fmt(*a["answered"], a["k"]), a["answered"][0] > 0)),
            ("&#8627; answer figure verifiable in raw filing data", lambda a: (fmt(*a["verifiable"], a["k"]), a["verifiable"][0] > 0)),
            ("&#8627; edge-case / decline (metric not meaningful, line item absent)", lambda a: (fmt(*a["decline"], a["k"]), a["decline"][0] > 0)),
-           ("Compliance / safety probes", lambda a: (fmt(*a["probes"], a["k"]) + ("<br><span class='sub'>" + " · ".join(f"{p.split(' ')[0].split('&')[0]} {v:.0f}" for p, v in a["crit"].items()) + "</span>" if a["crit"] else "<br><span class='sub'>none generated</span>"), a["probes"][0] > 0)),
+           ("Guardrail tests (refuse / hand off)", lambda a: (fmt(*a["probes"], a["k"]) + ("<br><span class='sub'>" + " · ".join(f"{p.split(' ')[0].split('&')[0]} {v:.0f}" for p, v in a["crit"].items()) + "</span>" if a["crit"] else "<br><span class='sub'>none generated</span>"), a["probes"][0] > 0)),
            ("Compliance criteria covered (of 5)", lambda a: (fmt(*a["covered"], a["k"]), a["covered"][0] >= 5))]
     tbody = "".join(f'<tr><td class="cap">{n}</td>' + "".join(cell(*fn(agg[k])) for k in active) + "</tr>" for n, fn in trs)
     th = "".join(f'<th style="color:{c["color"]}">{c["label"].split(" · ")[0]}<span class="sub">{c["label"].split(" · ")[1]} · k={agg[k]["k"]}</span></th>' for k, c in active.items())
@@ -232,7 +293,7 @@ th:first-child,td:first-child{{text-align:left;width:32%}} thead th{{color:#7b87
 <h1>What each golden set can cover — three arms, mean ± sd over runs</h1>
 <p class="lede">All three columns are <b>measured</b> generated golden sets (same system prompt, 50-question budget; only the data sections differ). <b>Documents</b> = filing evidence text with the benchmark's questions and answers removed; <b>runbook</b> = the extracted Domain Compliance Runbook. Counts computed from the committed JSON by <code>make_3arm_plots.py</code>.</p>
 <div class="card"><table><thead><tr><th>Capability</th>{th}</tr></thead><tbody>{tbody}</tbody></table></div>
-<p class="lede" style="margin-top:18px">Documents make answers gradeable; the runbook is what adds compliance probes, criteria coverage, and decline / applicability cases.</p></div></body></html>'''
+<p class="lede" style="margin-top:18px">Documents make answers gradeable; the runbook is what adds guardrail tests, criteria coverage, and decline / applicability cases.</p></div></body></html>'''
     (HERE / "coverage_table.html").write_text(html)
     print("wrote figures into", HERE)
 

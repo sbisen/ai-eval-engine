@@ -32,6 +32,25 @@ DECLINE = re.compile(r"meaningful|not (a )?(useful|relevant|applicable)|does not
                      r"not (be )?computable|state (that|so) and explain|explain why not|if (it|this|that) (is|does) not|"
                      r"no (inventory|cost of goods sold|COGS)|does not (report|present|hold|carry)|not (a )?(reported|defined|presented)", re.I)
 
+DOC_NAMES = {r.get("doc_name") for r in RAW if r.get("doc_name")}
+BASIS = re.compile(r"\bnon-?GAAP\b|\bGAAP\b|\bIFRS\b", re.I)
+UNITS = re.compile(r"million|billion|thousand|percent|%|unitless|basis points?|\bratio\b|\bx\b|times", re.I)
+FISCAL = re.compile(r"fiscal year|year[- ]end|year ended|\bFYE\b|\bFY ?20\d\d\b|\b20\d\d\b|fiscal 20\d\d", re.I)
+
+def disclosure(c):
+    """Answer disclosure completeness — same rule for every arm. Fraction of five provenance
+    markers present in the reference answer (`expected`): an explicit source pointer (a filing
+    name or 'Source:'), the statement or line item cited, units/scale, the fiscal period, and
+    the GAAP / non-GAAP basis. These are what the runbook's Evidence anchor asks every answer to
+    carry. An empty answer scores 0 on all five. Probes are excluded by the caller."""
+    e = c.get("expected") or ""
+    m = {"source": bool(re.search(r"\bSource\b", e) or any(d in e for d in DOC_NAMES)),
+         "statement_or_line_item": bool(STATEMENT.search(e) or re.search(r"'[^']{3,}'|line item|note \d", e, re.I)),
+         "units_scale": bool(UNITS.search(e)),
+         "fiscal_period": bool(FISCAL.search(e)),
+         "basis": bool(BASIS.search(e))}
+    return round(sum(m.values()) / 5.0, 3), m
+
 def norm(s): return re.sub(r"[^0-9]", "", s or "")
 def ev_text(r):
     e = r.get("evidence")

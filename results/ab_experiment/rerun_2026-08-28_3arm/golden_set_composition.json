@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "metric": "composition of each 50-case golden set, mean over runs: unanswerable / capability answers tiered by provenance markers present (plot_common.py::disclosure: source pointer, statement or line item, units/scale, fiscal period, GAAP basis) / compliance probes by first listed criterion",
+    "scorer": "rule-based, identical for every arm \u2014 NOT an LLM judge"
+  },
+  "C": {
+    "label": "no documents \u00b7 no runbook",
+    "per_run": [
+      {
+        "no_answer": 50,
+        "prov_low": 0,
+        "prov_mid": 0,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      },
+      {
+        "no_answer": 50,
+        "prov_low": 0,
+        "prov_mid": 0,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      },
+      {
+        "no_answer": 50,
+        "prov_low": 0,
+        "prov_mid": 0,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      }
+    ],
+    "mean": {
+      "no_answer": 50.0,
+      "prov_low": 0.0,
+      "prov_mid": 0.0,
+      "prov_full": 0.0,
+      "Domain scope": 0.0,
+      "MNPI & confidential-information safeguard": 0.0,
+      "No personal bias / no advice": 0.0,
+      "Escalate to Human": 0.0
+    }
+  },
+  "B": {
+    "label": "documents \u00b7 no runbook",
+    "per_run": [
+      {
+        "no_answer": 0,
+        "prov_low": 40,
+        "prov_mid": 10,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      },
+      {
+        "no_answer": 0,
+        "prov_low": 43,
+        "prov_mid": 7,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      },
+      {
+        "no_answer": 0,
+        "prov_low": 37,
+        "prov_mid": 13,
+        "prov_full": 0,
+        "Domain scope": 0,
+        "MNPI & confidential-information safeguard": 0,
+        "No personal bias / no advice": 0,
+        "Escalate to Human": 0
+      }
+    ],
+    "mean": {
+      "no_answer": 0.0,
+      "prov_low": 40.0,
+      "prov_mid": 10.0,
+      "prov_full": 0.0,
+      "Domain scope": 0.0,
+      "MNPI & confidential-information safeguard": 0.0,
+      "No personal bias / no advice": 0.0,
+      "Escalate to Human": 0.0
+    }
+  },
+  "A": {
+    "label": "documents \u00b7 runbook",
+    "per_run": [
+      {
+        "no_answer": 0,
+        "prov_low": 0,
+        "prov_mid": 0,
+        "prov_full": 36,
+        "Domain scope": 4,
+        "MNPI & confidential-information safeguard": 3,
+        "No personal bias / no advice": 4,
+        "Escalate to Human": 3
+      },
+      {
+        "no_answer": 0,
+        "prov_low": 0,
+        "prov_mid": 1,
+        "prov_full": 35,
+        "Domain scope": 4,
+        "MNPI & confidential-information safeguard": 3,
+        "No personal bias / no advice": 4,
+        "Escalate to Human": 3
+      },
+      {
+        "no_answer": 0,
+        "prov_low": 0,
+        "prov_mid": 0,
+        "prov_full": 36,
+        "Domain scope": 3,
+        "MNPI & confidential-information safeguard": 4,
+        "No personal bias / no advice": 4,
+        "Escalate to Human": 3
+      }
+    ],
+    "mean": {
+      "no_answer": 0.0,
+      "prov_low": 0.0,
+      "prov_mid": 0.33,
+      "prov_full": 35.67,
+      "Domain scope": 3.67,
+      "MNPI & confidential-information safeguard": 3.33,
+      "No personal bias / no advice": 4.0,
+      "Escalate to Human": 3.0
+    }
+  }
+}
