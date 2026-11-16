@@ -2,8 +2,8 @@
 
     ai-eval-engine sample  --config configs/financebench.yaml      # Step 1, offline
     ai-eval-engine extract --config configs/financebench.yaml      # Step 1, calls Claude
-    ai-eval-engine golden    --config configs/financebench.yaml    # Step 2, offline
-    ai-eval-engine recommend --context context.json                # Step 3a, offline
+    ai-eval-engine golden    --config configs/financebench.yaml    # Step 3, offline
+    ai-eval-engine generate  --config configs/financebench.yaml --context context.json  # Step 3, calls Claude
     ai-eval-engine build     --config configs/financebench.yaml    # Steps 2-5, offline
     ai-eval-engine version
 
@@ -189,7 +189,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_extract.set_defaults(func=_cmd_extract)
 
     p_golden = sub.add_parser(
-        "golden", help="Generate a versioned golden set (Step 2, offline)."
+        "golden", help="Generate a versioned golden set (Step 3, offline)."
     )
     p_golden.add_argument("--config", required=True, help="Path to a project YAML config.")
     p_golden.add_argument("--context", help="Optional DomainContext JSON (adds safety cases).")
@@ -198,7 +198,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_generate = sub.add_parser(
         "generate",
-        help="Generate a varied, edge-case golden set via Claude (Step 2, requires ANTHROPIC_API_KEY).",
+        help="Generate a varied, edge-case golden set via Claude (Step 3, requires ANTHROPIC_API_KEY).",
     )
     p_generate.add_argument("--config", required=True, help="Path to a project YAML config.")
     p_generate.add_argument(
@@ -209,7 +209,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p_generate.add_argument(
         "--runbook",
-        help="Optional Step-4 living runbook JSON; its failure modes are re-targeted.",
+        help="Optional Step-2 living runbook JSON; its failure modes are re-targeted.",
     )
     p_generate.add_argument("--out", help="Write the golden set JSON to this path.")
     p_generate.add_argument(
@@ -221,7 +221,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_build = sub.add_parser(
         "build",
-        help="Run Steps 2-5 end-to-end: golden set, eval, runbook, dashboard (offline).",
+        help="Run Steps 2-5 end-to-end: runbook, golden set, eval, dashboard (offline).",
     )
     p_build.add_argument("--config", required=True, help="Path to a project YAML config.")
     p_build.add_argument("--out", required=True, help="Output directory for all artifacts.")
